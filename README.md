@@ -20,7 +20,7 @@ The web scraper is used to web scrap websites using Python's BeautifulSoup and A
   <img src="main_inspect_element.png" alt="" width="450" class="center" style="margin-right: 5px;"/>
 </p>
 
-Each data vector needed to be cleaned: protocol names, dates, and amount lost in attack
+Each data vector needed to be cleaned: protocol names, dates, and amount lost in attack.
 The most intricate vector that needed prime attention were the dates. Dates and amounts with concatenated together with excessive spaces and a vertical bar(|). 
 
 > Here's a few lines of code used to extract the dates from the excessive html text data:
