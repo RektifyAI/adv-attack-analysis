@@ -12,10 +12,27 @@ The web scraper is used to web scrap websites using Python's BeautifulSoup and A
 >- [crypto.sec](https://cryptosec.info/defi-hacks/)
 >- [defiprime.com](https://defiprime.com/hacks2020)
 
+----
+
 ## Insights into Web Scrapping using Python BeautifulSoup
 <!-- image -->
 <p style="text-align:center;">
   <img src="main_inspect_element.png" alt="" width="300" class="center" style="margin-right: 5px;"/>
 </p>
 
-These attacks only exist due to vulnerabilities and [attack vectors](https://github.com/sigp/solidity-security-blog).
+Each data vector needed to be cleaned: protocol names, dates, and amount lost in attack
+The most intricate vector that needed prime attention were the dates. Dates and amounts with concatenated together with excessive spaces and a vertical bar(|). 
+
+> Here's a few lines of code used to extract the dates from the excessive html text data:
+```
+clean_dates = []
+for item in dates:
+    regex = " (\\d{2}/\\d{2}/\\d{4})";
+    i = item.lstrip(',000,000 | ')
+    
+    clean_dates.append(i)
+```
+> Follow the logic and results within the web scraper directory. 
+
+
+Attacks only exist due to vulnerabilities and [attack vectors](https://github.com/sigp/solidity-security-blog). Throughout building the code base, within the attack analysis repo we will do extensive research into specific vulnerabilities with the code for DeFi protocols. 
