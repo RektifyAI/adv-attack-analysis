@@ -17,7 +17,7 @@ The web scraper is used to web scrap websites using Python's BeautifulSoup and A
 ## Insights into Web Scrapping using Python BeautifulSoup
 <!-- image -->
 <p style="text-align:center;">
-  <img src="main_inspect_element.png" alt="" width="400" class="center" style="margin-right: 5px;"/>
+  <img src="main_inspect_element.png" alt="" width="450" class="center" style="margin-right: 5px;"/>
 </p>
 
 Each data vector needed to be cleaned: protocol names, dates, and amount lost in attack
