@@ -1,0 +1,3875 @@
+\documentclass[11pt]{article}
+
+    \usepackage[breakable]{tcolorbox}
+    \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
+    
+    \usepackage{iftex}
+    \ifPDFTeX
+    	\usepackage[T1]{fontenc}
+    	\usepackage{mathpazo}
+    \else
+    	\usepackage{fontspec}
+    \fi
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % Maintain compatibility with old templates. Remove in nbconvert 6.0
+    \let\Oldincludegraphics\includegraphics
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionFormat{nocaption}{}
+    \captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+
+    \usepackage{float}
+    \floatplacement{figure}{H} % forces figures to be placed at the correct location
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range
+    \makeatletter % fix for old versions of grffile with XeLaTeX
+    \@ifpackagelater{grffile}{2019/11/01}
+    {
+      % Do nothing on new versions
+    }
+    {
+      \def\Gread@@xetex#1{%
+        \IfFileExists{"\Gin@base".bb}%
+        {\Gread@eps{\Gin@base.bb}}%
+        {\Gread@@xetex@aux#1}%
+      }
+    }
+    \makeatother
+    \usepackage[Export]{adjustbox} % Used to constrain images to a maximum size
+    \adjustboxset{max size={0.9\linewidth}{0.9\paperheight}}
+
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    % The default LaTeX title has an obnoxious amount of whitespace. By default,
+    % titling removes some of it. It also provides customization options.
+    \usepackage{titling}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    \usepackage{mathrsfs}
+    
+
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+    \definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+    \definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+    % common color for the border for error outputs.
+    \definecolor{outerrorbackground}{HTML}{FFDFDF}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{rekt-news-ws}
+    
+    
+    
+    
+    
+% Pygments definitions
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\@namedef{PY@tok@w}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\@namedef{PY@tok@c}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\@namedef{PY@tok@cp}{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\@namedef{PY@tok@k}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kp}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kt}{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\@namedef{PY@tok@o}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@ow}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\@namedef{PY@tok@nb}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@nf}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@nc}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@nn}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@ne}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\@namedef{PY@tok@nv}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@no}{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\@namedef{PY@tok@nl}{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\@namedef{PY@tok@ni}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\@namedef{PY@tok@na}{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\@namedef{PY@tok@nt}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@nd}{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\@namedef{PY@tok@s}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sd}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@si}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\@namedef{PY@tok@se}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\@namedef{PY@tok@sr}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\@namedef{PY@tok@ss}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@sx}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@m}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@gh}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\@namedef{PY@tok@gu}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\@namedef{PY@tok@gd}{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\@namedef{PY@tok@gi}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\@namedef{PY@tok@gr}{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\@namedef{PY@tok@ge}{\let\PY@it=\textit}
+\@namedef{PY@tok@gs}{\let\PY@bf=\textbf}
+\@namedef{PY@tok@gp}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\@namedef{PY@tok@go}{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\@namedef{PY@tok@gt}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\@namedef{PY@tok@err}{\def\PY@bc##1{{\setlength{\fboxsep}{\string -\fboxrule}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}}
+\@namedef{PY@tok@kc}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kd}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kn}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kr}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@bp}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@fm}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@vc}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vg}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vi}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vm}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@sa}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sb}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sc}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@dl}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@s2}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sh}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@s1}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@mb}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mf}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mh}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mi}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@il}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mo}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@ch}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\@namedef{PY@tok@cm}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\@namedef{PY@tok@cpf}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\@namedef{PY@tok@c1}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\@namedef{PY@tok@cs}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % For linebreaks inside Verbatim environment from package fancyvrb. 
+    \makeatletter
+        \newbox\Wrappedcontinuationbox 
+        \newbox\Wrappedvisiblespacebox 
+        \newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}} 
+        \newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}} 
+        \newcommand*\Wrappedcontinuationindent {3ex } 
+        \newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox} 
+        % Take advantage of the already applied Pygments mark-up to insert 
+        % potential linebreaks for TeX processing. 
+        %        {, <, #, %, $, ' and ": go to next line. 
+        %        _, }, ^, &, >, - and ~: stay at end of broken line. 
+        % Use of \textquotesingle for straight quote. 
+        \newcommand*\Wrappedbreaksatspecials {% 
+            \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}% 
+            \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}% 
+            \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}% 
+            \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}% 
+            \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}% 
+            \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}% 
+            \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}% 
+            \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}% 
+            \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}% 
+            \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}% 
+            \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}% 
+            \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}% 
+            \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}% 
+            \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}% 
+        } 
+        % Some characters . , ; ? ! / are not pygmentized. 
+        % This macro makes them "active" and they will insert potential linebreaks 
+        \newcommand*\Wrappedbreaksatpunct {% 
+            \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}% 
+            \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}% 
+            \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}% 
+            \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}% 
+            \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}% 
+            \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}% 
+            \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}% 
+            \catcode`\.\active
+            \catcode`\,\active 
+            \catcode`\;\active
+            \catcode`\:\active
+            \catcode`\?\active
+            \catcode`\!\active
+            \catcode`\/\active 
+            \lccode`\~`\~ 	
+        }
+    \makeatother
+
+    \let\OriginalVerbatim=\Verbatim
+    \makeatletter
+    \renewcommand{\Verbatim}[1][1]{%
+        %\parskip\z@skip
+        \sbox\Wrappedcontinuationbox {\Wrappedcontinuationsymbol}%
+        \sbox\Wrappedvisiblespacebox {\FV@SetupFont\Wrappedvisiblespace}%
+        \def\FancyVerbFormatLine ##1{\hsize\linewidth
+            \vtop{\raggedright\hyphenpenalty\z@\exhyphenpenalty\z@
+                \doublehyphendemerits\z@\finalhyphendemerits\z@
+                \strut ##1\strut}%
+        }%
+        % If the linebreak is at a space, the latter will be displayed as visible
+        % space at end of first line, and a continuation symbol starts next line.
+        % Stretch/shrink are however usually zero for typewriter font.
+        \def\FV@Space {%
+            \nobreak\hskip\z@ plus\fontdimen3\font minus\fontdimen4\font
+            \discretionary{\copy\Wrappedvisiblespacebox}{\Wrappedafterbreak}
+            {\kern\fontdimen2\font}%
+        }%
+        
+        % Allow breaks at special characters using \PYG... macros.
+        \Wrappedbreaksatspecials
+        % Breaks at punctuation characters . , ; ? ! and / need catcode=\active 	
+        \OriginalVerbatim[#1,codes*=\Wrappedbreaksatpunct]%
+    }
+    \makeatother
+
+    % Exact colors from NB
+    \definecolor{incolor}{HTML}{303F9F}
+    \definecolor{outcolor}{HTML}{D84315}
+    \definecolor{cellborder}{HTML}{CFCFCF}
+    \definecolor{cellbackground}{HTML}{F7F7F7}
+    
+    % prompt
+    \makeatletter
+    \newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
+    \makeatother
+    \newcommand{\prompt}[4]{
+        {\ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}}
+    }
+    
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+\begin{document}
+    
+    \maketitle
+    
+    
+
+    
+    \hypertarget{sena-labs-rekt.news-web-scraping-activity}{%
+\section{Sena Labs: rekt.news Web Scraping
+Activity}\label{sena-labs-rekt.news-web-scraping-activity}}
+
+\hypertarget{goal-extract-attackexploit-specific-data-from-htmlxml-text-data}{%
+\subparagraph{Goal: Extract attack/exploit specific data from html/xml
+text
+data}\label{goal-extract-attackexploit-specific-data-from-htmlxml-text-data}}
+
+Extract vectors: protocol\_name, date, amount\_lost
+
+The following data extracted will be an introductory method to how the
+Sena REKT Report dataset will use methods such as Python webscraping to
+autonomously upload and valid attack data within the DeFi ecosystem. The
+following webscrapin method is more efficient than initial manual data
+entry that will be needed later in validation and data cleaning.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{1}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+\PY{k+kn}{from} \PY{n+nn}{pandas} \PY{k+kn}{import} \PY{n}{DataFrame}
+
+\PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+\PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+\PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
+
+\PY{k+kn}{import} \PY{n+nn}{requests}
+\PY{k+kn}{import} \PY{n+nn}{re}
+\PY{k+kn}{from} \PY{n+nn}{bs4} \PY{k+kn}{import} \PY{n}{BeautifulSoup}
+
+\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{2}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{from} \PY{n+nn}{urllib}\PY{n+nn}{.}\PY{n+nn}{request} \PY{k+kn}{import} \PY{n}{urlopen}
+\PY{k+kn}{from} \PY{n+nn}{bs4} \PY{k+kn}{import} \PY{n}{BeautifulSoup}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{3}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{url} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{https://rekt.news/leaderboard/}\PY{l+s+s2}{\PYZdq{}}
+\PY{n}{page} \PY{o}{=} \PY{n}{requests}\PY{o}{.}\PY{n}{get}\PY{p}{(}\PY{n}{url}\PY{p}{)}
+\PY{n}{html} \PY{o}{=} \PY{n}{urlopen}\PY{p}{(}\PY{n}{url}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{4}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{def} \PY{n+nf}{getHTMLdoc}\PY{p}{(}\PY{n}{url}\PY{p}{)}\PY{p}{:}
+        \PY{n}{response} \PY{o}{=} \PY{n}{requests}\PY{o}{.}\PY{n}{get}\PY{p}{(}\PY{n}{url}\PY{p}{)}
+        \PY{k}{return} \PY{n}{response}\PY{o}{.}\PY{n}{text}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{5}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{html\PYZus{}doc} \PY{o}{=} \PY{n}{getHTMLdoc}\PY{p}{(}\PY{n}{url}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{6}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{soup} \PY{o}{=} \PY{n}{BeautifulSoup}\PY{p}{(}\PY{n}{html\PYZus{}doc}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{html.parser}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{7}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nb}{print}\PY{p}{(}\PY{n}{soup}\PY{o}{.}\PY{n}{prettify}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <script>
+   !function()\{try\{let t=document.documentElement,e=window.localStorage,u=!!e\&\&e
+.getItem("REKT\_THEME"),l=!u||"null"===u;l?t.setAttribute("data-
+theme","light"):t.setAttribute("data-theme",u),l?e.setItem("REKT\_THEME","light")
+:e.setItem("REKT\_THEME",u)\}catch(t)\{console.error(t)\}\}();
+  </script>
+  <title>
+   Rekt - Leaderboard
+  </title>
+  <meta content="DeFi / Crypto - Investigative journalism \&amp;amp; creative
+commentary" name="description"/>
+  <meta charset="utf-8"/>
+  <link
+href="https://raw.githubusercontent.com/RektHQ/Assets/main/images/favicon.png"
+rel="icon" type="image/png"/>
+  <link href="https://www.rekt.news/" rel="canonical"/>
+  <meta content="True" name="HandheldFriendly"/>
+  <meta content="320" name="MobileOptimized"/>
+  <meta content="initial-scale=1.0, width=device-width" name="viewport"/>
+  <meta content="Rekt - Leaderboard" name="og:title"/>
+  <meta content="DeFi / Crypto - Investigative journalism \&amp;amp; creative
+commentary" property="og:description"/>
+  <meta content="https://raw.githubusercontent.com/RektHQ/Assets/main/images/ban
+ner-1200-675.png" property="og:image"/>
+  <meta content="https://www.rekt.news/" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="rekt" property="og:site\_name"/>
+  <meta content="summary\_large\_image" name="twitter:card"/>
+  <meta content="Rekt - Leaderboard" name="twitter:title"/>
+  <meta content="DeFi / Crypto - Investigative journalism \&amp;amp; creative
+commentary" name="twitter:description"/>
+  <meta content="https://raw.githubusercontent.com/RektHQ/Assets/main/images/ban
+ner-1200-675.png" name="twitter:image"/>
+  <meta content="https://www.rekt.news/" name="twitter:url"/>
+  <meta content="@RektHQ" name="twitter:site"/>
+  <link href="https://fonts.gstatic.com" rel="preconnect"/>
+  <script async=""
+src="https://www.googletagmanager.com/gtag/js?id=G-5T3NB49M5Z">
+  </script>
+  <script async="">
+   function gtag()\{dataLayer.push(arguments)\}window.dataLayer=window.dataLayer||
+[],gtag("js",new Date),gtag("config","G-5T3NB49M5Z");
+  </script>
+  <meta content="25" name="next-head-count"/>
+  <link as="style" href="/\_next/static/css/ae4206172b98c52d.css" rel="preload"/>
+  <link data-n-g="" href="/\_next/static/css/ae4206172b98c52d.css"
+rel="stylesheet"/>
+  <noscript data-n-css="">
+  </noscript>
+  <script defer="" nomodule=""
+src="/\_next/static/chunks/polyfills-5cd94c89d3acac5f.js">
+  </script>
+  <script defer="" src="/\_next/static/chunks/webpack-514908bffb652963.js">
+  </script>
+  <script defer="" src="/\_next/static/chunks/framework-91d7f78b5b4003c8.js">
+  </script>
+  <script defer="" src="/\_next/static/chunks/main-21be7f478156ec90.js">
+  </script>
+  <script defer="" src="/\_next/static/chunks/pages/\_app-98c26249b3577d95.js">
+  </script>
+  <script defer="" src="/\_next/static/chunks/1bfc9850-ae7db91564636cad.js">
+  </script>
+  <script defer="" src="/\_next/static/chunks/496-567bdf7e1a65088d.js">
+  </script>
+  <script defer="" src="/\_next/static/chunks/797-c20cb0861b9eb175.js">
+  </script>
+  <script defer="" src="/\_next/static/chunks/397-285b07b39ece02ff.js">
+  </script>
+  <script defer=""
+src="/\_next/static/chunks/pages/leaderboard-b0566d7cd961ba9d.js">
+  </script>
+  <script defer="" src="/\_next/static/ioAkjsqsaK5CQmeaLgUij/\_buildManifest.js">
+  </script>
+  <script defer="" src="/\_next/static/ioAkjsqsaK5CQmeaLgUij/\_ssgManifest.js">
+  </script>
+  <script defer=""
+src="/\_next/static/ioAkjsqsaK5CQmeaLgUij/\_middlewareManifest.js">
+  </script>
+  <style data-href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wg
+ht@0,400;0,500;0,600;0,700;1,400\&amp;display=swap">
+   @font-face\{font-family:'Roboto Mono';font-style:italic;font-weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xoDF4xlVMF-
+BfR8bXMIjhOsXG-q2oeuFoqFrlnAOW-.woff) format('woff')\}@font-face\{font-
+family:'Roboto Mono';font-style:normal;font-weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vqPQA.woff) format('woff')\}@font-face\{font-
+family:'Roboto Mono';font-style:normal;font-weight:500;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_7PqPQA.woff) format('woff')\}@font-face\{font-
+family:'Roboto Mono';font-style:normal;font-weight:600;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_AP2PQA.woff) format('woff')\}@font-face\{font-
+family:'Roboto Mono';font-style:normal;font-weight:700;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_Of2PQA.woff) format('woff')\}@font-face\{font-
+family:'Roboto Mono';font-style:italic;font-weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xoDF4xlVMF-
+BfR8bXMIjhOsXG-q2oeuFoqFrlnANW3Cp-eTIwsa4YaDA.woff) format('woff');unicode-
+range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F\}@font-
+face\{font-family:'Roboto Mono';font-style:italic;font-weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xoDF4xlVMF-
+BfR8bXMIjhOsXG-q2oeuFoqFrlnANW-Cp-eTIwsa4YaDA.woff) format('woff');unicode-
+range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116\}@font-face\{font-family:'Roboto
+Mono';font-style:italic;font-weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xoDF4xlVMF-
+BfR8bXMIjhOsXG-q2oeuFoqFrlnANW5Cp-eTIwsa4YaDA.woff) format('woff');unicode-
+range:U+0370-03FF\}@font-face\{font-family:'Roboto Mono';font-style:italic;font-
+weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xoDF4xlVMF-
+BfR8bXMIjhOsXG-q2oeuFoqFrlnANW1Cp-eTIwsa4YaDA.woff) format('woff');unicode-range
+:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-
+1EF9,U+20AB\}@font-face\{font-family:'Roboto Mono';font-style:italic;font-
+weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xoDF4xlVMF-
+BfR8bXMIjhOsXG-q2oeuFoqFrlnANW0Cp-eTIwsa4YaDA.woff) format('woff');unicode-range
+:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7
+F,U+A720-A7FF\}@font-face\{font-family:'Roboto Mono';font-style:italic;font-
+weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xoDF4xlVMF-
+BfR8bXMIjhOsXG-q2oeuFoqFrlnANW6Cp-eTIwsa4Y.woff) format('woff');unicode-range:U+
+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074
+,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD\}@font-face\{font-
+family:'Roboto Mono';font-style:normal;font-weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSV0me8iUI0lkQ.woff2)
+format('woff2');unicode-
+range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F\}@font-
+face\{font-family:'Roboto Mono';font-style:normal;font-weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSx0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116\}@font-
+face\{font-family:'Roboto Mono';font-style:normal;font-weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSt0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0370-03FF\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSd0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+
+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSZ0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,
+U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:400;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSh0me8iUI0.woff2)
+format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
+U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEF
+F,U+FFFD\}@font-face\{font-family:'Roboto Mono';font-style:normal;font-
+weight:500;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSV0me8iUI0lkQ.woff2)
+format('woff2');unicode-
+range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F\}@font-
+face\{font-family:'Roboto Mono';font-style:normal;font-weight:500;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSx0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116\}@font-
+face\{font-family:'Roboto Mono';font-style:normal;font-weight:500;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSt0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0370-03FF\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:500;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSd0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+
+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:500;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSZ0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,
+U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:500;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSh0me8iUI0.woff2)
+format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
+U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEF
+F,U+FFFD\}@font-face\{font-family:'Roboto Mono';font-style:normal;font-
+weight:600;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSV0me8iUI0lkQ.woff2)
+format('woff2');unicode-
+range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F\}@font-
+face\{font-family:'Roboto Mono';font-style:normal;font-weight:600;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSx0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116\}@font-
+face\{font-family:'Roboto Mono';font-style:normal;font-weight:600;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSt0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0370-03FF\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:600;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSd0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+
+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:600;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSZ0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,
+U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:600;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSh0me8iUI0.woff2)
+format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
+U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEF
+F,U+FFFD\}@font-face\{font-family:'Roboto Mono';font-style:normal;font-
+weight:700;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSV0me8iUI0lkQ.woff2)
+format('woff2');unicode-
+range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F\}@font-
+face\{font-family:'Roboto Mono';font-style:normal;font-weight:700;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSx0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116\}@font-
+face\{font-family:'Roboto Mono';font-style:normal;font-weight:700;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSt0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0370-03FF\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:700;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSd0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+
+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:700;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSZ0me8iUI0lkQ.woff2)
+format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,
+U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF\}@font-face\{font-family:'Roboto
+Mono';font-style:normal;font-weight:700;font-
+display:swap;src:url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-
+BfR8bXMIhJHg45mwgGEFl0\_3vrtSM1J-gEPT5Ese6hmHSh0me8iUI0.woff2)
+format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
+U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEF
+F,U+FFFD\}
+  </style>
+ </head>
+ <body>
+  <div data-reactroot="" id="\_\_next">
+   <div>
+    <header class="site-head">
+     <div class="site-head-content inner">
+      <a href="/">
+       <img alt="logo" class="site-logo inv-asset"
+src="https://raw.githubusercontent.com/rekthq/assets/main/images/logo.svg"/>
+      </a>
+      <nav>
+       <a class="nav-item" href="https://merch.rekt.news">
+        merch
+       </a>
+       <span class="divider">
+       </span>
+       <a class="nav-item" href="https://feed.rekt.news">
+        feed
+       </a>
+       <span class="divider">
+       </span>
+       <a class="nav-item nav-item-active" href="/leaderboard/">
+        leaderboard
+       </a>
+       <span class="divider">
+       </span>
+       <span class="theme-picker nav-item">
+        dark
+       </span>
+       <span class="divider">
+       </span>
+       <div class="lang-picker">
+        <span class="lang-picker-selected">
+         en
+         <span class="lang-picker-arrow">
+          ▼
+         </span>
+        </span>
+        <div class="lang-picker-options">
+        </div>
+       </div>
+      </nav>
+     </div>
+    </header>
+    <main class="content" role="main">
+     <div class="leaderboard">
+      <ol class="leaderboard-content">
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/polynetwork-rekt/">
+           Poly Network - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          611,000,000
+          <!-- -->
+          |
+          <!-- -->
+          08/10/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/bitmart-rekt/">
+           BitMart - REKT
+          </a>
+          <span class="leaderboard-audit">
+           N/A
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          196,000,000
+          <!-- -->
+          |
+          <!-- -->
+          12/04/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/compound-rekt/">
+           Compound - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          147,000,000
+          <!-- -->
+          |
+          <!-- -->
+          09/29/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/vulcan-forged-rekt/">
+           Vulcan Forged - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          140,000,000
+          <!-- -->
+          |
+          <!-- -->
+          12/13/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/cream-rekt-2/">
+           Cream Finance - REKT 2
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          130,000,000
+          <!-- -->
+          |
+          <!-- -->
+          10/27/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/badger-rekt/">
+           Badger - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          120,000,000
+          <!-- -->
+          |
+          <!-- -->
+          12/02/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/ascendex-rekt/">
+           Ascendex - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          77,700,000
+          <!-- -->
+          |
+          <!-- -->
+          12/12/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/easyfi-rekt/">
+           EasyFi - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          59,000,000
+          <!-- -->
+          |
+          <!-- -->
+          04/19/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/uranium-rekt/">
+           Uranium Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          57,200,000
+          <!-- -->
+          |
+          <!-- -->
+          04/28/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/bzx-rekt/">
+           bZx - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          55,000,000
+          <!-- -->
+          |
+          <!-- -->
+          11/05/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/pancakebunny-rekt/">
+           PancakeBunny - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          45,000,000
+          <!-- -->
+          |
+          <!-- -->
+          05/19/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/epic-hack-homie/">
+           Kucoin - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Internal audit
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          45,000,000
+          <!-- -->
+          |
+          <!-- -->
+          09/29/2020
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/alpha-finance-rekt/">
+           Alpha Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Quantstamp, Peckshield
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          37,500,000
+          <!-- -->
+          |
+          <!-- -->
+          02/13/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/veefinance-rekt/">
+           Vee Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Slowmist, Certik
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          34,000,000
+          <!-- -->
+          |
+          <!-- -->
+          09/21/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/meerkat-finance-bsc-rekt/">
+           Meerkat Finance - BSC - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          32,000,000
+          <!-- -->
+          |
+          <!-- -->
+          03/04/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/monox-rekt/">
+           MonoX - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Halborn, Peckshield
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          31,400,000
+          <!-- -->
+          |
+          <!-- -->
+          11/30/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/spartan-rekt/">
+           Spartan Protocol - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Certik
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          30,500,000
+          <!-- -->
+          |
+          <!-- -->
+          05/02/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/grim-finance-rekt/">
+           Grim Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Solidity Finance
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          30,000,000
+          <!-- -->
+          |
+          <!-- -->
+          12/18/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/stablemagnet-rekt/">
+           StableMagnet - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Techrate
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          27,000,000
+          <!-- -->
+          |
+          <!-- -->
+          06/23/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/paid-rekt/">
+           Paid Network - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          27,000,000
+          <!-- -->
+          |
+          <!-- -->
+          03/05/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/harvest-finance-rekt/">
+           Harvest Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Haechi, Peckshield
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          25,000,000
+          <!-- -->
+          |
+          <!-- -->
+          10/26/2020
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/xtoken-rekt/">
+           XToken - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Peckshield
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          24,000,000
+          <!-- -->
+          |
+          <!-- -->
+          05/12/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/popsicle-rekt/">
+           Popsicle Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Peckshield
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          20,000,000
+          <!-- -->
+          |
+          <!-- -->
+          08/03/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/pickle-finance-rekt/">
+           Pickle Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          19,700,000
+          <!-- -->
+          |
+          <!-- -->
+          11/22/2020
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/cream-rekt/">
+           Cream Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          18,800,000
+          <!-- -->
+          |
+          <!-- -->
+          08/30/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/snowdog-rekt/">
+           Snowdog - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          18,100,000
+          <!-- -->
+          |
+          <!-- -->
+          11/25/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/bearn-rekt/">
+           bEarn - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          18,000,000
+          <!-- -->
+          |
+          <!-- -->
+          05/17/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/indexed-finance-rekt/">
+           Indexed Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          16,000,000
+          <!-- -->
+          |
+          <!-- -->
+          10/14/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/eminence-rekt-in-prod/">
+           Eminence - Rekt in prod
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          15,000,000
+          <!-- -->
+          |
+          <!-- -->
+          09/28/2020
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/furucombo-rekt/">
+           Furucombo - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          14,000,000
+          <!-- -->
+          |
+          <!-- -->
+          02/27/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/deathbed-confessions-c3pr/">
+           Compounder Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Solidity Finance
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          12,000,000
+          <!-- -->
+          |
+          <!-- -->
+          12/02/2020
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/value-rekt3/">
+           Value DeFi - REKT 3
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          11,000,000
+          <!-- -->
+          |
+          <!-- -->
+          05/07/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/yearn-rekt/">
+           Yearn - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          11,000,000
+          <!-- -->
+          |
+          <!-- -->
+          02/05/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/arbix-rekt/">
+           Arbix Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Certik
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          10,000,000
+          <!-- -->
+          |
+          <!-- -->
+          01/04/2022
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/rari-capital-rekt/">
+           Rari Capital - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Quantstamp
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          10,000,000
+          <!-- -->
+          |
+          <!-- -->
+          05/08/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/value-rekt2/">
+           Value DeFi - REKT 2
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          10,000,000
+          <!-- -->
+          |
+          <!-- -->
+          05/05/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/cover-rekt/">
+           Cover - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Arcadia Group
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          9,400,000
+          <!-- -->
+          |
+          <!-- -->
+          12/29/2020
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/punkprotocol-rekt/">
+           Punk Protocol - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          8,950,000
+          <!-- -->
+          |
+          <!-- -->
+          08/10/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/visor-finance-rekt/">
+           Visor Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          8,200,000
+          <!-- -->
+          |
+          <!-- -->
+          12/21/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/thorchain-rekt2/">
+           THORChain - REKT 2
+          </a>
+          <span class="leaderboard-audit">
+           THORChain
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          8,000,000
+          <!-- -->
+          |
+          <!-- -->
+          07/22/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/hack-epidemic/">
+           Hack Epidemic (Origin Protocol - REKT)
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          8,000,000
+          <!-- -->
+          |
+          <!-- -->
+          11/17/2020
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/anyswap-rekt/">
+           Anyswap - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          7,900,000
+          <!-- -->
+          |
+          <!-- -->
+          07/10/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/warp-finance-rekt/">
+           Warp Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Hacken
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          7,800,000
+          <!-- -->
+          |
+          <!-- -->
+          12/18/2020
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/burgerswap-rekt/">
+           BurgerSwap - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          7,200,000
+          <!-- -->
+          |
+          <!-- -->
+          05/28/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/value-defi-rekt/">
+           Value DeFi - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Peckshield
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          7,000,000
+          <!-- -->
+          |
+          <!-- -->
+          11/14/2020
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/alchemix-rekt/">
+           Alchemix - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          6,500,000
+          <!-- -->
+          |
+          <!-- -->
+          06/16/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/belt-rekt/">
+           Belt - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Haechi
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          6,300,000
+          <!-- -->
+          |
+          <!-- -->
+          05/29/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/bondly-rekt/">
+           Bondly - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          5,900,000
+          <!-- -->
+          |
+          <!-- -->
+          07/15/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/roll-rekt/">
+           Roll - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          5,700,000
+          <!-- -->
+          |
+          <!-- -->
+          03/14/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/thorchain-rekt/">
+           THORChain - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          5,000,000
+          <!-- -->
+          |
+          <!-- -->
+          07/15/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/xtoken-rekt-x2/">
+           X-Token - REKT X2
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          4,500,000
+          <!-- -->
+          |
+          <!-- -->
+          08/29/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/11-rekt/">
+           Eleven Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          4,500,000
+          <!-- -->
+          |
+          <!-- -->
+          06/22/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/chainswap-rekt/">
+           ChainSwap - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          4,400,000
+          <!-- -->
+          |
+          <!-- -->
+          07/11/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/daomaker-rekt/">
+           DAO Maker - REKT
+          </a>
+          <span class="leaderboard-audit">
+           TBC
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          4,000,000
+          <!-- -->
+          |
+          <!-- -->
+          09/04/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/jaypegs-automart-rekt/">
+           JayPegs Automart - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          3,100,000
+          <!-- -->
+          |
+          <!-- -->
+          09/17/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/pancakebunny2-rekt/">
+           PancakeBunny - REKT 2
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          2,400,000
+          <!-- -->
+          |
+          <!-- -->
+          07/16/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/au-dodo-rekt/">
+           DODO - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          2,000,000
+          <!-- -->
+          |
+          <!-- -->
+          03/09/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/akropolis-rekt/">
+           Akropolis - REKT
+          </a>
+          <span class="leaderboard-audit">
+           CertiK, SmartDec
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          2,000,000
+          <!-- -->
+          |
+          <!-- -->
+          11/12/2020
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/bent-finance/">
+           Bent Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          1,750,000
+          <!-- -->
+          |
+          <!-- -->
+          12/21/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/8ight-finance-rekt/">
+           8ight Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          1,750,000
+          <!-- -->
+          |
+          <!-- -->
+          12/08/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/levyathan-rekt/">
+           Levyathan - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          1,500,000
+          <!-- -->
+          |
+          <!-- -->
+          07/30/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/the-big-combo/">
+           The Big Combo (Growth DeFi - REKT)
+          </a>
+          <span class="leaderboard-audit">
+           Consensys Dilligence
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          1,300,000
+          <!-- -->
+          |
+          <!-- -->
+          02/09/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/autoshark-rekt/">
+           Autoshark - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Techrate
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          745,000
+          <!-- -->
+          |
+          <!-- -->
+          05/24/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/merlinlabs-rekt/">
+           Merlin Labs - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Hacken
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          680,000
+          <!-- -->
+          |
+          <!-- -->
+          05/26/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/merlin2-rekt/">
+           Merlin Labs - REKT 2
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          550,000
+          <!-- -->
+          |
+          <!-- -->
+          05/26/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/merlin3-rekt/">
+           Merlin Labs - R3KT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          330,000
+          <!-- -->
+          |
+          <!-- -->
+          06/29/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/saddle-finance-rekt/">
+           Saddle Finance - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Openzeppelin, Certik, Quantstamp
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          275,735
+          <!-- -->
+          |
+          <!-- -->
+          01/20/2021
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="leaderboard-row">
+         <div class="leaderboard-row-title">
+          <a href="/safedollar-rekt/">
+           SafeDollar - REKT
+          </a>
+          <span class="leaderboard-audit">
+           Unaudited
+          </span>
+         </div>
+         <div class="leaderboard-row-details">
+          \$
+          <!-- -->
+          248,000
+          <!-- -->
+          |
+          <!-- -->
+          06/28/2021
+         </div>
+        </div>
+       </li>
+      </ol>
+      <p class="leaderboard-footer">
+       here lie the names of some of the defi protocols that have fallen victim
+to attack, exploit or arbitrage. this list is not complete and it never will be.
+these protocols are listed with respect; we appreciate and understand the work
+that lies behind each name.
+      </p>
+     </div>
+    </main>
+    <footer class="site-footer">
+     <div class="inner">
+      <a class="subscribe" href="http://eepurl.com/hd4HkP" target="\_blank">
+       SUBSCRIBE
+      </a>
+      <div>
+       <section class="footer-nav-links">
+        <a href="https://www.youtube.com/watch?v=v1Z5BnBuFyE" rel="noopener
+noreferrer" target="\_blank">
+         Hopium
+        </a>
+        <span class="divider">
+        </span>
+        <a href="https://opensea.io/collection/rekt-news-hacks-hopium"
+rel="noopener noreferrer" target="\_blank">
+         Opensea
+        </a>
+       </section>
+       <section class="copyright">
+        all content copyright
+        <!-- -->
+        <a href="/">
+         rekt
+        </a>
+        ©
+        <!-- -->
+        2022
+        <!-- -->
+        •
+        <!-- -->
+        all rights reserved
+        <!-- -->
+        .
+       </section>
+       <section class="poweredby">
+        donate
+        <!-- -->
+        (ETH/ERC20):
+        <a
+href="https://etherscan.io/address/0x3C5c2F4bCeC51a36494682f91Dbc6cA7c63B514C"
+rel="noopener noreferrer" target="\_blank">
+         0x3C5c2F4bCeC51a36494682f91Dbc6cA7c63B514C
+        </a>
+       </section>
+       <section class="poweredby">
+        run by
+        <!-- -->
+        <a href="https://twitter.com/RektHQ">
+         Rekt DAO
+        </a>
+        .
+        <!-- -->
+        founded by
+        <!-- -->
+        <a href="https://twitter.com/bneiluj" rel="noopener noreferrer"
+target="\_blank">
+         Julien Bouteloup
+        </a>
+       </section>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script id="\_\_NEXT\_DATA\_\_" type="application/json">
+   \{"props":\{"pageProps":\{"leaderboard":[\{"date":"08/11/2021","featured":false,"
+title":"Poly Network - REKT","rekt":\{"amount":611000000,"audit":"Unaudited","dat
+e":"08/10/2021"\},"tags":["Poly Network","REKT"],"excerpt":"This is it rekt
+readers; the big one. \$611M stolen from Poly Network, but has the hacker had a
+change of heart? They're returning the money bit by bit.","banner":"https://raw.
+githubusercontent.com/RektHQ/Assets/main/images/2021/08/poly-
+header.png","slug":"polynetwork-
+rekt"\},\{"date":"12/05/2021","featured":false,"title":"BitMart - REKT","rekt":\{"a
+mount":196000000,"audit":"N/A","date":"12/04/2021"\},"tags":["CeFi","BitMart","RE
+KT"],"excerpt":"Is CeFi any safer than DeFi? If not, why use it? BitMart has
+lost \$196M, placing it at number 2 on our leaderboard. Will they commit to
+refunding their users?","banner":"https://raw.githubusercontent.com/RektHQ/Asset
+s/main/images/2021/12/bitmart-header.png","slug":"bitmart-
+rekt"\},\{"date":"10/04/2021","featured":false,"title":"Compound - REKT","rekt":\{"
+amount":147000000,"audit":"Unaudited","date":"09/29/2021"\},"tags":["Compound","R
+EKT"],"excerpt":"It’s worse than we thought. Last week \textasciitilde{}\$80M in excess COMP was
+wrongly distributed. Now another \textasciitilde{}\$68.8M has been sent to the vulnerable vault,
+and even more COMP is being given away.","banner":"https://raw.githubusercontent
+.com/RektHQ/Assets/main/images/2021/10/comp2-header.png","slug":"compound-
+rekt"\},\{"date":"12/13/2021","featured":false,"title":"Vulcan Forged - REKT","rek
+t":\{"amount":140000000,"audit":"Unaudited","date":"12/13/2021"\},"tags":["Vulcan
+Forged","CEX","REKT"],"excerpt":"Four cases in ten days. \$140M gone from Vulcan
+Forged. \textbackslash{}"Compromised keys\textbackslash{}" are so hot right now.","banner":"https://raw.github
+usercontent.com/RektHQ/Assets/main/images/2021/12/vulcan-
+header.png","slug":"vulcan-forged-
+rekt"\},\{"date":"10/28/2021","featured":false,"title":"Cream Finance - REKT 2","r
+ekt":\{"amount":130000000,"audit":"Unaudited","date":"10/27/2021"\},"tags":["Cream
+","Yearn","REKT"],"excerpt":"Cream Finance has been hacked (again) for \textasciitilde{}\$130
+million. The Yearn Finance decentralised monopoly has grown too large. Why
+accumulate so many protocols if you don’t care for their users?","banner":"https
+://raw.githubusercontent.com/RektHQ/Assets/main/images/2021/10/cream2-header.png
+","slug":"cream-rekt-2"\},\{"date":"12/02/2021","featured":false,"title":"Badger -
+REKT","rekt":\{"amount":120000000,"audit":"Unaudited","date":"12/02/2021"\},"tags"
+:["Badger","REKT"],"excerpt":"rekt roadkill. \$120M taken in a front-end attack,
+placing Badger at number four on the leaderboard. rekt repeats; \textbackslash{}"infinite
+approval means unlimited trust.\textbackslash{}"","banner":"https://raw.githubusercontent.com/R
+ektHQ/Assets/main/images/2021/12/badger-header.png","slug":"badger-
+rekt"\},\{"date":"12/12/2021","featured":false,"title":"Ascendex - REKT","rekt":\{"
+amount":77700000,"audit":"Unaudited","date":"12/12/2021"\},"tags":["Ascendex","RE
+KT"],"excerpt":"Two CEX rekt in one week. Why do we see more “compromised keys”
+in uncertain markets? \$77.7M gone from Ascendex.","banner":"https://raw.githubus
+ercontent.com/RektHQ/Assets/main/images/2021/12/ascendex-
+header.png","slug":"ascendex-
+rekt"\},\{"date":"04/20/2021","featured":false,"title":"EasyFi - REKT","rekt":\{"am
+ount":59000000,"audit":"Unaudited","date":"04/19/2021"\},"tags":["REKT"],"excerpt
+":"The first big hack of a layer two protocol was EASY - \$6 million in
+stablecoins and \textasciitilde{}\$53 million in EASY tokens gone without any complications, when
+the mnemonic keys for Easy Network fell into the wrong hands.","banner":"https:/
+/raw.githubusercontent.com/RektHQ/Assets/main/images/2021/04/easy-
+header.png","slug":"easyfi-
+rekt"\},\{"date":"04/28/2021","featured":false,"title":"Uranium Finance - REKT","r
+ekt":\{"amount":57200000,"audit":"Unaudited","date":"04/28/2021"\},"tags":["Uraniu
+m","REKT"],"excerpt":"Cross-chain hacks are on the rise. Uranium Finance
+exploded again, leaving BSC users to cope with the fall out. \$57 million gone,
+in the latest hack on Binance Smart Chain.","banner":"https://raw.githubusercont
+ent.com/RektHQ/Assets/main/images/2021/04/uran-header.png","slug":"uranium-
+rekt"\},\{"date":"11/06/2021","featured":false,"title":"bZx - REKT","rekt":\{"amoun
+t":55000000,"audit":"Unaudited","date":"11/05/2021"\},"tags":["bZx","REKT"],"exce
+rpt":"Attacks can come from all angles. Straight to number 6 on our leaderboard
+for bZx, who lost \$55M to a phishing attack.","banner":"https://raw.githubuserco
+ntent.com/RektHQ/Assets/main/images/2021/11/bzx-header.png","slug":"bzx-
+rekt"\},\{"date":"05/20/2021","featured":false,"title":"PancakeBunny - REKT","rekt
+":\{"amount":45000000,"audit":"Unaudited","date":"05/19/2021"\},"tags":["PancakeBu
+nny","BSC","REKT"],"excerpt":"The BSC bloodbath continues. \$45 million gone from
+\textbackslash{}"PancakeBunny\textbackslash{}". At its peak, Pancake Bunny had over \$10 billion in TVL. At the
+time of writing, that TVL is down to just over \$1 billion. “Aren’t Flash loans
+Earitating” said the hacker.","banner":"https://raw.githubusercontent.com/RektHQ
+/Assets/main/images/2021/05/bunny-header.png","slug":"pancakebunny-
+rekt"\},\{"date":"09/29/2020","featured":false,"title":"Kucoin -
+REKT","rekt":\{"amount":45000000,"audit":"Internal
+audit","date":"09/29/2020"\},"tags":["kucoin","epic","hack"],"excerpt":"After
+what was described as an “unplanned movement of funds” on September 26th, Kucoin
+has reassured their users that all assets stolen in the hack will be returned
+and that Kucoin is fully insured for this scenario.","banner":"https://raw.githu
+busercontent.com/RektHQ/Assets/main/images/2020/09/kucoinwojak-2.jpg","slug":"ep
+ic-hack-homie"\},\{"date":"02/13/2021","featured":false,"title":"Alpha Finance -
+REKT","rekt":\{"amount":37500000,"audit":"Quantstamp,
+Peckshield","date":"02/13/2021"\},"tags":["Alpha
+Finance","Cronje","rekt"],"excerpt":"The dark arts of DeFi remain the most
+profitable. \textasciitilde{}\$37.5M gone in a tale of fake magic, confusion and accusation. The
+victim has singled out their attacker.","banner":"https://raw.githubusercontent.
+com/RektHQ/Assets/main/images/2021/02/header-alpha-homora.png","slug":"alpha-
+finance-rekt"\},\{"date":"09/21/2021","featured":false,"title":"Vee Finance -
+REKT","rekt":\{"amount":34000000,"audit":"Slowmist,
+Certik","date":"09/21/2021"\},"tags":["Vee Finance","REKT"],"excerpt":"Top ten
+thievery. \$34 million taken from Vee Finance earns them the number 7 spot on our
+leaderboard, yet nobody seems surprised. What’s normal for us is not normal else
+where.","banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/20
+21/09/vee-header.png","slug":"veefinance-
+rekt"\},\{"date":"03/04/2021","featured":false,"title":"Meerkat Finance - BSC - RE
+KT","rekt":\{"amount":32000000,"audit":"Unaudited","date":"03/04/2021"\},"tags":["
+BSC","Meerkat","REKT"],"excerpt":"An impressive debut for the first major
+exploit on BSC, as Meerkat Finance head straight to number three on our
+leaderboard. Will CZ and team roll back their corporate chain, or allow their
+users to suffer the loss? This suricate scam leaves the thieves with nowhere to 
+hide.","banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/202
+1/03/mf-header.png","slug":"meerkat-finance-bsc-
+rekt"\},\{"date":"11/30/2021","featured":false,"title":"MonoX -
+REKT","rekt":\{"amount":31400000,"audit":"Halborn,
+Peckshield","date":"11/30/2021"\},"tags":["MonoX","REKT"],"excerpt":"rekt by
+their own token. Mono X lost \$31M via a price manipulation of their recently
+launched \$MONO. How did two audits not prevent this?","banner":"https://raw.gith
+ubusercontent.com/RektHQ/Assets/main/images/2021/11/monox-
+header.png","slug":"monox-
+rekt"\},\{"date":"05/02/2021","featured":false,"title":"Spartan Protocol - REKT","
+rekt":\{"amount":30500000,"audit":"Certik","date":"05/02/2021"\},"tags":["Spartan
+Protocol","REKT"],"excerpt":"Sparta has fallen. A flaw in the code allowed an
+attacker to drain the SPARTA/WBNB liquidity pool, earning themselves \$30 million
+and the 6th position on the rekt leaderboard as a result.","banner":"https://raw
+.githubusercontent.com/RektHQ/Assets/main/images/2021/05/sparta-
+header.png","slug":"spartan-
+rekt"\},\{"date":"12/20/2021","featured":false,"title":"Grim Finance -
+REKT","rekt":\{"amount":30000000,"audit":"Solidity
+Finance","date":"12/18/2021"\},"tags":["Grim Finance","REKT"],"excerpt":"Don’t
+fear the reaper. Grim Finance is rekt. \$30M gone, position 18 on the leaderboard
+.","banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2021/12
+/grim-header.png","slug":"grim-finance-
+rekt"\},\{"date":"06/24/2021","featured":false,"title":"StableMagnet - REKT","rekt
+":\{"amount":27000000,"audit":"Techrate","date":"06/23/2021"\},"tags":["StableMagn
+et","BSC","REKT"],"excerpt":"A few hours before the attack, we received a
+message from an anonymous source suggesting that StableMagnet would rugpull. We
+couldn’t verify the claims, so our hands were tied.","banner":"https://raw.githu
+busercontent.com/RektHQ/Assets/main/images/2021/06/mag-
+header.png","slug":"stablemagnet-
+rekt"\},\{"date":"03/05/2021","featured":false,"title":"Paid Network - REKT","rekt
+":\{"amount":27000000,"audit":"Unaudited","date":"03/05/2021"\},"tags":["PAID","RE
+KT"],"excerpt":"Willy Wonka returns with the infinite mint, creating
+59,471,745.571 PAID tokens before dumping them onto the unsuspecting Oompa
+Loompas who were providing liquidity to the PAID/ETH pair on Uniswap.","banner":
+"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2021/03/paidtokill.
+png","slug":"paid-rekt"\},\{"date":"10/26/2020","featured":false,"title":"Harvest
+Finance - REKT","rekt":\{"amount":25000000,"audit":"Haechi,
+Peckshield","date":"10/26/2020"\},"tags":["harvest finance","flash
+loan","hack"],"excerpt":"The reaper does not listen to the harvest. A skilled
+farmer used flash loans to reap \$24 million from the FARM\_USDT and FARM\_USDC poo
+ls.","banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2020/
+10/reaper-3.jpg","slug":"harvest-finance-
+rekt"\},\{"date":"05/12/2021","featured":false,"title":"XToken - REKT","rekt":\{"am
+ount":24000000,"audit":"Peckshield","date":"05/12/2021"\},"tags":["XToken","REKT"
+],"excerpt":"The X-ploiters live amongst us. \$24 Million gone from XToken. A
+sub-species of crypto users have developed superhuman abilities which allow them
+to tear through holes in smart contracts or mould them to their will with flash
+loans and arbitrage.","banner":"https://raw.githubusercontent.com/RektHQ/Assets/
+main/images/2021/05/xtok-header.png","slug":"xtoken-
+rekt"\},\{"date":"08/04/2021","featured":false,"title":"Popsicle Finance - REKT","
+rekt":\{"amount":20000000,"audit":"Peckshield","date":"08/03/2021"\},"tags":["Pops
+icle","REKT"],"excerpt":"Protocol meltdown. \textasciitilde{}\$20 million gone. A complex hack of
+a simple bug leaves Popsicle Finance in a sticky situation.","banner":"https://r
+aw.githubusercontent.com/RektHQ/Assets/main/images/2021/08/popsicle-
+header.png","slug":"popsicle-
+rekt"\},\{"date":"11/22/2020","featured":false,"title":"Pickle Finance -
+REKT","slug":"pickle-finance-rekt","rekt":\{"amount":19700000,"audit":"Unaudited"
+,"date":"11/22/2020"\},"tags":["pickle finance","Rekt"],"excerpt":"The
+fermentation of finance continues. Even pickles have a shelf life. Pickle
+Finance has become the latest victim of the hack epidemic. However, this time,
+something is different{\ldots}","banner":"https://raw.githubusercontent.com/RektHQ/As
+sets/main/images/2020/11/rr.jpeg"\},\{"date":"08/30/2021","featured":false,"title"
+:"Cream Finance - REKT","rekt":\{"amount":18800000,"audit":"Unaudited","date":"08
+/30/2021"\},"tags":["Cream","REKT"],"excerpt":"Inspector rekt back once again.
+\$18.8M lost to a ghostface killer, this time from an old school DeFi protocol.",
+"banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2021/08/cr
+eam-header.png","slug":"cream-
+rekt"\},\{"date":"11/26/2021","featured":false,"title":"Snowdog - REKT","rekt":\{"a
+mount":18100000,"audit":"Unaudited","date":"11/25/2021"\},"tags":["Snowdog","Aval
+anche","REKT"],"excerpt":"A “game theory experiment” or a new breed of rug pull?
+\textasciitilde{}\$18M snapped up by just the first two transactions of Snowdog’s buyback. Was it
+luck or inside information that led the top dogs to success?","banner":"https://
+raw.githubusercontent.com/RektHQ/Assets/main/images/2021/11/snowdog-
+header.png","slug":"snowdog-
+rekt"\},\{"date":"05/17/2021","featured":false,"title":"bEarn - REKT","rekt":\{"amo
+unt":18000000,"audit":"Unaudited","date":"05/17/2021"\},"tags":["bEarn","REKT"],"
+excerpt":"\$18 million gone from bEarnFi. Has the hacker returned richer to their
+day job, or do they attack on weekends as they expect less attention? As we
+watch the rapid rise and fall of TVL on BSC, it becomes even more apparent that
+time is the most valuable audit of all.","banner":"https://raw.githubusercontent
+.com/RektHQ/Assets/main/images/2021/05/bearn-header.png","slug":"bearn-
+rekt"\},\{"date":"10/15/2021","featured":false,"title":"Indexed Finance - REKT","r
+ekt":\{"amount":16000000,"audit":"Unaudited","date":"10/14/2021"\},"tags":["Indexe
+d Finance","REKT"],"excerpt":"\$16 million taken from Indexed Finance. That’s one
+more protocol added to the rekt register, and \$16 million more on our
+leaderboard. Is anonymity the only way to stay safe?","banner":"https://raw.gith
+ubusercontent.com/RektHQ/Assets/main/images/2021/10/Index-
+Header.png","slug":"indexed-finance-
+rekt"\},\{"date":"09/29/2020","featured":false,"title":"Eminence - Rekt in prod","
+rekt":\{"amount":15000000,"audit":"Unaudited","date":"09/28/2020"\},"tags":["yfi",
+"defi","hack","Eminence","Cronje"],"excerpt":"The crypto community went into
+another frenzy last night, as Andre Cronje's unreleased project became the focus
+of hundreds of users, who bought \$15 million of the \$EMN token.","banner":"https
+://raw.githubusercontent.com/RektHQ/Assets/main/images/2020/12/tease.jpg","slug"
+:"eminence-rekt-in-
+prod"\},\{"date":"03/01/2021","featured":false,"title":"Furucombo - REKT","rekt":\{
+"amount":14000000,"audit":"Unaudited","date":"02/27/2021"\},"tags":["Furucombo","
+rekt"],"excerpt":"Better to wait than to swing and miss. rekt gets in the ring
+with Limzero and Kurt Barry to investigate the \$14m furucombo knockout.
+\textbackslash{}"Infinite approval\textbackslash{}" is never safe.","banner":"https://raw.githubusercontent.co
+m/RektHQ/Assets/main/images/2021/03/furu-header.png","slug":"furucombo-
+rekt"\},\{"date":"12/02/2020","featured":false,"title":"Compounder Finance -
+REKT","rekt":\{"amount":12000000,"audit":"Solidity
+Finance","date":"12/02/2020"\},"tags":["c3pr","audit","rugpull"],"excerpt":"The
+rekt reaper has a way of making people talk. In the final moments, when all TVL
+has gone, and the drawdown seems unbearable, a faceless figure enters the
+chat{\ldots} Follow our anonymous author as he tracks down and interrogates the
+perpetrator of the \$12M Compounder Finance rug pull.","banner":"https://lh6.goog
+leusercontent.com/TLkLMvzALcncoyVu5MGEumqmlOqk7KWADtRJ8Uj62TXUWi\_SZg\_gw9iiF9hVi\_
+vgMp55Jvpy5Bl0d\_ZxOcmJfZnEALbmRDkcrfbNPaO3F4b-qsIEjOfU3Tp4bKk54JN2wzTCVDhE","slu
+g":"deathbed-
+confessions-c3pr"\},\{"date":"05/08/2021","featured":false,"title":"Value DeFi -
+REKT 3","rekt":\{"amount":11000000,"audit":"Unaudited","date":"05/07/2021"\},"tags
+":["Value DeFi","REKT"],"excerpt":"Twice in one week. Value DeFi is a
+trainwreck. Six months ago they lost \$7M. Three days ago they lost \$10M. Now
+they’ve lost another \$11M. What went so wrong with Value DeFi?","banner":"https:
+//raw.githubusercontent.com/RektHQ/Assets/main/images/2021/05/3value-
+header.png","slug":"value-
+rekt3"\},\{"date":"02/05/2021","featured":false,"title":"Yearn - REKT","rekt":\{"am
+ount":11000000,"audit":"Unaudited","date":"02/05/2021"\},"tags":["Yearn","REKT"],
+"excerpt":"No protocol is too big to fail. The extreme power of flash loans
+makes blue chips fade to black. Even the mighty Yearn falls victim to the
+arbitrageur. Will Yearn be bailed out by
+CeFi?","banner":"https://lh6.googleusercontent.com/2htMKXFnd\_RYudETxssIO-ztLBIhB
+Xwlq4jADQmX80p682WvwhLmjSjoYhE5spF\_f\_Yfan8DLIe4B2NwLLIec9tH5wt9H\_RyRertgtKzELIVQ
+rq3XTwFhwULAoP9BHzzmCeyqsWg","slug":"yearn-
+rekt"\},\{"date":"01/04/2022","featured":true,"title":"Arbix Finance - REKT","rekt
+":\{"amount":10000000,"audit":"Certik","date":"01/04/2022"\},"tags":["Arbix
+Finance","REKT"],"excerpt":"New year, old news. Rug pulls are common on Binance
+Smart Chain; we’re only mentioning this one because it was larger than most.
+\textasciitilde{}\$10 million taken, and Arbix Finance are nowhere to be seen.","banner":"https:/
+/raw.githubusercontent.com/RektHQ/Assets/main/images/2022/01/arbix-
+header.png","slug":"arbix-
+rekt"\},\{"date":"05/08/2021","featured":false,"title":"Rari Capital - REKT","rekt
+":\{"amount":10000000,"audit":"Quantstamp","date":"05/08/2021"\},"tags":["Rari
+Capital","REKT"],"excerpt":"Young blood \textbackslash{}u0026 new money. Rari Capital has
+fallen victim to a serial attacker, who came from across chains to drain the
+Rari Capital pool, removing \$10 million worth of ETH.","banner":"https://raw.git
+hubusercontent.com/RektHQ/Assets/main/images/2021/05/rari-
+header.png","slug":"rari-capital-
+rekt"\},\{"date":"05/06/2021","featured":false,"title":"Value DeFi - REKT 2","rekt
+":\{"amount":10000000,"audit":"Unaudited","date":"05/05/2021"\},"tags":["Value
+DeFi","REKT"],"excerpt":"2 for 1, that’s Value DeFi - The first protocol to
+feature twice on the rekt leaderboard. First seven million, and now ten million
+dollars taken, as Value DeFi gets rekt cross-chains.","banner":"https://raw.gith
+ubusercontent.com/RektHQ/Assets/main/images/2021/05/value2-header2png.png","slug
+":"value-rekt2"\},\{"date":"12/29/2020","featured":false,"title":"Cover -
+REKT","rekt":\{"amount":9400000,"audit":"Arcadia
+Group","date":"12/29/2020"\},"tags":["cover","Rekt"],"excerpt":"Next time, take
+care of your own shit. Infinite mint but it’s no Willy Wonka - this is a
+Hollywood classic insurance themed noir. The black and white outcomes of
+insurance policies lend themselves well to Hollywood storylines.","banner":"http
+s://lh4.googleusercontent.com/IgAdM7JctrErxRd1kLmyJz4CEUbBDH1xZdsE4h7YZ\_6NTRmWbF
+3p7rNREX-4BcKiTRH9FygNeZXSOzLCe2PqmVZ2NrWz5fb6ZKpPREHc4x3zsCoF8RcQvhj9Sx5XlBDiM0
+4p1Xnh","slug":"cover-rekt"\},\{"date":"08/13/2021","featured":false,"title":"Punk
+Protocol - REKT","rekt":\{"amount":8950000,"audit":"Unaudited","date":"08/10/2021
+"\},"tags":["Punk Protocol","REKT"],"excerpt":"Punk is dead. On Aug 10th, Punk
+Protocol was hacked for \$8.95M, \textasciitilde{}\$5M of which was later returned.","banner":"htt
+ps://raw.githubusercontent.com/RektHQ/Assets/main/images/2021/08/punk-
+header.png","slug":"punkprotocol-
+rekt"\},\{"date":"12/22/2021","featured":false,"title":"Visor Finance - REKT","rek
+t":\{"amount":8200000,"audit":"Unaudited","date":"12/21/2021"\},"tags":["Visor
+Finance","REKT"],"excerpt":"It is the season of giving, and Visor Finance is
+going all in. Visor allowed an anonymous actor to mint \$8.2M in VISR.","banner":
+"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2021/12/visor-
+header.png","slug":"visor-finance-
+rekt"\},\{"date":"07/26/2021","featured":false,"title":"THORChain - REKT 2","rekt"
+:\{"amount":8000000,"audit":"THORChain","date":"07/22/2021"\},"tags":["THORChain",
+"REKT"],"excerpt":"THORChain took a hammering. Recently the protocol was hit for
+\$5M. A second strike saw them lose another \$8M. What's next for THOR and their
+fanatical followers?","banner":"https://raw.githubusercontent.com/RektHQ/Assets/
+main/images/2021/7/thor2-header.png","slug":"thorchain-
+rekt2"\},\{"date":"11/17/2020","featured":false,"title":"Hack Epidemic (Origin
+Protocol - REKT)","rekt":\{"amount":8000000,"audit":"Unaudited","date":"11/17/202
+0"\},"tags":["hack","flash loan","origin","cheese bank"],"excerpt":"Stay at home,
+wear a mask, the hack epidemic is spreading.These are dark times for weak code.
+Developers need to put their protocols into lockdown. Greed is contagious, and
+hacks bring eye-catching prizes. In just 24 hours we hear of two more attacks.",
+"banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2020/11/Un
+ti111tled.png","slug":"hack-
+epidemic"\},\{"date":"07/13/2021","featured":false,"title":"Anyswap - REKT","rekt"
+:\{"amount":7900000,"audit":"Unaudited","date":"07/10/2021"\},"tags":["Anyswap","R
+EKT"],"excerpt":"The bridges are burning. Anyswap and Chainswap in 24 hours.
+They say it's fixed, but can you trust them?","banner":"https://raw.githubuserco
+ntent.com/RektHQ/Assets/main/images/2021/7/anyswap-header.png","slug":"anyswap-
+rekt"\},\{"date":"12/18/2020","featured":false,"title":"Warp Finance - REKT","rekt
+":\{"amount":7800000,"audit":"Hacken","date":"12/18/2020"\},"tags":["warp
+finance","Rekt"],"excerpt":"All human beings, as we meet them, are commingled
+out of good and evil. As Jekyll was to Hyde, so white hat is to black. The
+developers we trust in daylight could be different in the night.  A potion of
+knowledge with irresistible results - who could resist when the punishment is ze
+ro?","banner":"https://lh6.googleusercontent.com/cu47l8eTpNnHgVR\_A2gq2boptXZBIIF
+HI0yO9ptnxWEDwjkAjVTH4vKPdrbsAe2nQZQNtz2YLiEfEb-
+UpPVg2-Mqk1kh3U-mxquiJZTn8TD1DsjtBVAdSPDvu0rB08TjRGmdycBP","slug":"warp-finance-
+rekt"\},\{"date":"05/28/2021","featured":false,"title":"BurgerSwap - REKT","rekt":
+\{"amount":7200000,"audit":"Unaudited","date":"05/28/2021"\},"tags":["BurgerSwap",
+"REKT"],"excerpt":"The hackers are really spoiling us this week with our fourth
+helping of the exact same meal. Can you ever really get tired of a classic?
+\$7.2M was stolen from BurgerSwap in just 14 servings.","banner":"https://raw.git
+hubusercontent.com/RektHQ/Assets/main/images/2021/05/burgerswap-
+header.png","slug":"burgerswap-
+rekt"\},\{"date":"11/14/2020","featured":false,"title":"Value DeFi - REKT","rekt":
+\{"amount":7000000,"audit":"Peckshield","date":"11/14/2020"\},"tags":["value
+defi","rekt","flash loan"],"excerpt":"Did they really know flashloan? The value
+of a reputation is volatile. Humility brings stability - boast too much and you
+will get rekt. Value DeFi was exploited today for \$7,000,000. Another harsh
+lesson from the flash loan family.","banner":"https://raw.githubusercontent.com/
+RektHQ/Assets/main/images/2020/11/jumpoutwindow-7.jpg","slug":"value-defi-
+rekt"\},\{"date":"06/18/2021","featured":false,"title":"Alchemix - REKT","rekt":\{"
+amount":6500000,"audit":"Unaudited","date":"06/16/2021"\},"tags":["alchemix","REK
+T"],"excerpt":"DeFi is a volatile protoscience. The Alchemix post-mortem shows
+how modern-day alchemists almost succeeded at safely creating gold out of the et
+her.","banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2021
+/06/alcx-header.png","slug":"alchemix-
+rekt"\},\{"date":"05/29/2021","featured":false,"title":"Belt - REKT","rekt":\{"amou
+nt":6300000,"audit":"Haechi","date":"05/29/2021"\},"tags":["Belt","BSC","Rekt"],"
+excerpt":"Welcome to the slaughterhouse. Another fork of a fork has rolled off
+the conveyor belt with \$6.3M falling straight into the hands of the hacker.","ba
+nner":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2021/05/belt-
+header.png","slug":"belt-
+rekt"\},\{"date":"07/15/2021","featured":false,"title":"Bondly - REKT","rekt":\{"am
+ount":5900000,"audit":"Unaudited","date":"07/15/2021"\},"tags":["Bondly","REKT"],
+"excerpt":"In which Bondly battles the infinite mint. BONDLY token holders are
+now at a loss, due to an infinite mint exploit in which the attacker made a
+profit of \$5.9 million.","banner":"https://raw.githubusercontent.com/RektHQ/Asse
+ts/main/images/2021/7/bondly-header.png","slug":"bondly-
+rekt"\},\{"date":"03/14/2021","featured":false,"title":"Roll - REKT","rekt":\{"amou
+nt":5700000,"audit":"Unaudited","date":"03/14/2021"\},"tags":["Roll","Social
+Tokens","REKT"],"excerpt":"Attacks can happen at any time, but the weekends are
+always busiest. Social tokens haven’t taken off yet, but that doesn’t mean Roll
+didn’t get rekt. \$5.7 million gone, and still no word from the Roll team.","bann
+er":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2021/03/roll-
+header.png","slug":"roll-
+rekt"\},\{"date":"07/16/2021","featured":false,"title":"THORChain - REKT","rekt":\{
+"amount":5000000,"audit":"Unaudited","date":"07/15/2021"\},"tags":["THORChain","R
+EKT"],"excerpt":"Even the old gods cannot escape the exploits. As the cross-
+chain attacks continue, THORChain becomes the latest victim. \$5 million lost.","
+banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2021/7/thor
+-header.png","slug":"thorchain-
+rekt"\},\{"date":"08/30/2021","featured":false,"title":"X-Token - REKT X2","rekt":
+\{"amount":4500000,"audit":"Unaudited","date":"08/29/2021"\},"tags":["X-Token","RE
+KT"],"excerpt":"Some sequels should never be written. Three months ago this team
+lost \$24 million - in the same token, to the same attack technique. Why did they
+let it happen again?","banner":"https://raw.githubusercontent.com/RektHQ/Assets/
+main/images/2021/08/2xtok-header.png","slug":"xtoken-
+rekt-x2"\},\{"date":"06/23/2021","featured":false,"title":"Eleven Finance - REKT",
+"rekt":\{"amount":4500000,"audit":"Unaudited","date":"06/22/2021"\},"tags":["Eleve
+n Finance","BSC","REKT"],"excerpt":"This one almost struck a nerve.
+Eleven.finance, a yield aggregator on Binance Smart Chain (BSC) and Polygon
+(MATIC) was exploited for a total of \$4.5M.","banner":"https://raw.githubusercon
+tent.com/RektHQ/Assets/main/images/2021/06/11-header.png","slug":"11-rekt"\},\{"da
+te":"07/13/2021","featured":false,"title":"ChainSwap - REKT","rekt":\{"amount":44
+00000,"audit":"Unaudited","date":"07/11/2021"\},"tags":["ChainSwap","REKT"],"exce
+rpt":"As the demand for DeFi increases across chains, the bridges that join them
+turn into targets themselves. A chain is only as strong as its weakest link… Who
+will break next?","banner":"https://raw.githubusercontent.com/RektHQ/Assets/main
+/images/2021/7/chainswap-header.png","slug":"chainswap-
+rekt"\},\{"date":"09/06/2021","featured":false,"title":"DAO Maker -
+REKT","rekt":\{"amount":4000000,"audit":"TBC","date":"09/04/2021"\},"tags":["DAO
+Maker","REKT"],"excerpt":"DAO Maker meet their maker. Again. \$4M lost, less than
+a month after losing \$7M. If you get rekt on repeat then we have to say somethin
+g{\ldots}","banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2021
+/09/daomaker-header.png","slug":"daomaker-
+rekt"\},\{"date":"09/18/2021","featured":false,"title":"JayPegs Automart - REKT","
+rekt":\{"amount":3100000,"audit":"Unaudited","date":"09/17/2021"\},"tags":["NFT","
+Sushi","JayPeg","REKT"],"excerpt":"A blue-chip rekt by a front-end attack.
+Remind us, which part of crypto is supposed to be “trustless”? Misplaced faith
+(temporarily) cost MISO \$3.1 million.","banner":"https://raw.githubusercontent.c
+om/RektHQ/Assets/main/images/2021/09/jaypeg-header.png","slug":"jaypegs-
+automart-rekt"\},\{"date":"07/18/2021","featured":false,"title":"PancakeBunny -
+REKT 2","rekt":\{"amount":2400000,"audit":"Unaudited","date":"07/16/2021"\},"tags"
+:["PancakeBunny","Polygon","REKT"],"excerpt":"Two months ago PancakeBunny got
+rekt on BSC, now the same thing has happened on Polygon. \$2.4 million lost. How 
+earitating.","banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/imag
+es/2021/7/pancbunny2-header.png","slug":"pancakebunny2-rekt"\},\{"date":"03/09/202
+1","featured":false,"title":"DODO - REKT","rekt":\{"amount":2000000,"audit":"Unau
+dited","date":"03/09/2021"\},"tags":["DODO","REKT"],"excerpt":"Is it dead or has
+it just gone to bed? DODO was hacked for \$2 million using a fake token attack,
+but the motive remains unclear. One thing’s for sure, whether hat white or black
+- only \$2 million? Must try harder.","banner":"https://raw.githubusercontent.com
+/RektHQ/Assets/main/images/2021/03/dodo-header-twt.png","slug":"au-dodo-
+rekt"\},\{"date":"11/12/2020","featured":false,"title":"Akropolis -
+REKT","rekt":\{"amount":2000000,"audit":"CertiK, SmartDec","date":"11/12/2020"\},"
+tags":["akropolis","delphi","REKT"],"excerpt":"The Akropolis has not been this
+rekt since the battle of Salamina in 480 B.C. A modern day King Xerses has razed
+the Akropolis once more, stealing \$2,000,000 DAI via a combination of flash
+loans and re-entrancy.","banner":"https://raw.githubusercontent.com/RektHQ/Asset
+s/main/images/2020/11/84604-1.jpg","slug":"akropolis-
+rekt"\},\{"date":"12/21/2021","featured":false,"title":"Bent Finance - REKT","rekt
+":\{"amount":1750000,"audit":"Unaudited","date":"12/21/2021"\},"tags":["Bent
+Finance","REKT"],"excerpt":"Who has been bending the rules at Bent Finance?
+\textasciitilde{}\$1.75M taken. Inspector rekt sets things straight.","banner":"https://raw.githu
+busercontent.com/RektHQ/Assets/main/images/2021/12/bent-
+header.png","slug":"bent-
+finance"\},\{"date":"12/08/2021","featured":false,"title":"8ight Finance - REKT","
+rekt":\{"amount":1750000,"audit":"Unaudited","date":"12/08/2021"\},"tags":["8ight
+Finance","REKT"],"excerpt":"Although this is our first story taking place on the
+Harmony chain, there’s nothing new about the protocol. Another Olympus fork,
+another set of \textbackslash{}"compromised keys\textbackslash{}". \$1.75M gone.","banner":"https://raw.githubu
+sercontent.com/RektHQ/Assets/main/images/2021/12/8ight-
+header.png","slug":"8ight-finance-
+rekt"\},\{"date":"08/05/2021","featured":false,"title":"Levyathan - REKT","rekt":\{
+"amount":1500000,"audit":"Unaudited","date":"07/30/2021"\},"tags":["Levyathan","R
+EKT"],"excerpt":"Levyathan Finance sank last week, along with its TVL of \$1.5M.
+Basic errors lead to total destruction. Bad intentions or just raw incompetence?
+You decide.","banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/imag
+es/2021/08/levy-header.png","slug":"levyathan-
+rekt"\},\{"date":"02/09/2021","featured":false,"title":"The Big Combo (Growth DeFi
+- REKT)","rekt":\{"amount":1300000,"audit":"Consensys
+Dilligence","date":"02/09/2021"\},"tags":["BT Finance","Growth
+DeFi"],"excerpt":"The days blur into one. Locked down, wired up and worn out.
+Millions of dollars gone but nobody blinks an eye. BT Finance? Growth DeFi?
+Small name backstreet protocols are easy prey for the serial killers who roam
+these streets without fear.","banner":"https://raw.githubusercontent.com/RektHQ/
+Assets/main/images/2021/02/header-big-combo.jpg","slug":"the-big-
+combo"\},\{"date":"05/25/2021","featured":false,"title":"Autoshark - REKT","rekt":
+\{"amount":745000,"audit":"Techrate","date":"05/24/2021"\},"tags":["Autoshark","RE
+KT"],"excerpt":"Autoshark hacked, now they swim with the fishes, although the
+damage was small - only \textasciitilde{}\$745k profit. Perhaps the hacker who donated \$100k DAI
+to the rekt.news treasury didn’t like to see Autoshark fishing for promotion in
+the replies.","banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/ima
+ges/2021/05/shark-header.png","slug":"autoshark-
+rekt"\},\{"date":"05/26/2021","featured":false,"title":"Merlin Labs - REKT","rekt"
+:\{"amount":680000,"audit":"Hacken","date":"05/26/2021"\},"tags":["Merlin
+Labs","REKT"],"excerpt":"The PancakeBunny attack pulled the rabbit out of the
+hat, now a surprisingly similar string of attacks emerges from Binance Smart
+Chain. \$680,000 taken from Merlin Lab.","banner":"https://raw.githubusercontent.
+com/RektHQ/Assets/main/images/2021/05/merlin-header.png","slug":"merlinlabs-
+rekt"\},\{"date":"05/27/2021","featured":false,"title":"Merlin Labs - REKT 2","rek
+t":\{"amount":550000,"audit":"Unaudited","date":"05/26/2021"\},"tags":["Merlin
+Labs","REKT 2"],"excerpt":"Once was not enough for Merlin Labs. Just 8 hours
+after the first attack, they lost another \textasciitilde{}200 ETH, yet still they remain at the
+bottom of the leaderboard. Must try harder.","banner":"https://raw.githubusercon
+tent.com/RektHQ/Assets/main/images/2021/05/merlin2-header.png","slug":"merlin2-r
+ekt"\},\{"date":"06/29/2021","featured":false,"title":"Merlin Labs - R3KT","rekt":
+\{"amount":330000,"audit":"Unaudited","date":"06/29/2021"\},"tags":["Merlin
+Labs","R3KT"],"excerpt":"The third time’s a charm for Merlin Finance. Why do
+people keep going back?","banner":"https://raw.githubusercontent.com/RektHQ/Asse
+ts/main/images/2021/06/Merlin3-header.png","slug":"merlin3-rekt"\},\{"date":"01/20
+/2021","featured":false,"title":"Saddle Finance -
+REKT","rekt":\{"amount":275735,"audit":"Openzeppelin, Certik,
+Quantstamp","date":"01/20/2021"\},"tags":["saddle
+finance","Fork","Rekt"],"excerpt":"Some things are better left alone. Raise
+\$4.2m, copy the code from Curve, and get rekt. Any investor that backed
+@saddlefinance values profit over progress. Why fund a fork with zero innovation
+?","banner":"https://raw.githubusercontent.com/RektHQ/Assets/main/images/2021/01
+/header-2.jpg","slug":"saddle-finance-
+rekt"\},\{"date":"06/28/2021","featured":false,"title":"SafeDollar - REKT","rekt":
+\{"amount":248000,"audit":"Unaudited","date":"06/28/2021"\},"tags":["SafeDollar","
+Polygon","REKT"],"excerpt":"Your dollars are not safe and they never were. Just
+\$248k taken from a protocol that was called \textbackslash{}"SafeDollar.\textbackslash{}"","banner":"https://r
+aw.githubusercontent.com/RektHQ/Assets/main/images/2021/06/safedollar-
+header.png","slug":"safedollar-rekt"\}]\},"\_\_N\_SSG":true\},"page":"/leaderboard","q
+uery":\{\},"buildId":"ioAkjsqsaK5CQmeaLgUij","isFallback":false,"gsp":true,"locale
+":"en","locales":["en","es","fr","ko","ru","tr","zh"],"defaultLocale":"en","scri
+ptLoader":[]\}
+  </script>
+ </body>
+</html>
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{8}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Get the title}
+\PY{n}{title} \PY{o}{=} \PY{n}{soup}\PY{o}{.}\PY{n}{title}
+\PY{n+nb}{print}\PY{p}{(}\PY{n}{title}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<title>Rekt - Leaderboard</title>
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{9}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{header} \PY{o}{=} \PY{n}{soup}\PY{o}{.}\PY{n}{header}\PY{p}{(}\PY{p}{)}
+\PY{n+nb}{print}\PY{p}{(}\PY{n}{header}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[<div class="site-head-content inner"><a href="/"><img alt="logo" class="site-
+logo inv-asset" src="https://raw.githubusercontent.com/rekthq/assets/main/images
+/logo.svg"/></a><nav><a class="nav-item"
+href="https://merch.rekt.news">merch</a><span class="divider"></span><a
+class="nav-item" href="https://feed.rekt.news">feed</a><span
+class="divider"></span><a class="nav-item nav-item-active"
+href="/leaderboard/">leaderboard</a><span class="divider"></span><span
+class="theme-picker nav-item">dark</span><span class="divider"></span><div
+class="lang-picker"><span class="lang-picker-selected">en<span class="lang-
+picker-arrow">▼</span></span><div class="lang-picker-
+options"></div></div></nav></div>, <a href="/"><img alt="logo" class="site-logo
+inv-asset" src="https://raw.githubusercontent.com/rekthq/assets/main/images/logo
+.svg"/></a>, <img alt="logo" class="site-logo inv-asset"
+src="https://raw.githubusercontent.com/rekthq/assets/main/images/logo.svg"/>,
+<nav><a class="nav-item" href="https://merch.rekt.news">merch</a><span
+class="divider"></span><a class="nav-item"
+href="https://feed.rekt.news">feed</a><span class="divider"></span><a
+class="nav-item nav-item-active" href="/leaderboard/">leaderboard</a><span
+class="divider"></span><span class="theme-picker nav-item">dark</span><span
+class="divider"></span><div class="lang-picker"><span class="lang-picker-
+selected">en<span class="lang-picker-arrow">▼</span></span><div class="lang-
+picker-options"></div></div></nav>, <a class="nav-item"
+href="https://merch.rekt.news">merch</a>, <span class="divider"></span>, <a
+class="nav-item" href="https://feed.rekt.news">feed</a>, <span
+class="divider"></span>, <a class="nav-item nav-item-active"
+href="/leaderboard/">leaderboard</a>, <span class="divider"></span>, <span
+class="theme-picker nav-item">dark</span>, <span class="divider"></span>, <div
+class="lang-picker"><span class="lang-picker-selected">en<span class="lang-
+picker-arrow">▼</span></span><div class="lang-picker-options"></div></div>,
+<span class="lang-picker-selected">en<span class="lang-picker-
+arrow">▼</span></span>, <span class="lang-picker-arrow">▼</span>, <div
+class="lang-picker-options"></div>]
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{10}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{text} \PY{o}{=} \PY{n}{soup}\PY{o}{.}\PY{n}{get\PYZus{}text}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{11}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nb}{print}\PY{p}{(}\PY{n}{soup}\PY{o}{.}\PY{n}{text}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Rekt - Leaderboardmerchfeedleaderboarddarken▼Poly Network -
+REKTUnaudited\$611,000,000 | 08/10/2021BitMart - REKTN/A\$196,000,000 |
+12/04/2021Compound - REKTUnaudited\$147,000,000 | 09/29/2021Vulcan Forged -
+REKTUnaudited\$140,000,000 | 12/13/2021Cream Finance - REKT
+2Unaudited\$130,000,000 | 10/27/2021Badger - REKTUnaudited\$120,000,000 |
+12/02/2021Ascendex - REKTUnaudited\$77,700,000 | 12/12/2021EasyFi -
+REKTUnaudited\$59,000,000 | 04/19/2021Uranium Finance - REKTUnaudited\$57,200,000
+| 04/28/2021bZx - REKTUnaudited\$55,000,000 | 11/05/2021PancakeBunny -
+REKTUnaudited\$45,000,000 | 05/19/2021Kucoin - REKTInternal audit\$45,000,000 |
+09/29/2020Alpha Finance - REKTQuantstamp, Peckshield\$37,500,000 | 02/13/2021Vee
+Finance - REKTSlowmist, Certik\$34,000,000 | 09/21/2021Meerkat Finance - BSC -
+REKTUnaudited\$32,000,000 | 03/04/2021MonoX - REKTHalborn, Peckshield\$31,400,000
+| 11/30/2021Spartan Protocol - REKTCertik\$30,500,000 | 05/02/2021Grim Finance -
+REKTSolidity Finance\$30,000,000 | 12/18/2021StableMagnet -
+REKTTechrate\$27,000,000 | 06/23/2021Paid Network - REKTUnaudited\$27,000,000 |
+03/05/2021Harvest Finance - REKTHaechi, Peckshield\$25,000,000 | 10/26/2020XToken
+- REKTPeckshield\$24,000,000 | 05/12/2021Popsicle Finance -
+REKTPeckshield\$20,000,000 | 08/03/2021Pickle Finance - REKTUnaudited\$19,700,000
+| 11/22/2020Cream Finance - REKTUnaudited\$18,800,000 | 08/30/2021Snowdog -
+REKTUnaudited\$18,100,000 | 11/25/2021bEarn - REKTUnaudited\$18,000,000 |
+05/17/2021Indexed Finance - REKTUnaudited\$16,000,000 | 10/14/2021Eminence - Rekt
+in prodUnaudited\$15,000,000 | 09/28/2020Furucombo - REKTUnaudited\$14,000,000 |
+02/27/2021Compounder Finance - REKTSolidity Finance\$12,000,000 | 12/02/2020Value
+DeFi - REKT 3Unaudited\$11,000,000 | 05/07/2021Yearn - REKTUnaudited\$11,000,000 |
+02/05/2021Arbix Finance - REKTCertik\$10,000,000 | 01/04/2022Rari Capital -
+REKTQuantstamp\$10,000,000 | 05/08/2021Value DeFi - REKT 2Unaudited\$10,000,000 |
+05/05/2021Cover - REKTArcadia Group\$9,400,000 | 12/29/2020Punk Protocol -
+REKTUnaudited\$8,950,000 | 08/10/2021Visor Finance - REKTUnaudited\$8,200,000 |
+12/21/2021THORChain - REKT 2THORChain\$8,000,000 | 07/22/2021Hack Epidemic
+(Origin Protocol - REKT)Unaudited\$8,000,000 | 11/17/2020Anyswap -
+REKTUnaudited\$7,900,000 | 07/10/2021Warp Finance - REKTHacken\$7,800,000 |
+12/18/2020BurgerSwap - REKTUnaudited\$7,200,000 | 05/28/2021Value DeFi -
+REKTPeckshield\$7,000,000 | 11/14/2020Alchemix - REKTUnaudited\$6,500,000 |
+06/16/2021Belt - REKTHaechi\$6,300,000 | 05/29/2021Bondly -
+REKTUnaudited\$5,900,000 | 07/15/2021Roll - REKTUnaudited\$5,700,000 |
+03/14/2021THORChain - REKTUnaudited\$5,000,000 | 07/15/2021X-Token - REKT
+X2Unaudited\$4,500,000 | 08/29/2021Eleven Finance - REKTUnaudited\$4,500,000 |
+06/22/2021ChainSwap - REKTUnaudited\$4,400,000 | 07/11/2021DAO Maker -
+REKTTBC\$4,000,000 | 09/04/2021JayPegs Automart - REKTUnaudited\$3,100,000 |
+09/17/2021PancakeBunny - REKT 2Unaudited\$2,400,000 | 07/16/2021DODO -
+REKTUnaudited\$2,000,000 | 03/09/2021Akropolis - REKTCertiK, SmartDec\$2,000,000 |
+11/12/2020Bent Finance - REKTUnaudited\$1,750,000 | 12/21/20218ight Finance -
+REKTUnaudited\$1,750,000 | 12/08/2021Levyathan - REKTUnaudited\$1,500,000 |
+07/30/2021The Big Combo (Growth DeFi - REKT)Consensys Dilligence\$1,300,000 |
+02/09/2021Autoshark - REKTTechrate\$745,000 | 05/24/2021Merlin Labs -
+REKTHacken\$680,000 | 05/26/2021Merlin Labs - REKT 2Unaudited\$550,000 |
+05/26/2021Merlin Labs - R3KTUnaudited\$330,000 | 06/29/2021Saddle Finance -
+REKTOpenzeppelin, Certik, Quantstamp\$275,735 | 01/20/2021SafeDollar -
+REKTUnaudited\$248,000 | 06/28/2021here lie the names of some of the defi
+protocols that have fallen victim to attack, exploit or arbitrage. this list is
+not complete and it never will be. these protocols are listed with respect; we
+appreciate and understand the work that lies behind each
+name.SUBSCRIBEHopiumOpenseaall content copyright rekt © 2022 • all rights
+reserved.donate (ETH/ERC20):0x3C5c2F4bCeC51a36494682f91Dbc6cA7c63B514Crun by
+Rekt DAO. founded by Julien Bouteloup
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{12}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{soup}\PY{o}{.}\PY{n}{find\PYZus{}all}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{a}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{12}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+[<a href="/"><img alt="logo" class="site-logo inv-asset" src="https://raw.github
+usercontent.com/rekthq/assets/main/images/logo.svg"/></a>,
+ <a class="nav-item" href="https://merch.rekt.news">merch</a>,
+ <a class="nav-item" href="https://feed.rekt.news">feed</a>,
+ <a class="nav-item nav-item-active" href="/leaderboard/">leaderboard</a>,
+ <a href="/polynetwork-rekt/">Poly Network - REKT</a>,
+ <a href="/bitmart-rekt/">BitMart - REKT</a>,
+ <a href="/compound-rekt/">Compound - REKT</a>,
+ <a href="/vulcan-forged-rekt/">Vulcan Forged - REKT</a>,
+ <a href="/cream-rekt-2/">Cream Finance - REKT 2</a>,
+ <a href="/badger-rekt/">Badger - REKT</a>,
+ <a href="/ascendex-rekt/">Ascendex - REKT</a>,
+ <a href="/easyfi-rekt/">EasyFi - REKT</a>,
+ <a href="/uranium-rekt/">Uranium Finance - REKT</a>,
+ <a href="/bzx-rekt/">bZx - REKT</a>,
+ <a href="/pancakebunny-rekt/">PancakeBunny - REKT</a>,
+ <a href="/epic-hack-homie/">Kucoin - REKT</a>,
+ <a href="/alpha-finance-rekt/">Alpha Finance - REKT</a>,
+ <a href="/veefinance-rekt/">Vee Finance - REKT</a>,
+ <a href="/meerkat-finance-bsc-rekt/">Meerkat Finance - BSC - REKT</a>,
+ <a href="/monox-rekt/">MonoX - REKT</a>,
+ <a href="/spartan-rekt/">Spartan Protocol - REKT</a>,
+ <a href="/grim-finance-rekt/">Grim Finance - REKT</a>,
+ <a href="/stablemagnet-rekt/">StableMagnet - REKT</a>,
+ <a href="/paid-rekt/">Paid Network - REKT</a>,
+ <a href="/harvest-finance-rekt/">Harvest Finance - REKT</a>,
+ <a href="/xtoken-rekt/">XToken - REKT</a>,
+ <a href="/popsicle-rekt/">Popsicle Finance - REKT</a>,
+ <a href="/pickle-finance-rekt/">Pickle Finance - REKT</a>,
+ <a href="/cream-rekt/">Cream Finance - REKT</a>,
+ <a href="/snowdog-rekt/">Snowdog - REKT</a>,
+ <a href="/bearn-rekt/">bEarn - REKT</a>,
+ <a href="/indexed-finance-rekt/">Indexed Finance - REKT</a>,
+ <a href="/eminence-rekt-in-prod/">Eminence - Rekt in prod</a>,
+ <a href="/furucombo-rekt/">Furucombo - REKT</a>,
+ <a href="/deathbed-confessions-c3pr/">Compounder Finance - REKT</a>,
+ <a href="/value-rekt3/">Value DeFi - REKT 3</a>,
+ <a href="/yearn-rekt/">Yearn - REKT</a>,
+ <a href="/arbix-rekt/">Arbix Finance - REKT</a>,
+ <a href="/rari-capital-rekt/">Rari Capital - REKT</a>,
+ <a href="/value-rekt2/">Value DeFi - REKT 2</a>,
+ <a href="/cover-rekt/">Cover - REKT</a>,
+ <a href="/punkprotocol-rekt/">Punk Protocol - REKT</a>,
+ <a href="/visor-finance-rekt/">Visor Finance - REKT</a>,
+ <a href="/thorchain-rekt2/">THORChain - REKT 2</a>,
+ <a href="/hack-epidemic/">Hack Epidemic (Origin Protocol - REKT)</a>,
+ <a href="/anyswap-rekt/">Anyswap - REKT</a>,
+ <a href="/warp-finance-rekt/">Warp Finance - REKT</a>,
+ <a href="/burgerswap-rekt/">BurgerSwap - REKT</a>,
+ <a href="/value-defi-rekt/">Value DeFi - REKT</a>,
+ <a href="/alchemix-rekt/">Alchemix - REKT</a>,
+ <a href="/belt-rekt/">Belt - REKT</a>,
+ <a href="/bondly-rekt/">Bondly - REKT</a>,
+ <a href="/roll-rekt/">Roll - REKT</a>,
+ <a href="/thorchain-rekt/">THORChain - REKT</a>,
+ <a href="/xtoken-rekt-x2/">X-Token - REKT X2</a>,
+ <a href="/11-rekt/">Eleven Finance - REKT</a>,
+ <a href="/chainswap-rekt/">ChainSwap - REKT</a>,
+ <a href="/daomaker-rekt/">DAO Maker - REKT</a>,
+ <a href="/jaypegs-automart-rekt/">JayPegs Automart - REKT</a>,
+ <a href="/pancakebunny2-rekt/">PancakeBunny - REKT 2</a>,
+ <a href="/au-dodo-rekt/">DODO - REKT</a>,
+ <a href="/akropolis-rekt/">Akropolis - REKT</a>,
+ <a href="/bent-finance/">Bent Finance - REKT</a>,
+ <a href="/8ight-finance-rekt/">8ight Finance - REKT</a>,
+ <a href="/levyathan-rekt/">Levyathan - REKT</a>,
+ <a href="/the-big-combo/">The Big Combo (Growth DeFi - REKT)</a>,
+ <a href="/autoshark-rekt/">Autoshark - REKT</a>,
+ <a href="/merlinlabs-rekt/">Merlin Labs - REKT</a>,
+ <a href="/merlin2-rekt/">Merlin Labs - REKT 2</a>,
+ <a href="/merlin3-rekt/">Merlin Labs - R3KT</a>,
+ <a href="/saddle-finance-rekt/">Saddle Finance - REKT</a>,
+ <a href="/safedollar-rekt/">SafeDollar - REKT</a>,
+ <a class="subscribe" href="http://eepurl.com/hd4HkP"
+target="\_blank">SUBSCRIBE</a>,
+ <a href="https://www.youtube.com/watch?v=v1Z5BnBuFyE" rel="noopener noreferrer"
+target="\_blank">Hopium</a>,
+ <a href="https://opensea.io/collection/rekt-news-hacks-hopium" rel="noopener
+noreferrer" target="\_blank">Opensea</a>,
+ <a href="/">rekt</a>,
+ <a
+href="https://etherscan.io/address/0x3C5c2F4bCeC51a36494682f91Dbc6cA7c63B514C"
+rel="noopener noreferrer"
+target="\_blank">0x3C5c2F4bCeC51a36494682f91Dbc6cA7c63B514C</a>,
+ <a href="https://twitter.com/RektHQ">Rekt DAO</a>,
+ <a href="https://twitter.com/bneiluj" rel="noopener noreferrer"
+target="\_blank">Julien Bouteloup</a>]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{13}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} find all the anchor tags with \PYZdq{}href\PYZdq{} }
+\PY{c+c1}{\PYZsh{} attribute starting with \PYZdq{}/\PYZdq{}}
+\PY{n}{exp\PYZus{}list}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+\PY{k}{for} \PY{n}{link} \PY{o+ow}{in} \PY{n}{soup}\PY{o}{.}\PY{n}{find\PYZus{}all}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{a}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                          \PY{n}{attrs}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{href}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{n}{re}\PY{o}{.}\PY{n}{compile}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZca{}/}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{\PYZcb{}}\PY{p}{)}\PY{p}{:}
+    
+    \PY{c+c1}{\PYZsh{} display the actual urls}
+    \PY{n}{content}\PY{o}{=}\PY{n}{link}\PY{o}{.}\PY{n}{get}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{href}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+    
+    \PY{n}{clean\PYZus{}content}\PY{o}{=}\PY{n}{content}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+    
+    \PY{c+c1}{\PYZsh{} Remove multiple null String elements twice}
+    \PY{n}{clean\PYZus{}content}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+    \PY{n}{clean\PYZus{}content}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+    
+    \PY{c+c1}{\PYZsh{} Remove all incapusulating list brackets from list elements}
+    \PY{n}{new\PYZus{}list} \PY{o}{=}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{clean\PYZus{}content}\PY{p}{)}\PY{p}{)}
+    
+    \PY{n}{exp\PYZus{}list}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{new\PYZus{}list}\PY{p}{)}
+    
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{14}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{exp\PYZus{}list}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{14}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+['', 'leaderboard', 'polynetwork-rekt', 'bitmart-rekt', 'compound-rekt']
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{15}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Testing for any more null elements }
+\PY{n}{exp\PYZus{}list}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{16}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Remove the rekt extension that is attached to protocol name}
+\PY{n}{ext} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}rekt}\PY{l+s+s1}{\PYZsq{}}
+\PY{n}{exp\PYZus{}list} \PY{o}{=} \PY{p}{[}\PY{n}{elem}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{n}{ext}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{elem} \PY{o+ow}{in} \PY{n}{exp\PYZus{}list}\PY{p}{]}
+\PY{n}{exp\PYZus{}list} \PY{o}{=} \PY{p}{[}\PY{n}{elem}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{elem} \PY{o+ow}{in} \PY{n}{exp\PYZus{}list}\PY{p}{]}
+\PY{n}{exp\PYZus{}list} \PY{o}{=} \PY{p}{[}\PY{n}{elem}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{leaderboard}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{elem} \PY{o+ow}{in} \PY{n}{exp\PYZus{}list}\PY{p}{]}
+
+
+\PY{n+nb}{print}\PY{p}{(}\PY{n}{exp\PYZus{}list}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['', 'polynetwork', 'bitmart', 'compound', 'vulcanforged', 'cream2', 'badger',
+'ascendex', 'easyfi', 'uranium', 'bzx', 'pancakebunny', 'epichackhomie',
+'alphafinance', 'veefinance', 'meerkatfinancebsc', 'monox', 'spartan',
+'grimfinance', 'stablemagnet', 'paid', 'harvestfinance', 'xtoken', 'popsicle',
+'picklefinance', 'cream', 'snowdog', 'bearn', 'indexedfinance',
+'eminenceinprod', 'furucombo', 'deathbedconfessionsc3pr', 'value3', 'yearn',
+'arbix', 'raricapital', 'value2', 'cover', 'punkprotocol', 'visorfinance',
+'thorchain2', 'hackepidemic', 'anyswap', 'warpfinance', 'burgerswap',
+'valuedefi', 'alchemix', 'belt', 'bondly', 'roll', 'thorchain', 'xtokenx2',
+'11', 'chainswap', 'daomaker', 'jaypegsautomart', 'pancakebunny2', 'audodo',
+'akropolis', 'bentfinance', '8ightfinance', 'levyathan', 'thebigcombo',
+'autoshark', 'merlinlabs', 'merlin2', 'merlin3', 'saddlefinance', 'safedollar',
+'']
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{17}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{exp\PYZus{}list}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{17}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+['', 'polynetwork', 'bitmart', 'compound', 'vulcanforged']
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{18}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{exp\PYZus{}list}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{19}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Final test}
+\PY{n}{exp\PYZus{}list}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{20}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nb}{len}\PY{p}{(}\PY{n}{exp\PYZus{}list}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{20}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+68
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{search-for-dates-and-amount_lost-within-list-elements}{%
+\subsubsection{Search for Dates and amount\_lost within list
+elements}\label{search-for-dates-and-amount_lost-within-list-elements}}
+
+After using the website inspector shortcut we were able to sift throught
+the HTML file for rekt.news and find that all dates and amounts were
+concatenated together within list elements.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{21}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{from} \PY{n+nn}{datetime} \PY{k+kn}{import} \PY{n}{datetime}
+\PY{k+kn}{from} \PY{n+nn}{dateutil} \PY{k+kn}{import} \PY{n}{parser}
+\PY{k+kn}{import} \PY{n+nn}{dateutil}\PY{n+nn}{.}\PY{n+nn}{parser} \PY{k}{as} \PY{n+nn}{dparser}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{22}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} li is the html tag for list elements within a table }
+\PY{n}{list\PYZus{}elements} \PY{o}{=} \PY{n}{soup}\PY{o}{.}\PY{n}{find\PYZus{}all}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{li}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+
+\PY{n}{list\PYZus{}elements}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{22}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+[<li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/polynetwork-rekt/">Poly Network - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->611,000,000<!-- --> | <!-- -->08/10/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/bitmart-rekt/">BitMart - REKT</a><span class="leaderboard-
+audit">N/A</span></div><div class="leaderboard-row-details">\$<!--
+-->196,000,000<!-- --> | <!-- -->12/04/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/compound-rekt/">Compound - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->147,000,000<!-- --> | <!-- -->09/29/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/vulcan-forged-rekt/">Vulcan Forged - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->140,000,000<!-- --> | <!-- -->12/13/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/cream-rekt-2/">Cream Finance - REKT 2</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->130,000,000<!-- --> | <!-- -->10/27/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/badger-rekt/">Badger - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->120,000,000<!-- --> | <!-- -->12/02/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/ascendex-rekt/">Ascendex - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->77,700,000<!-- --> | <!-- -->12/12/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/easyfi-rekt/">EasyFi - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->59,000,000<!-- --> | <!-- -->04/19/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/uranium-rekt/">Uranium Finance - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->57,200,000<!-- --> | <!-- -->04/28/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/bzx-rekt/">bZx - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->55,000,000<!-- --> | <!-- -->11/05/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/pancakebunny-rekt/">PancakeBunny - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->45,000,000<!-- --> | <!-- -->05/19/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/epic-hack-homie/">Kucoin - REKT</a><span class="leaderboard-
+audit">Internal audit</span></div><div class="leaderboard-row-details">\$<!--
+-->45,000,000<!-- --> | <!-- -->09/29/2020</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/alpha-finance-rekt/">Alpha Finance - REKT</a><span class="leaderboard-
+audit">Quantstamp, Peckshield</span></div><div class="leaderboard-row-
+details">\$<!-- -->37,500,000<!-- --> | <!-- -->02/13/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/veefinance-rekt/">Vee Finance - REKT</a><span class="leaderboard-
+audit">Slowmist, Certik</span></div><div class="leaderboard-row-details">\$<!--
+-->34,000,000<!-- --> | <!-- -->09/21/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/meerkat-finance-bsc-rekt/">Meerkat Finance - BSC - REKT</a><span
+class="leaderboard-audit">Unaudited</span></div><div class="leaderboard-row-
+details">\$<!-- -->32,000,000<!-- --> | <!-- -->03/04/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/monox-rekt/">MonoX - REKT</a><span class="leaderboard-audit">Halborn,
+Peckshield</span></div><div class="leaderboard-row-details">\$<!--
+-->31,400,000<!-- --> | <!-- -->11/30/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/spartan-rekt/">Spartan Protocol - REKT</a><span class="leaderboard-
+audit">Certik</span></div><div class="leaderboard-row-details">\$<!--
+-->30,500,000<!-- --> | <!-- -->05/02/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/grim-finance-rekt/">Grim Finance - REKT</a><span class="leaderboard-
+audit">Solidity Finance</span></div><div class="leaderboard-row-details">\$<!--
+-->30,000,000<!-- --> | <!-- -->12/18/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/stablemagnet-rekt/">StableMagnet - REKT</a><span class="leaderboard-
+audit">Techrate</span></div><div class="leaderboard-row-details">\$<!--
+-->27,000,000<!-- --> | <!-- -->06/23/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/paid-rekt/">Paid Network - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->27,000,000<!-- --> | <!-- -->03/05/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/harvest-finance-rekt/">Harvest Finance - REKT</a><span
+class="leaderboard-audit">Haechi, Peckshield</span></div><div
+class="leaderboard-row-details">\$<!-- -->25,000,000<!-- --> | <!--
+-->10/26/2020</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/xtoken-rekt/">XToken - REKT</a><span class="leaderboard-
+audit">Peckshield</span></div><div class="leaderboard-row-details">\$<!--
+-->24,000,000<!-- --> | <!-- -->05/12/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/popsicle-rekt/">Popsicle Finance - REKT</a><span class="leaderboard-
+audit">Peckshield</span></div><div class="leaderboard-row-details">\$<!--
+-->20,000,000<!-- --> | <!-- -->08/03/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/pickle-finance-rekt/">Pickle Finance - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->19,700,000<!-- --> | <!-- -->11/22/2020</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/cream-rekt/">Cream Finance - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->18,800,000<!-- --> | <!-- -->08/30/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/snowdog-rekt/">Snowdog - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->18,100,000<!-- --> | <!-- -->11/25/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/bearn-rekt/">bEarn - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->18,000,000<!-- --> | <!-- -->05/17/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/indexed-finance-rekt/">Indexed Finance - REKT</a><span
+class="leaderboard-audit">Unaudited</span></div><div class="leaderboard-row-
+details">\$<!-- -->16,000,000<!-- --> | <!-- -->10/14/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/eminence-rekt-in-prod/">Eminence - Rekt in prod</a><span
+class="leaderboard-audit">Unaudited</span></div><div class="leaderboard-row-
+details">\$<!-- -->15,000,000<!-- --> | <!-- -->09/28/2020</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/furucombo-rekt/">Furucombo - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->14,000,000<!-- --> | <!-- -->02/27/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/deathbed-confessions-c3pr/">Compounder Finance - REKT</a><span
+class="leaderboard-audit">Solidity Finance</span></div><div class="leaderboard-
+row-details">\$<!-- -->12,000,000<!-- --> | <!-- -->12/02/2020</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/value-rekt3/">Value DeFi - REKT 3</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->11,000,000<!-- --> | <!-- -->05/07/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/yearn-rekt/">Yearn - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->11,000,000<!-- --> | <!-- -->02/05/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/arbix-rekt/">Arbix Finance - REKT</a><span class="leaderboard-
+audit">Certik</span></div><div class="leaderboard-row-details">\$<!--
+-->10,000,000<!-- --> | <!-- -->01/04/2022</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/rari-capital-rekt/">Rari Capital - REKT</a><span class="leaderboard-
+audit">Quantstamp</span></div><div class="leaderboard-row-details">\$<!--
+-->10,000,000<!-- --> | <!-- -->05/08/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/value-rekt2/">Value DeFi - REKT 2</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->10,000,000<!-- --> | <!-- -->05/05/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/cover-rekt/">Cover - REKT</a><span class="leaderboard-audit">Arcadia
+Group</span></div><div class="leaderboard-row-details">\$<!-- -->9,400,000<!--
+--> | <!-- -->12/29/2020</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/punkprotocol-rekt/">Punk Protocol - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->8,950,000<!-- --> | <!-- -->08/10/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/visor-finance-rekt/">Visor Finance - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->8,200,000<!-- --> | <!-- -->12/21/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/thorchain-rekt2/">THORChain - REKT 2</a><span class="leaderboard-
+audit">THORChain</span></div><div class="leaderboard-row-details">\$<!--
+-->8,000,000<!-- --> | <!-- -->07/22/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/hack-epidemic/">Hack Epidemic (Origin Protocol - REKT)</a><span
+class="leaderboard-audit">Unaudited</span></div><div class="leaderboard-row-
+details">\$<!-- -->8,000,000<!-- --> | <!-- -->11/17/2020</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/anyswap-rekt/">Anyswap - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->7,900,000<!-- --> | <!-- -->07/10/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/warp-finance-rekt/">Warp Finance - REKT</a><span class="leaderboard-
+audit">Hacken</span></div><div class="leaderboard-row-details">\$<!--
+-->7,800,000<!-- --> | <!-- -->12/18/2020</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/burgerswap-rekt/">BurgerSwap - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->7,200,000<!-- --> | <!-- -->05/28/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/value-defi-rekt/">Value DeFi - REKT</a><span class="leaderboard-
+audit">Peckshield</span></div><div class="leaderboard-row-details">\$<!--
+-->7,000,000<!-- --> | <!-- -->11/14/2020</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/alchemix-rekt/">Alchemix - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->6,500,000<!-- --> | <!-- -->06/16/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/belt-rekt/">Belt - REKT</a><span class="leaderboard-
+audit">Haechi</span></div><div class="leaderboard-row-details">\$<!--
+-->6,300,000<!-- --> | <!-- -->05/29/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/bondly-rekt/">Bondly - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->5,900,000<!-- --> | <!-- -->07/15/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/roll-rekt/">Roll - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->5,700,000<!-- --> | <!-- -->03/14/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/thorchain-rekt/">THORChain - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->5,000,000<!-- --> | <!-- -->07/15/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/xtoken-rekt-x2/">X-Token - REKT X2</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->4,500,000<!-- --> | <!-- -->08/29/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/11-rekt/">Eleven Finance - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->4,500,000<!-- --> | <!-- -->06/22/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/chainswap-rekt/">ChainSwap - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->4,400,000<!-- --> | <!-- -->07/11/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/daomaker-rekt/">DAO Maker - REKT</a><span class="leaderboard-
+audit">TBC</span></div><div class="leaderboard-row-details">\$<!--
+-->4,000,000<!-- --> | <!-- -->09/04/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/jaypegs-automart-rekt/">JayPegs Automart - REKT</a><span
+class="leaderboard-audit">Unaudited</span></div><div class="leaderboard-row-
+details">\$<!-- -->3,100,000<!-- --> | <!-- -->09/17/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/pancakebunny2-rekt/">PancakeBunny - REKT 2</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->2,400,000<!-- --> | <!-- -->07/16/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/au-dodo-rekt/">DODO - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->2,000,000<!-- --> | <!-- -->03/09/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/akropolis-rekt/">Akropolis - REKT</a><span class="leaderboard-
+audit">CertiK, SmartDec</span></div><div class="leaderboard-row-details">\$<!--
+-->2,000,000<!-- --> | <!-- -->11/12/2020</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/bent-finance/">Bent Finance - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->1,750,000<!-- --> | <!-- -->12/21/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/8ight-finance-rekt/">8ight Finance - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->1,750,000<!-- --> | <!-- -->12/08/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/levyathan-rekt/">Levyathan - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->1,500,000<!-- --> | <!-- -->07/30/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/the-big-combo/">The Big Combo (Growth DeFi - REKT)</a><span
+class="leaderboard-audit">Consensys Dilligence</span></div><div
+class="leaderboard-row-details">\$<!-- -->1,300,000<!-- --> | <!--
+-->02/09/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/autoshark-rekt/">Autoshark - REKT</a><span class="leaderboard-
+audit">Techrate</span></div><div class="leaderboard-row-details">\$<!--
+-->745,000<!-- --> | <!-- -->05/24/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/merlinlabs-rekt/">Merlin Labs - REKT</a><span class="leaderboard-
+audit">Hacken</span></div><div class="leaderboard-row-details">\$<!--
+-->680,000<!-- --> | <!-- -->05/26/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/merlin2-rekt/">Merlin Labs - REKT 2</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->550,000<!-- --> | <!-- -->05/26/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/merlin3-rekt/">Merlin Labs - R3KT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->330,000<!-- --> | <!-- -->06/29/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/saddle-finance-rekt/">Saddle Finance - REKT</a><span class="leaderboard-
+audit">Openzeppelin, Certik, Quantstamp</span></div><div class="leaderboard-row-
+details">\$<!-- -->275,735<!-- --> | <!-- -->01/20/2021</div></div></li>,
+ <li><div class="leaderboard-row"><div class="leaderboard-row-title"><a
+href="/safedollar-rekt/">SafeDollar - REKT</a><span class="leaderboard-
+audit">Unaudited</span></div><div class="leaderboard-row-details">\$<!--
+-->248,000<!-- --> | <!-- -->06/28/2021</div></div></li>]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{23}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{table} \PY{o}{=} \PY{n}{soup}\PY{o}{.}\PY{n}{find\PYZus{}all}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{div}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{attrs} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{class}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{leaderboard\PYZhy{}row\PYZhy{}details}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{)}
+\PY{n}{table}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{23}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+[<div class="leaderboard-row-details">\$<!-- -->611,000,000<!-- --> | <!--
+-->08/10/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->196,000,000<!-- --> | <!--
+-->12/04/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->147,000,000<!-- --> | <!--
+-->09/29/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->140,000,000<!-- --> | <!--
+-->12/13/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->130,000,000<!-- --> | <!--
+-->10/27/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->120,000,000<!-- --> | <!--
+-->12/02/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->77,700,000<!-- --> | <!--
+-->12/12/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->59,000,000<!-- --> | <!--
+-->04/19/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->57,200,000<!-- --> | <!--
+-->04/28/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->55,000,000<!-- --> | <!--
+-->11/05/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->45,000,000<!-- --> | <!--
+-->05/19/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->45,000,000<!-- --> | <!--
+-->09/29/2020</div>,
+ <div class="leaderboard-row-details">\$<!-- -->37,500,000<!-- --> | <!--
+-->02/13/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->34,000,000<!-- --> | <!--
+-->09/21/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->32,000,000<!-- --> | <!--
+-->03/04/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->31,400,000<!-- --> | <!--
+-->11/30/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->30,500,000<!-- --> | <!--
+-->05/02/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->30,000,000<!-- --> | <!--
+-->12/18/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->27,000,000<!-- --> | <!--
+-->06/23/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->27,000,000<!-- --> | <!--
+-->03/05/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->25,000,000<!-- --> | <!--
+-->10/26/2020</div>,
+ <div class="leaderboard-row-details">\$<!-- -->24,000,000<!-- --> | <!--
+-->05/12/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->20,000,000<!-- --> | <!--
+-->08/03/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->19,700,000<!-- --> | <!--
+-->11/22/2020</div>,
+ <div class="leaderboard-row-details">\$<!-- -->18,800,000<!-- --> | <!--
+-->08/30/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->18,100,000<!-- --> | <!--
+-->11/25/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->18,000,000<!-- --> | <!--
+-->05/17/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->16,000,000<!-- --> | <!--
+-->10/14/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->15,000,000<!-- --> | <!--
+-->09/28/2020</div>,
+ <div class="leaderboard-row-details">\$<!-- -->14,000,000<!-- --> | <!--
+-->02/27/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->12,000,000<!-- --> | <!--
+-->12/02/2020</div>,
+ <div class="leaderboard-row-details">\$<!-- -->11,000,000<!-- --> | <!--
+-->05/07/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->11,000,000<!-- --> | <!--
+-->02/05/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->10,000,000<!-- --> | <!--
+-->01/04/2022</div>,
+ <div class="leaderboard-row-details">\$<!-- -->10,000,000<!-- --> | <!--
+-->05/08/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->10,000,000<!-- --> | <!--
+-->05/05/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->9,400,000<!-- --> | <!--
+-->12/29/2020</div>,
+ <div class="leaderboard-row-details">\$<!-- -->8,950,000<!-- --> | <!--
+-->08/10/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->8,200,000<!-- --> | <!--
+-->12/21/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->8,000,000<!-- --> | <!--
+-->07/22/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->8,000,000<!-- --> | <!--
+-->11/17/2020</div>,
+ <div class="leaderboard-row-details">\$<!-- -->7,900,000<!-- --> | <!--
+-->07/10/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->7,800,000<!-- --> | <!--
+-->12/18/2020</div>,
+ <div class="leaderboard-row-details">\$<!-- -->7,200,000<!-- --> | <!--
+-->05/28/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->7,000,000<!-- --> | <!--
+-->11/14/2020</div>,
+ <div class="leaderboard-row-details">\$<!-- -->6,500,000<!-- --> | <!--
+-->06/16/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->6,300,000<!-- --> | <!--
+-->05/29/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->5,900,000<!-- --> | <!--
+-->07/15/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->5,700,000<!-- --> | <!--
+-->03/14/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->5,000,000<!-- --> | <!--
+-->07/15/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->4,500,000<!-- --> | <!--
+-->08/29/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->4,500,000<!-- --> | <!--
+-->06/22/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->4,400,000<!-- --> | <!--
+-->07/11/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->4,000,000<!-- --> | <!--
+-->09/04/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->3,100,000<!-- --> | <!--
+-->09/17/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->2,400,000<!-- --> | <!--
+-->07/16/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->2,000,000<!-- --> | <!--
+-->03/09/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->2,000,000<!-- --> | <!--
+-->11/12/2020</div>,
+ <div class="leaderboard-row-details">\$<!-- -->1,750,000<!-- --> | <!--
+-->12/21/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->1,750,000<!-- --> | <!--
+-->12/08/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->1,500,000<!-- --> | <!--
+-->07/30/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->1,300,000<!-- --> | <!--
+-->02/09/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->745,000<!-- --> | <!--
+-->05/24/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->680,000<!-- --> | <!--
+-->05/26/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->550,000<!-- --> | <!--
+-->05/26/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->330,000<!-- --> | <!--
+-->06/29/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->275,735<!-- --> | <!--
+-->01/20/2021</div>,
+ <div class="leaderboard-row-details">\$<!-- -->248,000<!-- --> | <!--
+-->06/28/2021</div>]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{24}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{table}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+68
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{25}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{main} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+\PY{c+c1}{\PYZsh{} Create a master list of conglomerated amounts and dates}
+\PY{k}{for} \PY{n}{item} \PY{o+ow}{in} \PY{n}{soup}\PY{o}{.}\PY{n}{select}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{div.leaderboard\PYZhy{}row\PYZhy{}details}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+    \PY{n}{main}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{item}\PY{o}{.}\PY{n}{text}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{26}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{main}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{26}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+['\$611,000,000 | 08/10/2021',
+ '\$196,000,000 | 12/04/2021',
+ '\$147,000,000 | 09/29/2021',
+ '\$140,000,000 | 12/13/2021',
+ '\$130,000,000 | 10/27/2021']
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{27}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{dates} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+\PY{k}{for} \PY{n}{item} \PY{o+ow}{in} \PY{n}{main}\PY{p}{:}
+    \PY{n}{dates} \PY{o}{=} \PY{p}{[}\PY{n}{elem}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{000,000 | }\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{elem} \PY{o+ow}{in} \PY{n}{dates}\PY{p}{]}
+    \PY{n}{s1} \PY{o}{=} \PY{n+nb}{slice}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{27}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
+    \PY{n}{dates}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{item}\PY{p}{[}\PY{n}{s1}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{28}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{dates}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{28}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+[',000 | 08/10/2021',
+ ',000 | 12/04/2021',
+ ',000 | 09/29/2021',
+ ',000 | 12/13/2021',
+ ',000 | 10/27/2021']
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{29}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{clean\PYZus{}dates} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+\PY{k}{for} \PY{n}{item} \PY{o+ow}{in} \PY{n}{dates}\PY{p}{:}
+    \PY{n}{regex} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ (}\PY{l+s+se}{\PYZbs{}\PYZbs{}}\PY{l+s+s2}{d}\PY{l+s+si}{\PYZob{}2\PYZcb{}}\PY{l+s+s2}{/}\PY{l+s+se}{\PYZbs{}\PYZbs{}}\PY{l+s+s2}{d}\PY{l+s+si}{\PYZob{}2\PYZcb{}}\PY{l+s+s2}{/}\PY{l+s+se}{\PYZbs{}\PYZbs{}}\PY{l+s+s2}{d}\PY{l+s+si}{\PYZob{}4\PYZcb{}}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{;}
+    \PY{n}{i} \PY{o}{=} \PY{n}{item}\PY{o}{.}\PY{n}{lstrip}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,000,000 | }\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+    
+    \PY{n}{clean\PYZus{}dates}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{i}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{30}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} A list of all of the cleaned dates}
+\PY{n}{clean\PYZus{}dates}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{30}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+['8/10/2021', '12/04/2021', '9/29/2021', '12/13/2021', '10/27/2021']
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{31}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nb}{len}\PY{p}{(}\PY{n}{clean\PYZus{}dates}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{31}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+68
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{32}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{main}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{32}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+['\$611,000,000 | 08/10/2021',
+ '\$196,000,000 | 12/04/2021',
+ '\$147,000,000 | 09/29/2021',
+ '\$140,000,000 | 12/13/2021',
+ '\$130,000,000 | 10/27/2021']
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{33}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{amt} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+\PY{k}{for} \PY{n}{item} \PY{o+ow}{in} \PY{n}{main}\PY{p}{:}
+    \PY{n}{amt} \PY{o}{=} \PY{p}{[}\PY{n}{elem}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ | }\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{elem} \PY{o+ow}{in} \PY{n}{amt}\PY{p}{]}
+    \PY{n}{s2} \PY{o}{=} \PY{n+nb}{slice}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{13}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
+    \PY{n}{amt}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{item}\PY{p}{[}\PY{n}{s2}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{34}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{amt}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{34}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+['\$611,000,000 ',
+ '\$196,000,000 ',
+ '\$147,000,000 ',
+ '\$140,000,000 ',
+ '\$130,000,000 ']
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{35}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{clean\PYZus{}amt} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+\PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n}{amt}\PY{p}{:}
+    \PY{n}{i} \PY{o}{=} \PY{n}{x}\PY{o}{.}\PY{n}{rstrip}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{| }\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}           
+    \PY{n}{clean\PYZus{}amt}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{i}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{36}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} The last 6 elements will have to be manually cleaned which is not a grueling burden}
+\PY{n}{clean\PYZus{}amt}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{36}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+['\$611,000,000',
+ '\$196,000,000',
+ '\$147,000,000',
+ '\$140,000,000',
+ '\$130,000,000']
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{37}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{clean\PYZus{}amt}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+68
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{38}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Testing if the length of each list are equal so the DataFrame}
+\PY{c+c1}{\PYZsh{} is built with the proper dimensions}
+\PY{k}{if} \PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{clean\PYZus{}amt}\PY{p}{)} \PY{o}{==} \PY{n+nb}{len}\PY{p}{(}\PY{n}{exp\PYZus{}list}\PY{p}{)}\PY{p}{)} \PY{o+ow}{and} \PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{exp\PYZus{}list}\PY{p}{)} \PY{o}{==} \PY{n+nb}{len}\PY{p}{(}\PY{n}{clean\PYZus{}dates}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+    \PY{n+nb}{print}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+\PY{k}{else}\PY{p}{:}
+    \PY{n+nb}{print}\PY{p}{(}\PY{k+kc}{False}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+True
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{39}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{exp\PYZus{}list}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{39}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+['polynetwork', 'bitmart', 'compound', 'vulcanforged', 'cream2']
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{40}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{exp\PYZus{}list}\PY{p}{,} \PY{n}{columns}\PY{o}{=} \PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{protocol\PYZus{}name}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}
+\PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{40}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+  protocol\_name
+0   polynetwork
+1       bitmart
+2      compound
+3  vulcanforged
+4        cream2
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{41}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df1} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{clean\PYZus{}dates}\PY{p}{,} \PY{n}{columns}\PY{o}{=} \PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{date\PYZus{}of\PYZus{}attack}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}
+\PY{n}{df1}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{41}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+  date\_of\_attack
+0      8/10/2021
+1     12/04/2021
+2      9/29/2021
+3     12/13/2021
+4     10/27/2021
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{42}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df2} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{clean\PYZus{}amt}\PY{p}{,} \PY{n}{columns}\PY{o}{=} \PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{amount\PYZus{}lost}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}
+\PY{n}{df2}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{42}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+    amount\_lost
+0  \$611,000,000
+1  \$196,000,000
+2  \$147,000,000
+3  \$140,000,000
+4  \$130,000,000
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{43}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{df1}\PY{p}{)}
+\PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{43}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+  protocol\_name date\_of\_attack
+0   polynetwork      8/10/2021
+1       bitmart     12/04/2021
+2      compound      9/29/2021
+3  vulcanforged     12/13/2021
+4        cream2     10/27/2021
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{44}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Final DataFrame with all columns appended}
+\PY{c+c1}{\PYZsh{} Special thanks to BeautifulSoup}
+\PY{n}{df}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{df2}\PY{p}{)}
+\PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{44}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+  protocol\_name date\_of\_attack   amount\_lost
+0   polynetwork      8/10/2021  \$611,000,000
+1       bitmart     12/04/2021  \$196,000,000
+2      compound      9/29/2021  \$147,000,000
+3  vulcanforged     12/13/2021  \$140,000,000
+4        cream2     10/27/2021  \$130,000,000
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{45}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Converting dataframe data to Excel}
+\PY{c+c1}{\PYZsh{} The data stored accounts for the rekt 2020\PYZhy{}2021 leaderboard}
+\PY{n}{df}\PY{o}{.}\PY{n}{to\PYZus{}excel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sena\PYZus{}rektnews\PYZus{}ws.xlsx}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+
+\end{Verbatim}
+\end{tcolorbox}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+\end{document}
