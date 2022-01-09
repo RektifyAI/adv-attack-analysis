@@ -17,7 +17,7 @@ The web scraper is used to web scrap websites using Python's BeautifulSoup and A
 ## Insights into Web Scrapping using Python BeautifulSoup
 <!-- image -->
 <p style="text-align:center;">
-  <img src="main_inspect_element.png" alt="" width="300" class="center" style="margin-right: 5px;"/>
+  <img src="main_inspect_element.png" alt="" width="400" class="center" style="margin-right: 5px;"/>
 </p>
 
 Each data vector needed to be cleaned: protocol names, dates, and amount lost in attack
@@ -32,7 +32,7 @@ for item in dates:
     
     clean_dates.append(i)
 ```
-> Follow the logic and results within the web scraper directory. 
+> [Follow the logic and results within the web scraper directory.](https://github.com/SenaLabs/adv-attack-analysis/blob/main/web-scraper/rekt-news-ws.ipynb)
 
 
 Attacks only exist due to vulnerabilities and [attack vectors](https://github.com/sigp/solidity-security-blog). Throughout building the code base, within the attack analysis repo we will do extensive research into specific vulnerabilities with the code for DeFi protocols. 
