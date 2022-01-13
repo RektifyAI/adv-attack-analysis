@@ -1,6 +1,6 @@
 # Advanced Attack Analysis
 
-The Advanced Attack Analysis is a deep data analysis repo, uncovering the latest insights on attacks within the DeFi ecosystem. Methods such as EDA, web scrapping, Python requests, and API manipulation are used to retrieve attack specific data.
+The Advanced Attack Analysis is a deep data analysis repo, uncovering the latest insights on attacks within the DeFi ecosystem. Methods such as EDA, web scrapping, Python requests, and API calls are used to retrieve attack specific data.
 
 This repo equips Sena with the ability to utilize past attack data to perform predictive and prescriptive analytics using machine learning as well as building models that will be used as data visualizations in the Sena UI stack. The inception of DeFi is a contentious  subject but within our analysis we funnel attack date from the later MakerDAO and Ethereum days around 2016 where more and more new chains began to emerge to partipate in the DeFi ecosystem. Attacks recorded from 2016 till now are utilized to make inferences on the past.
 
