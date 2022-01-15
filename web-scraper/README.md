@@ -6,4 +6,9 @@ The web scraper is used to web scrap websites using Python's BeautifulSoup and A
 >- [crypto.sec](https://cryptosec.info/defi-hacks/)
 >- [defiprime.com](https://defiprime.com/hacks2020)
 
+<!-- image -->
+<p style="text-align:center;">
+  <img src="data-retrieval.jpg" alt="" width="450" class="center" style="margin-left: 10px;"/>
+</p>
+
 # Get requests through APIs
