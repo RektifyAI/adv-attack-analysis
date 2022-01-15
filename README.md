@@ -7,7 +7,7 @@ This repo equips Sena with the ability to utilize past attack data to perform pr
 Sena allots for machine learning tactics such as supervised learning to created regression models and predictive models with the Sena attack dataset along with relevant metadata. 
 
 The web scraper is used to web scrap websites using Python's BeautifulSoup and API commands to autonmously funnel data into the attack dataset. The following websites are used in Sena's web scraper:
->- [rekt.news](https://rekt.news) - #1 resource for DeFi hacks across the ecosystem
+>- [rekt.news](https://rekt.news) - #1 Resource for DeFi hacks across the ecosystem
 >- [slowmist.io](https://hacked.slowmist.io/en/)
 >- [crypto.sec](https://cryptosec.info/defi-hacks/)
 >- [defiprime.com](https://defiprime.com/hacks2020)
