@@ -10,7 +10,7 @@ Attacks recorded from then till now are utilized to make inferences so that a pr
 > S.E.A.L. - Sena Exploratory Attack Library dataset
 ----
 
-## Insights into Web Scrapping using Python BeautifulSoup
+## Insights into Web Scraping using Python BeautifulSoup
 <!-- image -->
 <p style="text-align:center;">
   <img src="main_inspect_element.png" alt="" width="450" class="center" style="margin-left: 10px;"/>
