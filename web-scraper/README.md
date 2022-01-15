@@ -5,3 +5,5 @@ The web scraper is used to web scrap websites using Python's BeautifulSoup and A
 >- [slowmist.io](https://hacked.slowmist.io/en/)
 >- [crypto.sec](https://cryptosec.info/defi-hacks/)
 >- [defiprime.com](https://defiprime.com/hacks2020)
+
+# Get requests through APIs
