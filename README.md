@@ -6,14 +6,6 @@ This repo equips Sena with the ability to utilize past attack data to perform pr
 
 Attacks recorded from then till now are utilized to make inferences so that a predictions based on data stored in the S.E.A.L. dataset can support Sena protocol's analytical acrchitecture to detect high priority vulnerabilities before they lead to possible attacks. The Sena application will give alerts when attacks occur and warning messages when the analytical architecture detects vulnerabilities.
 
-Sena implements machine learning techniques such as supervised learning to created regression, classifcation, and predictive models with the S.E.A.L. dataset along with relevant metadata. 
-
-The web scraper is used to web scrap websites using Python's BeautifulSoup and API commands to autonmously funnel data into S.E.A.L. Python's BeautifulSoup allows us to extract qualitative and quantative attack data from HTML/XML text inside of webpages. The following websites are used in Sena's web scraper:
->- [rekt.news](https://rekt.news) - #1 Resource for DeFi hacks across the ecosystem
->- [slowmist.io](https://hacked.slowmist.io/en/)
->- [crypto.sec](https://cryptosec.info/defi-hacks/)
->- [defiprime.com](https://defiprime.com/hacks2020)
-
 > <b> Index terms: </b> </br>
 > EDA - Exploratory Data Analysis,
 > Supervised Learning - a machine learning technique that uses labeled data to train algorithms into predicting and classifying outcomes accurately, 
