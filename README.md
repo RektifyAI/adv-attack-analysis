@@ -14,6 +14,9 @@ The web scraper is used to web scrap websites using Python's BeautifulSoup and A
 >- [crypto.sec](https://cryptosec.info/defi-hacks/)
 >- [defiprime.com](https://defiprime.com/hacks2020)
 
+> <b> Index terms: </b>
+> EDA - Exploratory Data Analysis
+> Supervised Learning - a machine learning technique that uses labeled data to train algorithms into predicting and classifying outcomes accurately.
 > S.E.A.L. = Sena Exploratory Attack Library dataset
 ----
 
