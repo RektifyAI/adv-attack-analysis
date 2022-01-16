@@ -19,11 +19,10 @@ Attacks recorded from then till now are utilized to make inferences so that a pr
 Each data vector needed to be cleaned: protocol names, dates, and amount lost in attack.
 The most intricate vector that needed prime attention were the dates. Dates and amounts with concatenated together with excessive spaces and a vertical bar(|). 
 
-> Here's a few lines of code used to extract the dates from the excessive html text data:
+> Here's a few lines of code used to extract the dates from the unstructured html text data:
 ```
-clean_dates = []
+clean_dates = [] # Empty list to store cleaned dates
 for item in dates:
-    regex = " (\\d{2}/\\d{2}/\\d{4})";
     i = item.lstrip(',000,000 | ')
     
     clean_dates.append(i)
