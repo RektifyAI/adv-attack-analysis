@@ -5,9 +5,9 @@ The Advanced Attack Analysis is a deep data analysis repo, uncovering the latest
 Attacks recorded from then till now are utilized to make inferences so that a predictions based on data stored in the S.E.A.L. dataset can support Sena protocol's analytical acrchitecture to detect high priority vulnerabilities before they lead to possible attacks. The Sena application will give alerts when attacks occur and warning messages when the analytical architecture detects vulnerabilities.
 
 > <b> Index terms: </b> </br>
-> EDA - Exploratory Data Analysis,
-> Supervised Learning - a machine learning technique that uses labeled data to train algorithms into predicting and classifying outcomes accurately, 
-> S.E.A.L. - Sena Exploratory Attack Library dataset
+> EDA - Exploratory Data Analysis </br>
+> Supervised Learning - a machine learning technique that uses labeled data to train algorithms into predicting and classifying outcomes accurately </br>
+> S.E.A.L. - Sena Exploratory Attack Library dataset </br>
 ----
 
 ## Insights into Web Scraping using Python BeautifulSoup
