@@ -19,14 +19,24 @@ Attacks recorded from then till now are utilized to make inferences so that a pr
 Each data vector needed to be cleaned: protocol names, dates, and amount lost in attack.
 The most intricate vector that needed prime attention were the dates. Dates and amounts with concatenated together with excessive spaces and a vertical bar(|). 
 
+Here's an example of how the data is formatted within the HTML text: 
+```
+Input: '$140,000,000 | 12/13/2021'
+```
+The amount lost and dates are concatenated together which makes the task of curating each item difficult. But with BeautifulSoup the task is much easier.
+
 > Here's a few lines of code used to extract the dates from the unstructured html text data:
 ```
 clean_dates = [] # Empty list to store cleaned dates
 for item in dates:
-    i = item.lstrip(',000,000 | ')
+    i = item.lstrip(',000,000 | ') # Removes the leading characters
     
     clean_dates.append(i)
 ```
+```
+Output: 12/13/2021
+```
+
 > [Follow the logic and results within the web scraper directory.](https://github.com/SenaLabs/adv-attack-analysis/blob/main/web-scraper/rekt-news-ws.ipynb)
 
 ## Applied Research: Discovering vulnerabilities before the attacks happen
