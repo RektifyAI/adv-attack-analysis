@@ -10,7 +10,7 @@ The following websites are used in Sena's web scraper:
 
 <!-- image -->
 <p style="text-align:center;">
-  <img src="data-retrieval.jpg" alt="" width="700" class="center" style="margin-left: 10px;"/>
+  <img src="data-retrieval.jpg" alt="" width="700" class="center" style="margin: 10px;"/>
 </p>
 
 # Get requests through APIs
