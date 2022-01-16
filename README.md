@@ -7,7 +7,7 @@ Attacks recorded from then till now are utilized to make inferences so that a pr
 > <b> Index terms: </b> </br>
 > EDA - Exploratory Data Analysis </br>
 > Supervised Learning - a machine learning technique that uses labeled data to train algorithms into predicting and classifying outcomes accurately </br>
-> S.E.A.L. - Sena Exploratory Attack Library dataset </br>
+> S.E.A.L. - Sena Exploratory Attack Library  </br>
 ----
 
 ## Insights into Web Scraping using Python BeautifulSoup
