@@ -13,7 +13,7 @@ Attacks recorded from then till now are utilized to make inferences so that a pr
 ## Insights into Web Scraping using Python BeautifulSoup
 <!-- image -->
 <p style="text-align:center;">
-  <img src="rektnews_inspect_element.png" alt="" width="550" class="center" style="margin-left: 10px;"/>
+  <img src="rektnews_inspect_element.png" alt="" width="700" class="center" style="margin-left: 10px;"/>
 </p>
 
 Each data vector needed to be cleaned: protocol names, dates, and amount lost in attack.
