@@ -33,7 +33,7 @@ for item in dates:
     
     clean_dates.append(i)
 ```
-> Trial and error was used to find the right parameters for the .lstrip method used in Strings.
+> Trial and error was used to find the proper parameters for the .lstrip method used to remove leading chars in Strings.
 ```
 Output: 11/05/2021
 ```
