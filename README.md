@@ -13,7 +13,7 @@ Attacks recorded from then till now are utilized to make inferences so that a pr
 ## Insights into Web Scraping using Python BeautifulSoup
 <!-- image -->
 <p style="text-align:center;">
-  <img src="rektnews_inspect_element.png" alt="" width="450" class="center" style="margin-left: 10px;"/>
+  <img src="rektnews_inspect_element.png" alt="" width="550" class="center" style="margin-left: 10px;"/>
 </p>
 
 Each data vector needed to be cleaned: protocol names, dates, and amount lost in attack.
@@ -21,7 +21,7 @@ The most intricate vector that needed prime attention were the dates. Dates and 
 
 Here's an example of how the data is formatted within the HTML text: 
 ```
-Input: '$140,000,000 | 12/13/2021'
+Input: '$55,000,000 | 11/05/2021'
 ```
 The amount lost and dates are concatenated together which makes the task of curating each item difficult. But with BeautifulSoup the task is much easier.
 
@@ -33,8 +33,9 @@ for item in dates:
     
     clean_dates.append(i)
 ```
+> Trial and error was used to find the right parameters for the .lstrip method used in Strings.
 ```
-Output: 12/13/2021
+Output: 11/05/2021
 ```
 
 > [Follow the logic and results within the web scraper directory.](https://github.com/SenaLabs/adv-attack-analysis/blob/main/web-scraper/rekt-news-ws.ipynb)
