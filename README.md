@@ -1,6 +1,6 @@
 # Advanced Attack Analysis
 
-The Advanced Attack Analysis is a deep data analysis repo, uncovering the latest insights on attacks within the DeFi ecosystem. Methods such as EDA, web scrapping, Python requests, and API calls are used to retrieve attack specific data. Sena has the ability to utilize past attack data to perform prescriptive analytics using machine learning as well as building models that will be used as data visualizations on the Sena application. The inception of DeFi is a contentious  subject, but in the advanced attack analysis repo we aggregate attack data from the later MakerDAO and Ethereum days. Around 2015, new chains began to emerge to partipate in the decentralized finance industry. 
+The Advanced Attack Analysis is a deep data analysis repo, uncovering the latest insights on attacks within the DeFi ecosystem. Methods such as EDA, web scrapping, Python requests, and API calls are used to retrieve attack specific data. Sena has the ability to utilize past attack data to perform prescriptive analytics using machine learning as well as building models that will be used as data visualizations on the Sena application.
 
 Attacks recorded from then till now are utilized to make inferences so that a predictions based on data stored in the S.E.A.L. dataset can support Sena protocol's analytical acrchitecture to detect high priority vulnerabilities before they lead to possible attacks. The Sena application will give alerts when attacks occur and warning messages when the analytical architecture detects vulnerabilities.
 
@@ -42,3 +42,5 @@ Output: 11/05/2021
 
 ## Applied Research: Discovering vulnerabilities before the attacks happen
 Attacks only exist due to vulnerabilities and [attack vectors](https://github.com/sigp/solidity-security-blog). Throughout building the code base, within the attack analysis repo we will do extensive research into specific vulnerabilities with the code for DeFi protocols. 
+
+The inception of DeFi is a contentious  subject, but in this repo we aggregate attack data from the later MakerDAO and Ethereum days. Around 2015, new chains began to emerge to partipate in the decentralized finance industry. 
