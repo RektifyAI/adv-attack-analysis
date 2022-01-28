@@ -5,7 +5,7 @@ Sena implements machine learning techniques such as supervised learning to creat
 |  Attack Type  | Neural Network |
 | ------------- | -------------- |
 |  DDos Attack  | Feed-forward Neural Network   |
-| Smart Contract Vulnerabilities  | Graph Neural Network   |
+| Smart Contract Bug  | Graph Neural Network   |
 | Reentrancy    | Graph Neural Network |
 
 
