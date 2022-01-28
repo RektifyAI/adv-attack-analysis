@@ -9,6 +9,12 @@ Sena implements machine learning techniques such as supervised learning to creat
 | Reentrancy    | Graph Neural Network |
 
 
+<!-- image -->
+<p style="text-align:center;">
+  <img src="tensor_flow.png" alt="tensor flow" width="800" class="center" style="margin-right: 5px;"/>
+</p>
+
+
 Sources:
 - https://reader.elsevier.com/reader/sd/pii/S1319157806800029?token=2EF11E26C870D27055A3E24E1E9E5FA0BBE72443A8FAB2CAC51BA87B480D569CF612869DB9F56B18D546E3FC4AAAE771&originRegion=us-east-1&originCreation=20220128064013
 - https://www.ijcai.org/Proceedings/2020/0454.pdf
