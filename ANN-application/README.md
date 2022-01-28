@@ -5,8 +5,12 @@ Sena implements machine learning techniques such as supervised learning to creat
 |  Attack Type  | Neural Network |
 | ------------- | -------------- |
 |  DDos Attack  | Feed-forward Neural Network   |
-| Smart Contract Bug  | Graph Neural Network   |
-| Reentrancy    | Graph Neural Network |
+|  DDos Attack  | Self-Organizing Map(SOM) |
+|  DDos Attack  | Modified Adaptive Resonance Theory 2 (Modified ART2) |
+| Smart Contract Bug  | Graph Neural Network (GNN)  |
+| Reentrancy    | Graph Neural Network (GNN) |
+| Phishing Attack | Self-structuring Neural Network |
+
 
 
 <!-- image -->
@@ -20,3 +24,4 @@ Sources:
 - https://www.ijcai.org/Proceedings/2020/0454.pdf
 - https://link.springer.com/article/10.1007/s11276-020-02379-z
 - https://arxiv.org/abs/2106.09282
+- https://link.springer.com/article/10.1007/s00521-013-1490-z
