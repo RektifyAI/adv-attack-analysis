@@ -2,9 +2,9 @@
 
 Sena implements machine learning techniques such as supervised learning to created regression, classifcation, and predictive models with the S.E.A.L. dataset along with relevant metadata. Through using AI/ML, Sena will explore the feasibility of using artificial neural networks (ANNs) for risk assessment in predicting possible attacks using S.E.A.L. data. Sena is the first DeFi protocol to using AI/ML to analyze attack data.
 
-|  Attack Type  | Neural Network Application |
-| ------------- | -------------- |
-|  DDos Attack  | Feed-forward Neural Network   |
+|  Attack Type  | Neural Network Application | Sources |
+| ------------- | -------------- | -----------|
+|  DDos Attack  | Feed-forward Neural Network   | 
 |  DDos Attack  | Self-Organizing Map(SOM) |
 |  DDos Attack  | Modified Adaptive Resonance Theory 2 (Modified ART2) |
 | Smart Contract Bug  | Graph Neural Network (GNN)  |
@@ -25,3 +25,4 @@ Sources:
 - https://link.springer.com/article/10.1007/s11276-020-02379-z
 - https://arxiv.org/abs/2106.09282
 - https://link.springer.com/article/10.1007/s00521-013-1490-z
+- https://www.ijcai.org/Proceedings/2020/0454.pdf
