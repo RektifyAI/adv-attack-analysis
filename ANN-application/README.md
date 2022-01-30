@@ -25,3 +25,4 @@ Sources:
 - https://arxiv.org/abs/2106.09282
 - https://link.springer.com/article/10.1007/s00521-013-1490-z
 - https://www.ijcai.org/Proceedings/2020/0454.pdf
+- [Detection of malicious and non-malicious website visitors using unsupervised neural network learning](https://www.sciencedirect.com/science/article/abs/pii/S1568494612003778)
