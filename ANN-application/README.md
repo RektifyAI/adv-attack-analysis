@@ -14,7 +14,7 @@ Sena implements machine learning techniques such as supervised learning to creat
 
 <!-- image -->
 <p style="text-align:center;">
-  <img src="tensor_flow.png" alt="tensor flow" width="800" class="center" style="margin-right: 5px;"/>
+  <img src="" alt="tensor flow" width="800" class="center" style="margin-right: 5px;"/>
 </p>
 
 
