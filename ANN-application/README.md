@@ -6,11 +6,10 @@ Sena implements machine learning techniques such as supervised learning to creat
 | ------------- | -------------- | -----------|
 |  DDos Attack<sup>1</sup>  | Feed-forward Neural Network   | 
 |  DDos Attack<sup>2</sup>   | Self-Organizing Map(SOM) |
-|  DDos Attack<sup>3</sup>   | Modified Adaptive Resonance Theory 2 (Modified ART2) |
 | Smart Contract Bug  | Graph Neural Network (GNN)  |
 | Reentrancy    | Graph Neural Network (GNN) |
 | Phishing Attack | Self-structuring Neural Network |
-
+|  DDos Attack<sup>3</sup>   | Modified Adaptive Resonance Theory 2 (Modified ART2) |
 
 
 <!-- image -->
