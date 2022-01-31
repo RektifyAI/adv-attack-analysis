@@ -2,14 +2,14 @@
 
 Sena implements machine learning techniques such as supervised learning to created regression, classifcation, and predictive models with the S.E.A.L. dataset along with relevant metadata. Through using AI/ML, Sena will explore the feasibility of using artificial neural networks (ANNs) for risk assessment in predicting possible attacks using S.E.A.L. data. Sena is the first DeFi protocol to using AI/ML to analyze attack data. By way of artificial neural networks we can analyze attack specific data in the decentralized finance domain.
 
-|  Attack Type  | Artificial Neural Network Application | Sources |  
-| ------------- | -------------- | ----------- |
-|  DDos Attack<sup>1</sup>  | Feed-forward Neural Network   | #1 |
-|  DDos Attack<sup>2</sup>   | Self-Organizing Map(SOM) | #1 |
-| Smart Contract Bug  | Graph Neural Network (GNN)  | #2, #3, #5  |
-| Reentrancy    | Graph Neural Network (GNN) |#3, #5 |
-| Phishing Attack | Self-structuring Neural Network | #4 |
-|  DDos Attack<sup>3</sup>   | Modified Adaptive Resonance Theory 2 (Modified ART2) | #6 |
+|Attack Example | Attack Date | Attack Type  | Artificial Neural Network Application | Sources |  
+|-----------| -------- | ------------- | -------------- | ----------- |
+| LooksRare| 01/11/2022 |  DDos Attack<sup>1</sup>  | Feed-forward Neural Network   | #1 |
+| | |  DDos Attack<sup>2</sup> | Self-Organizing Map(SOM) | #1 |
+| Multichain | 01/18/2022 | Smart Contract Bug  | Graph Neural Network (GNN)  | #2, #3, #5  |
+| Grim Finance | 12/19/2022 | Reentrancy | Graph Neural Network (GNN) |#3, #5 |
+| CryptoBatz by Ozzy Osbourne | 01/21/2022 | Phishing Attack | Self-structuring Neural Network | #4 |
+| | |  DDos Attack<sup>3</sup>   | Modified Adaptive Resonance Theory 2 (Modified ART2) | #6 |
 
 
 <!-- image -->
