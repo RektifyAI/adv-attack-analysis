@@ -25,3 +25,5 @@ Sources:
 4. [Predicting phishing websites based on self-structuring neural network](https://link.springer.com/article/10.1007/s00521-013-1490-z)
 5. [Smart Contract Vulnerability Detection Using Graph Neural Networks](https://www.ijcai.org/Proceedings/2020/0454.pdf)
 6. [Detection of malicious and non-malicious website visitors using unsupervised neural network learning](https://www.sciencedirect.com/science/article/abs/pii/S1568494612003778)
+7. [DDoS flooding attack detection scheme based on F-divergence](https://www.sciencedirect.com/science/article/abs/pii/S0140366412001156)
+8. [Natural Language Processing](https://strathprints.strath.ac.uk/2611/1/strathprints002611.pdf)
