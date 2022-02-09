@@ -1,0 +1,423 @@
+protocol_name,date_of_attack,amount_lost,attack_type
+Kingfund Finance,01/20/2022,300 WBNB,Scam
+AFKSystem,01/19/2022,"$12,000,000",Scam
+Crypto.com,01/18/2022,"4,836.26 ETH + 443.93 BTC + $ 66,200",Unauthorized Withdrawal
+Multichain,01/18/2022,450 ETH,Contract vulnerabilities
+Crosswise,01/18/2022,"879,000",Use privileged functions
+Crypto Burger,01/17/2022,-,Contract vulnerabilities
+CityDAO,01/15/2022,29.67 ETH,Discord admin account hacked
+Rari Capital,01/15/2022,"$200,000",price manipulation
+Frosties,01/13/2022,"$1,000,000",Scam
+Multiple IDO Projects,01/12/2022,5744 BNB,Scam
+LooksRare,01/11/2022,-,DDos attack
+Lympo,01/10/2022,"$18,700,000",Hot Wallet Security Vulnerability
+LCX,01/09/2022,"$6,000,000",Stolen hot wallet
+Arbitrum One,01/09/2022,-,Downtime
+StoboxCompany,01/07/2022,-,Private key leak
+DaoMetaland,01/07/2022,640 BNB,Scam
+Bored Bunny,01/06/2022,"2,000 ETH",Scam
+Moon Rabbit,01/05/2022,-,Scam
+Arbix Finance,01/04/2022,"$10,000,000",Scam
+Tinyman Pools,01/01/2022,-,Contract vulnerabilities
+Bitmart,12/04/2021,"$196,000,000",
+Compound,9/29/2021,"$147,000,000",
+VulcanForged,12/13/2021,"$140,000,000",
+Cream Finance,10/27/2021,"$130,000,000",
+BadgerDAO,12/02/2021,"$120,000,000",
+Ascendex,12/12/2021,"$77,700,000",
+EasyFi,4/19/2021,"$59,000,000",
+Uranium,4/28/2021,"$57,200,000",
+bZx,11/05/2021,"$55,000,000",
+Pancake Bunny,5/19/2021,"$45,000,000",
+epichackhomie,9/29/2020,"$45,000,000",
+Alpha Finance,2/13/2021,"$37,500,000",
+Vee Finance,9/21/2021,"$34,000,000",
+Crypto.com,1/18/2022,"$33,700,000",
+Meerkat Finance,03/04/2021,"$32,000,000",
+MonoX,11/30/2021,"$31,400,000",
+Spartan Protocol,05/02/2021,"$30,500,000",
+Grim Finance,12/18/2021,"$30,000,000",
+StableMagnet,6/23/2021,"$27,000,000",
+Paid Network,03/05/2021,"$27,000,000",
+Harvest Finance,10/26/2020,"$25,000,000",
+X-Token,5/12/2021,"$24,000,000",
+popsicle,08/03/2021,"$20,000,000",
+Pickle Finance,11/22/2020,"$19,700,000",
+Cream Finance,8/30/2021,"$18,800,000",
+Snowdog,11/25/2021,"$18,100,000",
+Bearn.Fi,5/17/2021,"$18,000,000",
+Indexed Finance,10/14/2021,"$16,000,000",
+eminenceinprod,9/28/2020,"$15,000,000",
+Furucombo,2/27/2021,"$14,000,000",
+Death Bed Confessionsc3pr,12/02/2020,"$12,000,000",
+Value DeFi,05/07/2021,"$11,000,000",
+Yearn Finance,02/05/2021,"$11,000,000",
+arbix,01/04/2022,"$10,000,000",
+Rari Capital,05/08/2021,"$10,000,000",
+Value DeFi,05/05/2021,"$10,000,000",
+cover,12/29/2020,"$9,400,000",
+Punk Protocol,8/10/2021,"$8,950,000",
+visorfinance,12/21/2021,"$8,200,000",
+THORChain,7/22/2021,"$8,000,000",
+Hackepidemic,11/17/2020,"$8,000,000",
+LCX,01/08/2022,"$7,940,000",
+AnySwap,7/10/2021,"$7,900,000",
+Warp Finance,12/18/2020,"$7,800,000",
+BurgerSwap,5/28/2021,"$7,200,000",
+Value DeFi,11/14/2020,"$7,000,000",
+Alchemix,6/16/2021,"$6,500,000",
+belt,5/29/2021,"$6,300,000",
+bondly,7/15/2021,"$5,900,000",
+Roll,3/14/2021,"$5,700,000",
+THORChain,7/15/2021,"$5,000,000",
+X-Token,8/29/2021,"$4,500,000",
+Eleven Finance,6/22/2021,"$4,500,000",
+Chain Swap,7/11/2021,"$4,400,000",
+Dao Maker,09/04/2021,"$4,000,000",
+jaypegsautomart,9/17/2021,"$3,100,000",
+Pancake Bunny,7/16/2021,"$2,400,000",
+Audodo,03/09/2021,"$2,000,000",
+Akropolis,11/12/2020,"$2,000,000",
+bentfinance,12/21/2021,"$1,750,000",
+8ight Finance,12/08/2021,"$1,750,000",
+Levyathan,7/30/2021,"$1,500,000",
+The Big Combo,02/09/2021,"$1,300,000",
+AutoShark Finance,5/24/2021,"$74,500,005",
+Merlin Lab,5/26/2021,"$68,000,005",
+Merlin Lab,5/26/2021,"$55,000,005",
+Merlin Lab,6/29/2021,"$33,000,006",
+Saddle Finance,1/20/2021,"$275,735",
+Safe Dollar,6/28/2021,"$248,000",
+Pizza DeFi,12/5/2021,"$5,000,000",
+BadgerDAO,12/2/2021,"$120,000,000",
+MonoX,11/30/2021,"$31,000,000",
+bZx,11/5/2021,"$55,000,000",
+Cream Finance,10/27/2021,"$130,000,000",
+Pancake Bunny,10/20/2021,"$2,000,000",
+Indexed Finance,10/15/2021,"$16,000,000",
+Compound Finance,9/30/2021,"$80,000,000",
+Vee Finance,9/21/2021,"$35,000,000",
+pNetwork,9/20/2021,"$12,000,000",
+Sushi,9/16/2021,null,
+Zabu Finance,9/12/2021,"$3,200,000",
+Dao Maker,9/4/2021,"$4,000,000",
+Cream Finance,9/30/2021,"$19,000,000",
+Dao Maker,8/12/2021,"$7,000,000",
+Poly Network,8/10/2021,"$611,000,000",
+Punk Protocol,8/10/2021,"$3,950,000",
+Popsicle Finance,8/3/2021,"$25,000,000",
+Levyathan,7/30/2021,null,
+THORChain,7/23/2021,"$13,000,000",
+Pancake Bunny,7/16/2021,"$2,400,000",
+THORChain,7/15/2021,"$4,900,000",
+THORChain,6/28/2021,"$139,000",
+Bondly Finance,7/15/2021,null,
+Chain Swap,7/10/2021,"$4,400,000",
+Chain Swap,7/2/2021,"$800,000",
+Safe Dollar,6/28/2021,"$248,000",
+Eleven Finance,6/22/2021,"$4,600,000",
+Impossible Finance,6/21/2021,"$500,000",
+Alchemix,6/16/2021,null,
+Belt Finance,5/28/2021,"$50,000,000",
+BurgerSwap,5/28/2021,"$7,200,000",
+Wild Credit,5/27/2021,null,
+Merlin Lab,5/26/2021,"$330,000",
+Merlin Lab,5/26/2021,"$550,000",
+Merlin Lab,5/26/2021,"$680,000",
+AutoShark Finance,5/24/2021,"$822,000",
+Venus Protocol,5/19/2021,null,
+Pancake Bunny,5/19/2021,"$200,000,000",
+Bearn.Fi,5/16/2021,"$11,000,000",
+X-Token,5/12/2021,"$24,500,000",
+Rari Capital,5/8/2021,"$15,000,000",
+Spartan Protocol,5/2/2021,"$30,000,000",
+Uranium Finance,4/28/2021,"$50,000,000",
+EasyFi,4/19/2021,"$80,000,000",
+Force DAO,4/4/2021,"$376,000",
+TurtleDex,3/18/2021,"$2,400,000",
+Iron Finance,3/16/2021,"$170,000",
+Roll,3/14/2021,"$5,700,000",
+DODO,3/8/2021,"$1,910,000",
+Paid Network,3/5/2021,"$160,000,000",
+Meerkat Finance,3/4/2021,"$31,000,000",
+Furucombo,2/28/2020,"$14,000,000",
+Cream Finance,2/12/2021,"$37,000,000",
+Alpha Finance Lab,2/13/2021,"$37,000,000",
+BT Finance,2/12/2021,"$1,500,000",
+Growth DeFi,2/8/2021,"$1,300,000",
+Yearn Finance,2/4/2021,"$11,000,000",
+Saddle Finance,1/19/2021,"$275,000",
+Cover Protocol,12/28/2020,"$5,000,000",
+Warp Finance,12/18/2020,"$7,700,000",
+Pickle Finance,11/21/2020,"$30,000,000",
+Origin Protocol,11/17/2020,"$7,000,000",
+Value DeFi,11/14/2020,"$6,000,000",
+Akropolis,11/12/2020,"$2,000,000",
+Harvest Finance,10/26/2020,"$24,000,000",
+Leo Finance,10/11/2020,"$42,000",
+Eminence,9/29/2020,"$15,000,000",
+bZx,9/13/2020,"$8,000,000",
+Soft Yearn Finance,9/7/2020,"$250,000",
+Opyn,8/4/2020,"$370,000",
+Balancer,6/29/2020,"$500,000",
+dForce,4/19/2020,"$24,900,000",
+bZx,2/15/2020,"$900,000",
+Fulcrum,1/11/2020,"$2,500,000",
+Bancor,7/9/2018,13500000,Private Key Compromise
+Opyn,8/4/2020,371260,Smart Contract Exploit
+MakerDAO,3/12/2020,8320000,Smart Contract Exploit
+Uniswap,4/12/2020,300000,Reentrancy
+Akropolis,11/12/2020,2030851,Flash Loan Hack
+Yearn Finance yDai Vault,2/4/2021,11000000,Flash Loan Hack
+Spartan Protocol,5/1/2021,30500000,Flash Loan Hack
+Paid Network,3/5/2021,3750000,Smart Contract Exploit
+BT Finance,2/9/2021,1500000,Smart Contract Exploit
+Synlev,3/12/2021,2000000,Fraud Rug Pull
+DefiSaver,07/01/2021,1200000,Whitehat
+Compounder Finance,12/01/2020,12500000,Fraud Rug Pull
+Meerkat,03/04/2021,31000000,Fraud Rug Pull
+PercentFinance,11/04/2020,1000000,Smart Contract Bug
+SushiSwap,09/05/2020,13808454,Fraud Rug Pull
+Cheese Bank,11/06/2020,3300000,Flash Loan Hack
+The DAO,12/06/2016,50000000,Reentrancy
+Rari Capital,05/07/2021,10000000,Smart Contract Exploit
+DefiSaver,08/10/2020,310000,Smart Contract Exploit
+SpankChain,09/10/2018,37950,Reentrancy
+wLeo,12/10/2020,42000,Smart Contract Exploit
+Axion,11/12/2020,600000,Mint Exploit
+Alpha Homora,2/13/2021,38000000,Flash Loan Hack
+YAM Finance,08/13/2020,750000,Rebase Error
+bZx,09/13/2020,8000000,Smart Contract Exploit
+Roll,03/14/2021,5700000,Private Key Compromise
+inSure,06/14/2021,25000000,Smart Contract Exploit
+Value DeFi,11/14/2020,6000000,Flash Loan Hack
+bZx,02/15/2020,355880,Flash Loan Hack
+Origin Dollar,11/16/2020,7700000,Flash Loan Hack
+Iron Finance,03/17/2021,170000,Other
+88mph,11/17/2020,100000,Mint Exploit
+Warp Finance,12/17/2020,7700000,Flash Loan Hack
+bZx,02/18/2020,633000,Flash Loan Hack
+True Seigniorage Dollar,03/18/2021,16600,Mint Exploit
+Bancor,06/18/2020,135229,Other
+dForce,04/19/2020,24500000,Reentrancy
+Pancake Bunny,05/19/2021,45000000,Flash Loan Hack
+Pickle Finance,11/21/2020,19700000,Smart Contract Exploit
+Hegic,04/23/2020,48000,Smart Contract Bug
+Deriswap,11/23/2020,53000,Fraud Rug Pull
+Sythetix sETH Exploit,06/25/2019,,Other
+Harvest,10/26/2020,33800000,Flash Loan Hack
+Julswap,05/27/2021,,Flash Loan Hack
+Uranium Finance,04/28/2021,57200000,Smart Contract Exploit
+BurgerSwap,05/28/2021,7200000,Flash Loan Hack
+null,06/28/2020,449740,Flash Loan Hack
+Eminence,09/28/2020,15000000,Flash Loan Hack
+Cover Protocol,12/28/2020,9400000,Mint Exploit
+SushiSwap,1/29/21,108000,Smart Contract Exploit
+VEther/Vader,06/30/2020,900000,Smart Contract Exploit
+SushiSwap,11/30/2020,15000,Smart Contract Exploit
+Force DAO,4/6/2021,367000,Smart Contract Exploit
+Growth DeFi,2/8/2021,1400000,Smart Contract Exploit
+DODO,3/9/2021,3800000,Flash Loan Hack
+Mocha Set Dollar,01/01/2021,6679,Fraud Rug Pull
+Static,01/01/2021,,Fraud Rug Pull
+Multiple Finance,02/01/2021,240000,Fraud Rug Pull
+Vaultz,02/02/2021,7625,Fraud Rug Pull
+Penny Protocol,04/01/2021,1884,Fraud Rug Pull
+Xdef Finance,05/01/2021,561000,Fraud Rug Pull
+Shopin,06/01/2018,10000000,ICO Scam
+Kore,11/01/2020,346488,Fraud Rug Pull
+Kper Network,11/01/2020,550000,Fraud Rug Pull
+PlexCoin,12/01/2017,2000000,ICO Scam
+AriseBank,02/02/2018,4200000,ICO Scam
+DeFlast Finance,02/02/2021,300000,Whitehat
+OracleSwapToken,02/02/2021,127327,Fraud Rug Pull
+Hedget,03/02/2021,,Fraud Rug Pull
+Centra,04/02/2018,25000000,ICO Scam
+YFDash Finance,12/02/2020,65611,Fraud Rug Pull
+Chad Token,08/03/2021,,Fraud Rug Pull
+Soft Yearn Finance,09/03/2020,250000,Rebase Error
+Rise Protocol,11/03/2021,543452,Fraud Rug Pull
+Ape Inn,05/04/2021,12000,Fraud Rug Pull
+UniCats,10/04/2020,230000,Fraud Rug Pull
+Matcha,10/04/2021,250000,Unable to Sell
+Qubes,10/04/2021,1757250,Unable to Sell
+YearnSpace,12/04/2020,0,Fraud Rug Pull
+FairElon,04/05/2021,8000,Unable to Sell
+keep3rX,11/05/2020,13280,Fraud Rug Pull
+Kong Coin,04/06/2021,9963,Unable to Sell
+Burn Vault Finance,10/06/2020,1396,Fraud Rug Pull
+Padthai Finance,10/06/2020,30000,Fraud Rug Pull
+YFFC Finance,11/06/2020,29700,Fraud Rug Pull
+Unirocket,10/08/2020,9100,Fraud Rug Pull
+Contribute.Protocol,01/09/2021,6000,Fraud Rug Pull
+Emerald Mine,09/09/2020,2500000,Fraud Rug Pull
+YFDEX Finance,11/09/2020,20000000,Fraud Rug Pull
+Generate,03/10/2021,,Fraud Rug Pull
+FLiK,05/10/2019,1300000,ICO Scam
+CBDAO,11/10/2020,90000,Fraud Rug Pull
+Defibase,12/11/2020,382800,Fraud Rug Pull
+YFFS Finance,12/11/2020,1000000,ICO Scam
+Shabuvault,12/11/2020,5500,Fraud Rug Pull
+Nifity.io,01/13/2021,194000,Fraud Rug Pull
+Boon Tech,08/13/2020,5000000,ICO Scam
+BlockVest,02/14/2019,2500000,ICO Scam
+SakuraDeFi,02/14/2021,,Fraud Rug Pull
+MOOswap.org,10/14/2020,50000,Fraud Rug Pull
+DeTrade,12/14/2020,1000000,Fraud Rug Pull
+Reflation,12/14/2020,126850,Fraud Rug Pull
+Minivault,11/15/2020,20000,Fraud Rug Pull
+pills.forsale,01/16/2021,800000,Fraud Rug Pull
+Fomo3d,08/16/2018,4000000,Smart Contract Exploit
+Sav3r,11/16/2020,23460,Fraud Rug Pull
+Walletreum,11/16/2020,163000,Fraud Rug Pull
+Blockchain Terminal Token,01/17/2021,30000000,ICO Scam
+YearnML,01/18/2021,75000,Fraud Rug Pull
+ShareDeFi Protocol,03/18/2021,,Fraud Rug Pull
+MTI Finance,11/18/2020,66000,Fraud Rug Pull
+GasPay,02/19/2021,203063,Fraud Rug Pull
+Xfinance,10/19/2020,1050000,Fraud Rug Pull
+K3psav,11/19/2020,16636,Fraud Rug Pull
+Authmen Token,12/19/2020,12000,Fraud Rug Pull
+fairmoon,05/19/21,157500,
+DarkDeFi,02/20/2021,65000,Unable to Sell
+Shiba Poodle,03/20/2021,,Fraud Rug Pull
+iProtocol,12/20/2020,42880,Fraud Rug Pull
+Solid Protocol,12/20/2020,150000,Fraud Rug Pull
+EasyFi,04/20/21,59000000,Private Key Compromise
+OpportyToken,01/21/2020,600000,ICO Scam
+Argyle Coin,05/21/2019,30000000,ICO Scam
+lv.finance,09/21/2020,,Fraud Rug Pull
+Marlin Pond,12/21/2020,,Fraud Rug Pull
+Turtledex Token,03/22/2021,2500000,Fraud Rug Pull
+Titanium BAR,05/22/2018,21000000,ICO Scam
+Pro Coin,05/22/2019,26500000,ICO Scam
+Futurebase,12/22/2020,35560,Fraud Rug Pull
+gif.market,03/23/2021,134000,Fraud Rug Pull
+Dropil,04/23/2020,1800000,ICO Scam
+Fantasy Market Token,09/23/2019,63000,ICO Scam
+Mosaic,10/24/2020,102500,Fraud Rug Pull
+Cakelock,02/25/2021,4230,Fraud Rug Pull
+TruAmpl,08/25/2020,693000,Fraud Rug Pull
+Data Transaction Token,09/25/2020,2400000,ICO Scam
+Hatch DAO,09/25/2020,4319,Fraud Rug Pull
+Magix,12/25/2020,6000,Fraud Rug Pull
+Metropolis,12/25/2020,38750,Fraud Rug Pull
+Veritaseum,07/26/2017,8400000,Private Key Compromise
+Furucombo,02/26/2021,14000000,Infinite Approval
+PopcornSwap,01/27/2021,2000000,Fraud Rug Pull
+Safestorm,03/27/2021,24300,Fraud Rug Pull
+Santa DAO,10/27/2020,3456,Fraud Rug Pull
+ThunderSwap,02/28/2020,46500,Fraud Rug Pull
+BitClave,05/28/2020,25500000,ICO Scam
+bitqy/bitqyM,08/29/2019,13000000,ICO Scam
+Dark Matter,12/29/2020,3000,Fraud Rug Pull
+Oyster,10/30/2018,300000,Fraud Rug Pull
+UniDark,11/30/2020,35000,Fraud Rug Pull
+Exeedme,12/30/2020,560000,Fraud Rug Pull
+YYFI,07/31/2020,,Fraud Rug Pull
+Amplyfi,7/31/2020,850000,Fraud Rug Pull
+DEOR,4/6/2021,600000,Fraud Rug Pull
+IYF,3/7/2021,2000000,Fraud Rug Pull
+iBase,,130000,ICO Scam
+RChain,,300000,Other
+Veritaseum,,14800000,ICO Scam
+X-Token,,28000000,
+Microbit,01/01/2021,,Fraud Rug Pull
+SharkTron,09/11/2020,26000000,Fraud Rug Pull
+Leverage X,02/25/2021,250000,Fraud Rug Pull
+Merkle Tree Ventures,,,
+StableMagnet,06/23/2021,22000000,Fraud Rug Pull
+Tether,,30950010,
+Eleven Finance,06/23/2021,4500000,Mint Exploit
+Alchemix,06/18/2021,6500000,Smart Contract Exploit
+Safe Dollar,06/18/2021,250000,Mint Exploit
+Yearn Finance,06/26/2021,259000,Smart Contract Bug
+Visor,06/19/2021,500000,Private Key Compromise
+Polybutterfly,,,
+StableMagnet,,,
+Polyorca,,,
+Beetsfarm,,,
+Aurafi,,,
+Belt Finance,5/29/21,6200000,Flash Loan Hack
+STRD Finance,,,
+cretaceous.space,,,
+Missile Finance,,,
+Pumaswap,,,
+Boobs,,,
+Ogre,,,
+Croco,,,
+Warden,,,
+Pablo Escobar,,,
+Pull dog swap,,,
+MoltenSwap,,,
+WhaleSwap,,,
+DiceSwap,,,
+KoiSwap,,,
+Chaddy,,,
+SheepSwap,,,
+Demeterfinance.org,,,
+Durian,,,
+https://sailorswap.io/sale,,,
+https://sf2.safufinance.xyz/,,,
+https://dragon-fly.finance/#/,,,
+Rumstaking.com,,,
+https://original.finance/,,,
+Finite,,,
+Bacon,,,
+Croco,,,
+Neonic,,,
+Ela,,,
+BNBdivs,,,
+Sexyapy.com,,,
+https://axedefi.com/,,,
+https://seashell.finance,,,
+Bearn.Fi,5/16/21,11000000,Smart Contract Exploit
+yCredit,1/1/2021,11000000,Mint Exploit
+Yield Finance,2/27/21,166000,Whitehat
+Zerion,3/4/2021,30000,Other
+Sil finance,3/18/21,12200000,Smart Contract Exploit
+Polkatrain,4/4/2021,3000000,Smart Contract Exploit
+Pancake Swap,3/15/21,1800000,Smart Contract Exploit
+Value DeFi,5/7/2021,11000000,Smart Contract Exploit
+Venus,5/18/21,300000000,Smart Contract Exploit
+Bogged,5/22/21,3600000,Flash Loan Hack
+Merlin,5/26/21,680000,Mint Exploit
+Wild Credit,5/27/21,637000,Smart Contract Exploit
+Alchemix,6/6/2021,50000,Smart Contract Bug
+Impossible Finance,6/21/21,500000,Flash Loan Hack
+Uranium Finance,4/7/2021,1500000,Smart Contract Exploit
+Value DeFi,5/6/2021,10000000,Smart Contract Exploit
+Hotdogcart Finance,6/29/21,22000,Fraud Rug Pull
+Merlin,6/29/21,300000,Smart Contract Exploit
+Poly Network,8/11/2021,611000000,Other
+Cream Finance,08/30/2021,18800000,Reentrancy
+X-Token,08/30/2021,4500000,Flash Loan Hack
+Punk Protocol,08/13/21,8950000,Smart Contract Exploit
+Tomb Finance,9/3/2021,,
+Dao Maker,9/6/2021,4000000,Smart Contract Exploit
+Compound,09/29/21,147000000,Smart Contract Bug
+Compound,10/04/21,68800000,Smart Contract Bug
+Indexed Finance,10/15/2021,16000000,Other
+Cream Finance,10/27/2021,130000000,Flash Loan Hack
+AnubisDAO,10/29/21,60000000,Fraud Rug Pull
+SQUID,11/01/2021,3400000,Fraud Rug Pull
+bZx,11/05/2021,55040167,Private Key Compromise
+Curve Finance,11/11/2021,30000000,Other
+Vesper Finance,11/03/2021,3000000,Oracle Manipulation
+BXH,10/30/2021,139195315,Private Key Compromise
+AutoShark Finance,10/29/2021,2000000,Flash Loan Hack
+Avaterra Finance,10/21/2021,,Mint Exploit
+Pancake Bunny,10/20/2021,,Flash Loan Hack
+Glide Finance,10/18/2021,300000,Smart Contract Bug
+Cream Finance,02/13/2021,37500000,Flash Loan Hack
+Nerve,,,
+Bitinex,09/27/2021,,Other
+pNetwork,09/20/2021,,
+Vee Finance,09/20/2021,,Other
+Nowswap,09/15/2021,1000000,
+Saddle Finance,01/19/2021,275000,Other
+SushiSwap,01/20/2021,100000,Smart Contract Exploit
+Snowdog,11/26/2021,,Fraud Rug Pull
+MonoX,11/30/2021,,Other
+BadgerDAO,12/02/2021,,Infinite Approval
+Bitmart,12/05/2021,,Other
