@@ -9,7 +9,8 @@ The following websites are used in Sena's web scraper:
 >- [slowmist.io](https://hacked.slowmist.io/en/)
 >- [crypto.sec](https://cryptosec.info/defi-hacks/)
 >- [defiprime.com](https://defiprime.com/hacks2020)
-> [squanch](https://github.com/TheSquanch-147/Rugpulls-Hacks-Exploits-List)
+>- [squanch](https://github.com/TheSquanch-147/Rugpulls-Hacks-Exploits-List)
+>[quadrigainitiative](https://www.quadrigainitiative.com/hackfraudscam/btfinancehack.php)
 
 <!-- image -->
 <p style="text-align:center;">
