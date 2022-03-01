@@ -1,6 +1,6 @@
 # Sena Web Scaper
 
-The web scraper is used to extract data from websites using Python's BeautifulSoup. We wish to use DeFi exploit specific APIs to autonmously funnel data into S.E.A.L., but the DeFi industry is still relatively new. The main API we can utilize at this time is the Nansen.ai API. We hope to land them as a potential partner. 
+The web scraper is used to extract data from webpages using Python's BeautifulSoup. We wish to use DeFi exploit specific APIs to autonmously funnel data into S.E.A.L., but the DeFi industry is still relatively new. The main API we can utilize at this time is the Nansen.ai API. We hope to land them as a potential partner. 
 
 To expand the data-driven functionality of Sena we will have to build our own API with all the DeFi attack data we've curated to be the one-stop shop for the DeFi ecosystem. In the meanwhile, Python's BeautifulSoup allows us to extract qualitative and quantative attack data from HTML/XML text inside of webpages. 
 
