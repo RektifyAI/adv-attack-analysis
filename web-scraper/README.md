@@ -7,6 +7,7 @@ To expand the data-driven functionality of Sena we will have to build our own AP
 The following websites are used in Sena's web scraper:
 >- [rekt.news](https://rekt.news) - #1 Resource for DeFi hacks across the ecosystem
 >- [slowmist.io](https://hacked.slowmist.io/en/)
+>- cryptobriefing
 >- [crypto.sec](https://cryptosec.info/defi-hacks/)
 >- [defiprime.com](https://defiprime.com/hacks2020)
 >- [coingeek](https://coingeek.com/the-defi-hacks-of-2020/)
