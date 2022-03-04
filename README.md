@@ -7,7 +7,7 @@ Sena has the ability to utilize past attack data to perform prescriptive analyti
 Attacks recorded from then till now are utilized to make inferences so that a predictions based on data stored in the S.E.A.L. dataset can support Sena protocol's analytical acrchitecture to detect high priority vulnerabilities before they lead to possible attacks. The Sena application will give alerts when attacks occur and warning messages when the analytical architecture detects vulnerabilities.
 
 > <b> Index terms: </b> </br>
-> EDA - Exploratory Data Analysis (typically conducted to display relationships between metadata </br>
+> EDA - Exploratory Data Analysis (typically conducted to display relationships between metadata) </br>
 > Supervised Learning - a machine learning technique that uses labeled data to train algorithms into predicting and classifying outcomes accurately </br>
 > S.E.A.L. - Sena Exploratory Attack Library dataset </br>
 ----
