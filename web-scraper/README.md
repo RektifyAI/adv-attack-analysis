@@ -21,4 +21,10 @@ The following websites are used in Sena's web scraper:
 </p>
 
 # Get requests through APIs
-[DeFi Llama](https://docs.llama.fi/api), [Twitter](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api), [DeFi Pulse](https://docs.defipulse.com/api-docs-by-provider/defi-pulse-data) are a few APIs Sena will be using to curate protocol specific data. DeFi Llama's API is a source to retrieve total value locked at the time of the exploit, a registery of DeFi protocols, and on-chain data. DeFi Pulse's API gives access to ETH gas prices as well as an on-slot of data providers for future needs. Twitter's API allows us to monitor protocol activity. All data curated from these APIs will be curated under columns in the S.E.A.L. dataset. 
+>- TVL data: [DeFi Llama](https://docs.llama.fi/api)
+>- Protocol behavior: [Twitter](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)
+>- Overall DeFi market trends: [DeFi Pulse](https://docs.defipulse.com/api-docs-by-provider/defi-pulse-data) 
+>- Social behavior or DeFi users/protocols: [LunarCrush](https://legacy.lunarcrush.com/developers/docs), [PyPi page](https://pypi.org/project/lunarcrush/)
+
+
+The preceding are a few APIs Sena will be using to curate protocol specific data. DeFi Llama's API is a source to retrieve total value locked at the time of the exploit, a registery of DeFi protocols, and on-chain data. DeFi Pulse's API gives access to ETH gas prices as well as an on-slot of data providers for future needs. Twitter's API allows us to monitor protocol activity. All data curated from these APIs will be curated under columns in the S.E.A.L. dataset. 
