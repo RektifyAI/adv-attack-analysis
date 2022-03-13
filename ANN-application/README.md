@@ -5,11 +5,11 @@ Sena implements AI/ML techniques such as supervised learning to created regressi
 |Attack Example | Attack Date | Attack Type  | Artificial Neural Network Application | Sources |  
 |-----------| -------- | ------------- | -------------- | ----------- |
 | LooksRare| 01/11/2022 |  DDos Attack<sup>1</sup>  | Feed-forward Neural Network   | #1 |
-| | |  DDos Attack<sup>2</sup> | Self-Organizing Map(SOM) | #1 |
+| Arbitrum One | 01/14/2021 |  DDos Attack<sup>2</sup> | Self-Organizing Map(SOM) | #1 |
 | Multichain | 01/18/2022 | Smart Contract Bug  | Graph Neural Network (GNN)  | #2, #3, #5  |
 | Grim Finance | 12/19/2022 | Reentrancy | Graph Neural Network (GNN) |#3, #5 |
 | CryptoBatz by Ozzy Osbourne | 01/21/2022 | Phishing Attack | Self-structuring Neural Network | #4 |
-| | |  DDos Attack<sup>3</sup>   | Modified Adaptive Resonance Theory 2 (Modified ART2) | #6 |
+| Solana | 01/13/2021|  DDos Attack<sup>3</sup>   | Modified Adaptive Resonance Theory 2 (Modified ART2) | #6 |
 
 
 <!-- image -->
