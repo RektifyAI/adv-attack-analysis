@@ -9,7 +9,7 @@ Sena implements AI/ML techniques such as supervised learning to created regressi
 | Grim Finance | 12/19/2021 | Yield Farming | Reentrancy | Graph Neural Network (GNN) |#3, #5 |
 | LooksRare | 01/11/2022 | NFT Marketplace |  DDos Attack<sup>1</sup>  | Feed-forward Neural Network   | #1 |
 | Multichain | 01/18/2022 | DEX | Smart Contract Bug  | Graph Neural Network (GNN)  | #2, #3, #5  |
-| CryptoBatz by Ozzy Osbourne | 01/21/2022 | NFT Project| | Phishing Attack | Self-structuring Neural Network | #4 |
+| CryptoBatz by Ozzy Osbourne | 01/21/2022 | NFT Project|  Phishing Attack | Self-structuring Neural Network | #4 |
 
 
 
