@@ -2,7 +2,7 @@
 
 Sena implements AI/ML techniques such as supervised learning to created regression, classifcation, and predictive models with the S.E.A.L. dataset, along with extracting relevant metadata from attack events. Through using advanced data science techniques, Sena will explore the feasibility of utilizing artificial neural networks (ANNs) for risk assessment in predicting possible attacks using S.E.A.L. data. Sena is the first DeFi protocol to using AI/ML to analyze attacks. By way of artificial neural networks we can analyze attack specific data in the decentralized finance domain.
 
-|Attack Example | Protocol Type | Attack Date | Attack Type  | Artificial Neural Network Application | Sources |  
+|Attack Example | Attack Date | Protocol Type | Attack Type  | Artificial Neural Network Application | Sources |  
 |-----------| -------- | -------- | ------------- | -------------- | ----------- |
 | Solana | 01/13/2021 | Open-source Blockchain Platform | | DDos Attack<sup>3</sup>   | Modified Adaptive Resonance Theory 2 
 | Arbitrum One | 01/14/2021 | Layer 2 |  DDos Attack<sup>2</sup> | Self-Organizing Map(SOM) | #1 |
