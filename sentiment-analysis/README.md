@@ -1,1 +1,1 @@
-# Exploring attack description excerpts on DeFi News webpages using NLP
+# Exploring attack  excerpts on Web3 News webpages using NLP
