@@ -15,6 +15,7 @@ The following websites are used in Sena's web scraper:
 >- [squanch](https://github.com/TheSquanch-147/Rugpulls-Hacks-Exploits-List)
 >- [quadrigainitiative](https://www.quadrigainitiative.com/hackfraudscam/btfinancehack.php)
 >- [rugdoc](https://rugdoc.io)
+>- [crypto slam](https://cryptoslam.io)
 
 <!-- image -->
 <p style="text-align:center;">
