@@ -14,7 +14,6 @@ The following websites are used in Sena's web scraper:
 >- [coingeek](https://coingeek.com/the-defi-hacks-of-2020/)
 >- [squanch](https://github.com/TheSquanch-147/Rugpulls-Hacks-Exploits-List)
 >- [quadrigainitiative](https://www.quadrigainitiative.com/hackfraudscam/btfinancehack.php)
->- [rugdoc](https://rugdoc.io)
 >- [crypto slam](https://cryptoslam.io)
 >- [wowisme](https://www.wowisme.net/defi-security-vulnerabilities-and-exploits-2021/)
 
