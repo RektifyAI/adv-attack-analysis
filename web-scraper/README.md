@@ -16,6 +16,7 @@ The following websites are used in Sena's web scraper:
 >- [quadrigainitiative](https://www.quadrigainitiative.com/hackfraudscam/btfinancehack.php)
 >- [crypto slam](https://cryptoslam.io)
 >- [wowisme](https://www.wowisme.net/defi-security-vulnerabilities-and-exploits-2021/)
+>- [etherscan](https://etherscan.io)
 
 <!-- image -->
 <p style="text-align:center;">
