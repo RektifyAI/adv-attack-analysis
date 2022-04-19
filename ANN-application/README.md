@@ -1,4 +1,4 @@
-# ANN applications for analyzing attacks on DeFi protocols and vulnerable platforms
+# ANN applications for analyzing attacks on vulnerable Web3 products
 
 Sena implements AI/ML techniques such as supervised learning to linear regression, classifcation, and predictive models with the SEAL dataset, along with extracting relevant metadata from attack events. Through using advanced data science techniques, Sena will explore the feasibility of utilizing artificial neural networks (ANNs) for risk assessment in detecting vulnerabilities befero they graduate to successful attacks using SEAL data. 
 
