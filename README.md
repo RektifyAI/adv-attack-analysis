@@ -13,10 +13,6 @@ Attacks recorded from then and now are utilized to make inferences so that a pre
 ----
 
 ## Insights into Web Scraping using Python BeautifulSoup
-<!-- image -->
-<p style="text-align:center;">
-  <img src="rektnews_inspect_element.png" alt="" width="700" class="center" style="margin-left: 10px;"/>
-</p>
 
 Each data vector needed to be cleaned: protocol names, dates, and amount lost in attack.
 The most intricate vector that needed prime attention were the dates. Dates and amounts with concatenated together with excessive spaces and a vertical bar(|). 
@@ -41,6 +37,11 @@ Output: 11/05/2021
 ```
 
 > Redirect link: [Follow the logic and results in the web scraper directory.](https://github.com/SenaLabs/adv-attack-analysis/blob/main/web-scraper/rekt-news-ws.ipynb)
+
+<!-- image -->
+<p style="text-align:center;">
+  <img src="rektnews_inspect_element.png" alt="" width="700" class="center" style="margin-left: 10px;"/>
+</p>
 
 ## Applied Research: Discovering vulnerabilities before the attacks happen
 Attacks only exist due to vulnerabilities and [attack vectors](https://github.com/sigp/solidity-security-blog). Throughout building the code base, within the attack analysis repo we will do extensive research into specific vulnerabilities with the code for DeFi protocols. 
