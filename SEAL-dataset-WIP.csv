@@ -326,3 +326,8 @@ Nowswap,DEX,09/15/2021,1000000,,
 SushiSwap,Lending and Borrowing,01/20/2021,100000,Smart Contract Exploit,
 Bitmart,DEX,12/05/2021,,Other,
 Wormhole,Crosschain Aggregator,02/02/2022,322000000,,
+Grim Finance,Yield Aggregator,04/29/2022,30000000,Flash Loan Attack,
+Superfluid,Trading,12/09/2022,8700000,Flash Loan Attack,https://polygonscan.com/tx/0xdee86cae2e1bab16496a49b2ec61aae0472a7ccf06f79744d42473e96edd6af6
+Dego Finance,NFT Project,02/10/2022,10000000,Private Key Compromise,
+Ronin Network,Bridge,03/29/2022,625000000,Unauthorized Withdrawal,
+Beanstalk,Stablecoins,04/18/2022,181000000,Flash Loan Attack,
