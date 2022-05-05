@@ -12,7 +12,7 @@ Sena is the first DeFi protocol to using AI/ML to analyze attacks. By way of art
 | LooksRare | 01/11/2022 | NFT Marketplace |  DDos Attack<sup>1</sup>  | Feed-forward Neural Network   | #1 |
 | Multichain | 01/18/2022 | DEX | Smart Contract Bug  | Graph Neural Network (GNN)  | #2, #3, #5  |
 | CryptoBatz by Ozzy Osbourne | 01/21/2022 | NFT Project |  Phishing Attack | Self-structuring Neural Network | #4 |
-| Compound Finance | 10/27/2022 | Lending and Borrowing |  Flash Loan Attack | Deep Neural Network | #9 |
+| Compound Finance | 10/27/2022 | Lending and Borrowing |  Flash Loan Attack | Deep Neural Network(DNN) | #9 |
 
 
 
