@@ -7,17 +7,18 @@ To expand the data-driven functionality of Sena we will have to build our own AP
 The following websites are used in Sena's web scraper:
 >- [rekt.news](https://rekt.news) - #1 resource for DeFi hacks across the ecosystem
 >- [CertiK](https://www.certik.com)
->- [slowmist.io](https://hacked.slowmist.io/en/)
->- [cryptobriefing hack archive](https://cryptobriefing.com/tag/hack/)
->- [rugdoc projects](https://rugdoc.io/project/)
->- [crypto.sec](https://cryptosec.info/defi-hacks/)
->- [defiprime.com](https://defiprime.com/hacks2020)
 >- [coingeek](https://coingeek.com/the-defi-hacks-of-2020/)
+>- [cryptobriefing hack archive](https://cryptobriefing.com/tag/hack/)
+>- [crypto.sec](https://cryptosec.info/defi-hacks/)
+>- [crypto slam](https://cryptoslam.io)
+>- [defiprime.com](https://defiprime.com/hacks2020)
+>- [etherscan](https://etherscan.io)
+>- [hedgewithcrypto](https://www.hedgewithcrypto.com/cryptocurrency-exchange-hacks/)
+>- [rugdoc projects](https://rugdoc.io/project/)
+>- [slowmist.io](https://hacked.slowmist.io/en/)
 >- [squanch](https://github.com/TheSquanch-147/Rugpulls-Hacks-Exploits-List)
 >- [quadrigainitiative](https://www.quadrigainitiative.com/hackfraudscam/btfinancehack.php)
->- [crypto slam](https://cryptoslam.io)
 >- [wowisme](https://www.wowisme.net/defi-security-vulnerabilities-and-exploits-2021/)
->- [etherscan](https://etherscan.io)
 
 <!-- image -->
 <p style="text-align:center;">
