@@ -14,6 +14,7 @@ The following websites are used in Sena's web scraper:
 >- [defiprime.com](https://defiprime.com/hacks2020)
 >- [etherscan](https://etherscan.io)
 >- [hedgewithcrypto](https://www.hedgewithcrypto.com/cryptocurrency-exchange-hacks/)
+>- [idex](https://blog.idex.io/all-posts/a-complete-list-of-cryptocurrency-exchange-hacks-updated/#2012)
 >- [rugdoc projects](https://rugdoc.io/project/)
 >- [slowmist.io](https://hacked.slowmist.io/en/)
 >- [squanch](https://github.com/TheSquanch-147/Rugpulls-Hacks-Exploits-List)
