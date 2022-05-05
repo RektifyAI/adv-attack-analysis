@@ -6,6 +6,7 @@ To expand the data-driven functionality of Sena we will have to build our own AP
 
 The following websites are used in Sena's web scraper:
 >- [rekt.news](https://rekt.news) - #1 resource for DeFi hacks across the ecosystem
+>- [bitcoinexchangeguide](https://bitcoinexchangeguide.com/bitcoin/scams-hacks/#Picostocks_Cold_Wallet_Hack)
 >- [CertiK](https://www.certik.com)
 >- [coingeek](https://coingeek.com/the-defi-hacks-of-2020/)
 >- [cryptobriefing hack archive](https://cryptobriefing.com/tag/hack/)
