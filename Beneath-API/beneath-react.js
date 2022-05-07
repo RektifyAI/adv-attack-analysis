@@ -1,4 +1,4 @@
-npm install beneath-react
+!npm install beneath-react
 
 import { useRecords } from "beneath-react";
 
