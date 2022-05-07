@@ -1,4 +1,4 @@
-!npm install beneath-react
+/* Run in CLI before deploying: npm install beneath-react */
 
 import { useRecords } from "beneath-react";
 
