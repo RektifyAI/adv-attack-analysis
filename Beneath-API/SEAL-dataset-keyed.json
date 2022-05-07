@@ -1,0 +1,3686 @@
+{
+   "Kingfund Finance": [
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "01/20/2022",
+         "amount_lost": 114000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "AFKSystem": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "01/19/2022",
+         "amount_lost": 12000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Crypto.com": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "01/18/2022",
+         "amount_lost": 34000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Multichain": [
+      {
+         "project_type": "DEX",
+         "date_of_attack": "01/18/2022",
+         "amount_lost": 1400000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "DEX",
+         "date_of_attack": "7/10/2021",
+         "amount_lost": 7900000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "Crosswise": [
+      {
+         "project_type": "AMM",
+         "date_of_attack": "01/18/2022",
+         "amount_lost": 879000,
+         "attack_type": "Use Privileged Functions",
+         "contract_hash": ""
+      }
+   ],
+   "Crypto Burger": [
+      {
+         "project_type": "NFT Project",
+         "date_of_attack": "01/17/2022",
+         "amount_lost": 770000,
+         "attack_type": "Reentrancy",
+         "contract_hash": ""
+      }
+   ],
+   "CityDAO": [
+      {
+         "project_type": "DAO",
+         "date_of_attack": "01/15/2022",
+         "amount_lost": 90000,
+         "attack_type": "Admin Account Hack",
+         "contract_hash": ""
+      }
+   ],
+   "Rari Capital": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "01/15/2022",
+         "amount_lost": 200000,
+         "attack_type": "Price Manipulation",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "05/08/2021",
+         "amount_lost": 10000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Frosties": [
+      {
+         "project_type": "NFT Project",
+         "date_of_attack": "01/13/2022",
+         "amount_lost": 1000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Multiple IDO Projects": [
+      {
+         "project_type": "IDO Project",
+         "date_of_attack": "01/12/2022",
+         "amount_lost": 2700000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "LooksRare": [
+      {
+         "project_type": "NFT Marketplace",
+         "date_of_attack": "01/11/2022",
+         "amount_lost": null,
+         "attack_type": "DDos attack",
+         "contract_hash": ""
+      }
+   ],
+   "Lympo": [
+      {
+         "project_type": "NFT Marketplace",
+         "date_of_attack": "01/10/2022",
+         "amount_lost": 18700000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "LCX": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "01/09/2022",
+         "amount_lost": 6000000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Trading",
+         "date_of_attack": "01/08/2022",
+         "amount_lost": 7940000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Solana": [
+      {
+         "project_type": "Network",
+         "date_of_attack": "01/13/2021",
+         "amount_lost": null,
+         "attack_type": "DDos attack",
+         "contract_hash": ""
+      }
+   ],
+   "Arbitrum One": [
+      {
+         "project_type": "Layer 2",
+         "date_of_attack": "01/14/2021",
+         "amount_lost": null,
+         "attack_type": "DDos attack",
+         "contract_hash": ""
+      }
+   ],
+   "Stobox Company": [
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "01/07/2022",
+         "amount_lost": null,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "DaoMetaland": [
+      {
+         "project_type": "Metaverse Platform",
+         "date_of_attack": "01/07/2022",
+         "amount_lost": 288000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Bored Bunny": [
+      {
+         "project_type": "NFT Project",
+         "date_of_attack": "01/06/2022",
+         "amount_lost": 6200000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Moon Rabbit": [
+      {
+         "project_type": "NFT Marketplace",
+         "date_of_attack": "01/05/2022",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Arbix Finance": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "01/04/2022",
+         "amount_lost": 10000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Tinyman Pools": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "01/01/2022",
+         "amount_lost": null,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "Bitmart": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/04/2021",
+         "amount_lost": 196000000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Compound": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "9/29/2021",
+         "amount_lost": 147000000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "",
+         "date_of_attack": "10/04/21",
+         "amount_lost": 68800000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "VulcanForged": [
+      {
+         "project_type": "Gaming",
+         "date_of_attack": "12/13/2021",
+         "amount_lost": 140000000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Cream Finance": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "10/27/2021",
+         "amount_lost": 130000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "8/30/2021",
+         "amount_lost": 18800000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "10/27/2021",
+         "amount_lost": 130000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "",
+         "date_of_attack": "08/30/2021",
+         "amount_lost": 18800000,
+         "attack_type": "Reentrancy",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "",
+         "date_of_attack": "10/27/2021",
+         "amount_lost": 130000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "02/13/2021",
+         "amount_lost": 37500000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "BadgerDAO": [
+      {
+         "project_type": "DAO",
+         "date_of_attack": "12/02/2021",
+         "amount_lost": 120000000,
+         "attack_type": "Phishing Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Ascendex": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/11/2021",
+         "amount_lost": 80000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "EasyFi": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "4/19/2021",
+         "amount_lost": 59000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Uranium Finance": [
+      {
+         "project_type": "AMM",
+         "date_of_attack": "4/28/2021",
+         "amount_lost": 57200000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "",
+         "date_of_attack": "4/7/2021",
+         "amount_lost": 1500000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "bZx": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "11/05/2021",
+         "amount_lost": 55000000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "9/13/2020",
+         "amount_lost": 8000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "2/15/2020",
+         "amount_lost": 900000,
+         "attack_type": "Oracle Manipulation",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "09/13/2020",
+         "amount_lost": 8000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "02/15/2020",
+         "amount_lost": 355880,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "02/18/2020",
+         "amount_lost": 633000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "11/05/2021",
+         "amount_lost": 55040167,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Pancake Bunny": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "5/19/2021",
+         "amount_lost": 45000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "7/16/2021",
+         "amount_lost": 2400000,
+         "attack_type": "",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "10/20/2021",
+         "amount_lost": 2000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "05/19/2021",
+         "amount_lost": 45000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "10/20/2021",
+         "amount_lost": 45000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "KuCoin": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "9/29/2020",
+         "amount_lost": 281000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Alpha Finance": [
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "2/13/2021",
+         "amount_lost": 37500000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Vee Finance": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "9/21/2021",
+         "amount_lost": 34000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "9/21/2021",
+         "amount_lost": 35000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Meerkat Finance": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "03/04/2021",
+         "amount_lost": 32000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "MonoX": [
+      {
+         "project_type": "DEX",
+         "date_of_attack": "11/30/2021",
+         "amount_lost": 31400000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "Spartan Protocol": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "05/02/2021",
+         "amount_lost": 30500000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "                                                                                                                                                                                                                                                                                                                                                                                   ": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "12/18/2021",
+         "amount_lost": 30000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "StableMagnet": [
+      {
+         "project_type": "AMM",
+         "date_of_attack": "6/23/2021",
+         "amount_lost": 27000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Paid Network": [
+      {
+         "project_type": "Insurance",
+         "date_of_attack": "03/05/2021",
+         "amount_lost": 27000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Harvest Finance": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "10/26/2020",
+         "amount_lost": 25000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "2/17/2022",
+         "amount_lost": 33800000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "xToken": [
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "5/12/2021",
+         "amount_lost": 24000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "8/29/2021",
+         "amount_lost": 4500000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "5/12/2021",
+         "amount_lost": 24500000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Popsicle Finance": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "08/03/2021",
+         "amount_lost": 20000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Pickle Finance": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "11/22/2020",
+         "amount_lost": 19700000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Snowdog": [
+      {
+         "project_type": "Memecoin",
+         "date_of_attack": "11/25/2021",
+         "amount_lost": 18100000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Bearn.Fi": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "5/17/2021",
+         "amount_lost": 18000000,
+         "attack_type": "",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "",
+         "date_of_attack": "5/16/21",
+         "amount_lost": 11000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Indexed Finance": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "10/14/2021",
+         "amount_lost": 16000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Eminence": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "9/28/2020",
+         "amount_lost": 15000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Furucombo": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "2/27/2021",
+         "amount_lost": 14000000,
+         "attack_type": "Infinite Approval",
+         "contract_hash": ""
+      }
+   ],
+   "Death Bed Confessionsc3pr": [
+      {
+         "project_type": "Memecoin",
+         "date_of_attack": "12/02/2020",
+         "amount_lost": 12000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Value DeFi": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "05/07/2021",
+         "amount_lost": 11000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "05/05/2021",
+         "amount_lost": 10000000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "11/14/2020",
+         "amount_lost": 7400000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "",
+         "date_of_attack": "5/6/2021",
+         "amount_lost": 10000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Yearn Finance": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "02/05/2021",
+         "amount_lost": 11000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "9/7/2020",
+         "amount_lost": 250000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "2/4/2021",
+         "amount_lost": 11000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "09/03/2020",
+         "amount_lost": 250000,
+         "attack_type": "Rebase Error",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "06/26/2021",
+         "amount_lost": 259000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "Punk Protocol": [
+      {
+         "project_type": "NFT Project",
+         "date_of_attack": "8/10/2021",
+         "amount_lost": 8950000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Visor Finance": [
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "12/21/2021",
+         "amount_lost": 8200000,
+         "attack_type": "Reentrancy",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "AMM",
+         "date_of_attack": "06/19/2021",
+         "amount_lost": 500000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "ThorChain": [
+      {
+         "project_type": "Crosschain Aggregator",
+         "date_of_attack": "7/22/2021",
+         "amount_lost": 8000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Crosschain Aggregator",
+         "date_of_attack": "7/15/2021",
+         "amount_lost": 5000000,
+         "attack_type": "",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Crosschain Aggregator",
+         "date_of_attack": "6/28/2021",
+         "amount_lost": 139000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Warp Finance": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "12/18/2020",
+         "amount_lost": 7800000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "BurgerSwap": [
+      {
+         "project_type": "DEX",
+         "date_of_attack": "5/28/2021",
+         "amount_lost": 7200000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Alchemix": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "6/16/2021",
+         "amount_lost": 6500000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "6/6/2021",
+         "amount_lost": 50000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "Belt Finance": [
+      {
+         "project_type": "AMM",
+         "date_of_attack": "5/29/2021",
+         "amount_lost": 6300000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Bondly Finance": [
+      {
+         "project_type": "NFT Marketplace",
+         "date_of_attack": "7/15/2021",
+         "amount_lost": 5900000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Roll": [
+      {
+         "project_type": "Payments",
+         "date_of_attack": "3/14/2021",
+         "amount_lost": 5700000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Eleven Finance": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "6/22/2021",
+         "amount_lost": 4500000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Chain Swap": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "7/11/2021",
+         "amount_lost": 4400000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Bridge",
+         "date_of_attack": "7/10/2021",
+         "amount_lost": 4400000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Bridge",
+         "date_of_attack": "7/2/2021",
+         "amount_lost": 800000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Dao Maker": [
+      {
+         "project_type": "Funding",
+         "date_of_attack": "09/03/2021",
+         "amount_lost": 4000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Funding",
+         "date_of_attack": "8/12/2021",
+         "amount_lost": 7000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "",
+         "date_of_attack": "9/6/2021",
+         "amount_lost": 4000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Jay Pegs Auto Mart": [
+      {
+         "project_type": "NFT Project",
+         "date_of_attack": "9/17/2021",
+         "amount_lost": 3100000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Audodo": [
+      {
+         "project_type": "DEX",
+         "date_of_attack": "03/09/2021",
+         "amount_lost": 3800000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Akropolis": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "11/12/2020",
+         "amount_lost": 2000000,
+         "attack_type": "Reentrancy",
+         "contract_hash": ""
+      }
+   ],
+   "Bent Finance": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "12/21/2021",
+         "amount_lost": 1750000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "8ight Finance": [
+      {
+         "project_type": "DAO",
+         "date_of_attack": "12/08/2021",
+         "amount_lost": 1750000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Levyathan Finance": [
+      {
+         "project_type": "Index",
+         "date_of_attack": "7/30/2021",
+         "amount_lost": 1500000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "BT Finance": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "02/09/2021",
+         "amount_lost": 1300000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "AutoShark Finance": [
+      {
+         "project_type": "AMM",
+         "date_of_attack": "5/24/2021",
+         "amount_lost": 74500000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "AMM",
+         "date_of_attack": "10/29/2021",
+         "amount_lost": 2000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Merlin Lab": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "5/26/2021",
+         "amount_lost": 68000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "5/26/2021",
+         "amount_lost": 55000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "6/29/2021",
+         "amount_lost": 33000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Saddle Finance": [
+      {
+         "project_type": "AMM",
+         "date_of_attack": "1/20/2021",
+         "amount_lost": 275735,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "AMM",
+         "date_of_attack": "05/01/2022",
+         "amount_lost": 11000000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "Safe Dollar": [
+      {
+         "project_type": "Stablecoins",
+         "date_of_attack": "6/28/2021",
+         "amount_lost": 248000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Stablecoins",
+         "date_of_attack": "06/18/2021",
+         "amount_lost": 250000,
+         "attack_type": "Mint Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Pizza DeFi": [
+      {
+         "project_type": "Other",
+         "date_of_attack": "12/5/2021",
+         "amount_lost": 5000000,
+         "attack_type": "Infinite Approval",
+         "contract_hash": ""
+      }
+   ],
+   "Compound Finance": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "9/30/2021",
+         "amount_lost": 100000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "",
+         "date_of_attack": "09/29/21",
+         "amount_lost": 147000000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "pNetwork": [
+      {
+         "project_type": "Network",
+         "date_of_attack": "9/20/2021",
+         "amount_lost": 12000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "SushiSwap": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "9/16/2021",
+         "amount_lost": 3000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "09/05/2020",
+         "amount_lost": 13808454,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "1/29/21",
+         "amount_lost": 108000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "11/30/2020",
+         "amount_lost": 15000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "01/20/2021",
+         "amount_lost": 100000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Zabu Finance": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "9/12/2021",
+         "amount_lost": 3200000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Poly Network": [
+      {
+         "project_type": "Crosschain Aggregator",
+         "date_of_attack": "8/10/2021",
+         "amount_lost": 611000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Impossible Finance": [
+      {
+         "project_type": "Funding",
+         "date_of_attack": "6/21/2021",
+         "amount_lost": 500000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "",
+         "date_of_attack": "6/21/21",
+         "amount_lost": 500000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Force DAO": [
+      {
+         "project_type": "DAO",
+         "date_of_attack": "4/4/2021",
+         "amount_lost": 376000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "DAO",
+         "date_of_attack": "4/6/2021",
+         "amount_lost": 367000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "TurtleDex": [
+      {
+         "project_type": "DEX",
+         "date_of_attack": "3/18/2021",
+         "amount_lost": 2400000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Iron Finance": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "3/16/2021",
+         "amount_lost": 170000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Cover Protocol": [
+      {
+         "project_type": "Insurance",
+         "date_of_attack": "12/28/2020",
+         "amount_lost": 5000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Origin Protocol": [
+      {
+         "project_type": "Stablecoins",
+         "date_of_attack": "11/17/2020",
+         "amount_lost": 7000000,
+         "attack_type": "Reentrancy",
+         "contract_hash": ""
+      }
+   ],
+   "Leo Finance": [
+      {
+         "project_type": "Network",
+         "date_of_attack": "10/11/2020",
+         "amount_lost": 42000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Balancer": [
+      {
+         "project_type": "AMM",
+         "date_of_attack": "6/29/2020",
+         "amount_lost": 500000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "dForce": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "4/19/2020",
+         "amount_lost": 24900000,
+         "attack_type": "Reentrancy",
+         "contract_hash": ""
+      }
+   ],
+   "Fulcrum": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "1/11/2020",
+         "amount_lost": 2500000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Bancor": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "7/9/2018",
+         "amount_lost": 13500000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Trading",
+         "date_of_attack": "06/18/2020",
+         "amount_lost": 135229,
+         "attack_type": "Other",
+         "contract_hash": ""
+      }
+   ],
+   "Opyn": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "8/4/2020",
+         "amount_lost": 371260,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Trading",
+         "date_of_attack": "04/19/2020",
+         "amount_lost": 24500000,
+         "attack_type": "Reentrancy",
+         "contract_hash": ""
+      }
+   ],
+   "MakerDAO": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "3/12/2020",
+         "amount_lost": 8320000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Uniswap": [
+      {
+         "project_type": "DEX",
+         "date_of_attack": "4/18/2020",
+         "amount_lost": 500000,
+         "attack_type": "Reentrancy",
+         "contract_hash": ""
+      }
+   ],
+   "Synlev": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "3/12/2021",
+         "amount_lost": 2000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "DefiSaver": [
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "07/01/2021",
+         "amount_lost": 1200000,
+         "attack_type": "Whitehat",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "08/10/2020",
+         "amount_lost": 310000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Compounder Finance": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "12/01/2020",
+         "amount_lost": 12500000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Percent Finance": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "11/04/2020",
+         "amount_lost": 1000000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "Cheese Bank": [
+      {
+         "project_type": "Funding",
+         "date_of_attack": "11/06/2020",
+         "amount_lost": 3300000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "The DAO": [
+      {
+         "project_type": "DAO",
+         "date_of_attack": "12/06/2016",
+         "amount_lost": 50000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "SpankChain": [
+      {
+         "project_type": "Network",
+         "date_of_attack": "09/10/2018",
+         "amount_lost": 37950,
+         "attack_type": "Reentrancy",
+         "contract_hash": ""
+      }
+   ],
+   "Axion": [
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "11/2/2020",
+         "amount_lost": 600000,
+         "attack_type": "Mint Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "YAM Finance": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "08/13/2020",
+         "amount_lost": 750000,
+         "attack_type": "Rebase Error",
+         "contract_hash": ""
+      }
+   ],
+   "inSure": [
+      {
+         "project_type": "Insurance",
+         "date_of_attack": "06/14/2021",
+         "amount_lost": 25000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Origin Dollar": [
+      {
+         "project_type": "Stablecoins",
+         "date_of_attack": "11/16/2020",
+         "amount_lost": 7700000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "88mph": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "11/17/2020",
+         "amount_lost": 100000,
+         "attack_type": "Mint Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "True Seigniorage Dollar": [
+      {
+         "project_type": "Stablecoins",
+         "date_of_attack": "03/18/2021",
+         "amount_lost": 16600,
+         "attack_type": "Mint Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Hegic": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "04/23/2020",
+         "amount_lost": 48000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "Deriswap": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "11/23/2020",
+         "amount_lost": 53000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Synthetix": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "06/25/2019",
+         "amount_lost": 37000000,
+         "attack_type": "Other",
+         "contract_hash": ""
+      }
+   ],
+   "Julswap": [
+      {
+         "project_type": "DEX",
+         "date_of_attack": "05/27/2021",
+         "amount_lost": 7200000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "null": [
+      {
+         "project_type": "",
+         "date_of_attack": "06/28/2020",
+         "amount_lost": 449740,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Vader Protocol": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "06/30/2020",
+         "amount_lost": 900000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Growth DeFi": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "2/8/2021",
+         "amount_lost": 1400000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Mocha Set Dollar": [
+      {
+         "project_type": "Funding",
+         "date_of_attack": "01/01/2021",
+         "amount_lost": 6679,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Charge DeFi": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "01/01/2021",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Multiple Finance": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "02/01/2021",
+         "amount_lost": 240000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Vaultz": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "02/02/2021",
+         "amount_lost": 7625,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Penny Protocol": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "04/01/2021",
+         "amount_lost": 1884,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Xdef Finance": [
+      {
+         "project_type": "Funding",
+         "date_of_attack": "05/01/2021",
+         "amount_lost": 561000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Shopin": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "06/01/2018",
+         "amount_lost": 10000000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "Kore": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "11/01/2020",
+         "amount_lost": 346488,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Kper Network": [
+      {
+         "project_type": "Network",
+         "date_of_attack": "11/01/2020",
+         "amount_lost": 550000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "PlexCoin": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "12/01/2017",
+         "amount_lost": 2000000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "AriseBank": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "02/02/2018",
+         "amount_lost": 4200000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "DeFlast Finance": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "02/02/2021",
+         "amount_lost": 300000,
+         "attack_type": "Whitehat",
+         "contract_hash": ""
+      }
+   ],
+   "OracleSwapToken": [
+      {
+         "project_type": "DEX",
+         "date_of_attack": "02/02/2021",
+         "amount_lost": 127327,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Hedget": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "03/02/2021",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Centra": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "04/02/2018",
+         "amount_lost": 25000000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "YFDash Finance": [
+      {
+         "project_type": "Network",
+         "date_of_attack": "12/02/2020",
+         "amount_lost": 65611,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Chad Token": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "08/03/2021",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Rise Protocol": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "11/03/2021",
+         "amount_lost": 543452,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "UniCats": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "10/04/2020",
+         "amount_lost": 230000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Matcha": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "10/04/2021",
+         "amount_lost": 250000,
+         "attack_type": "Unable to Sell",
+         "contract_hash": ""
+      }
+   ],
+   "Qubes": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "10/04/2021",
+         "amount_lost": 1757250,
+         "attack_type": "Unable to Sell",
+         "contract_hash": ""
+      }
+   ],
+   "YearnSpace": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "12/04/2020",
+         "amount_lost": 0,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "FairElon": [
+      {
+         "project_type": "Memecoin",
+         "date_of_attack": "04/05/2021",
+         "amount_lost": 8000,
+         "attack_type": "Unable to Sell",
+         "contract_hash": ""
+      }
+   ],
+   "keep3rX": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "11/05/2020",
+         "amount_lost": 13280,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Kong Coin": [
+      {
+         "project_type": "Memecoin",
+         "date_of_attack": "04/06/2021",
+         "amount_lost": 9963,
+         "attack_type": "Unable to Sell",
+         "contract_hash": ""
+      }
+   ],
+   "Burn Vault Finance": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "10/06/2020",
+         "amount_lost": 1396,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Padthai Finance": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "10/06/2020",
+         "amount_lost": 30000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "YFFC Finance": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "11/06/2020",
+         "amount_lost": 29700,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Unirocket": [
+      {
+         "project_type": "Memecoin",
+         "date_of_attack": "10/08/2020",
+         "amount_lost": 9100,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Contribute Protocol": [
+      {
+         "project_type": "DAO",
+         "date_of_attack": "01/09/2021",
+         "amount_lost": 6000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Emerald Mine": [
+      {
+         "project_type": "Interest",
+         "date_of_attack": "09/09/2020",
+         "amount_lost": 2500000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "YFDEX Finance": [
+      {
+         "project_type": "Liquidity Pool",
+         "date_of_attack": "11/09/2020",
+         "amount_lost": 20000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Generate": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "03/10/2021",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "FLiK": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "05/10/2019",
+         "amount_lost": 1300000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "CBDAO": [
+      {
+         "project_type": "DAO",
+         "date_of_attack": "11/10/2020",
+         "amount_lost": 90000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Defibase": [
+      {
+         "project_type": "Crosschain Aggregator",
+         "date_of_attack": "12/11/2020",
+         "amount_lost": 382800,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "YFFS Finance": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "12/11/2020",
+         "amount_lost": 1000000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "Shabuvault": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "12/11/2020",
+         "amount_lost": 5500,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Nifity.io": [
+      {
+         "project_type": "NFT Marketplace",
+         "date_of_attack": "01/13/2021",
+         "amount_lost": 194000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Boon Tech": [
+      {
+         "project_type": "Stablecoins",
+         "date_of_attack": "08/13/2020",
+         "amount_lost": 5000000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "BlockVest": [
+      {
+         "project_type": "DEX",
+         "date_of_attack": "02/14/2019",
+         "amount_lost": 2500000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "Sakura DeFi": [
+      {
+         "project_type": "Gaming",
+         "date_of_attack": "02/14/2021",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "MOOswap.org": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "10/14/2020",
+         "amount_lost": 50000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "DeTrade": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "12/14/2020",
+         "amount_lost": 1000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "MiniVault Finance": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "11/15/2020",
+         "amount_lost": 20000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "pills.forsale": [
+      {
+         "project_type": "NFT Marketplace",
+         "date_of_attack": "01/16/2021",
+         "amount_lost": 800000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Fomo3d": [
+      {
+         "project_type": "Gaming",
+         "date_of_attack": "08/16/2018",
+         "amount_lost": 4000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Sav3r": [
+      {
+         "project_type": "Gaming",
+         "date_of_attack": "11/16/2020",
+         "amount_lost": 23460,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Walletreum": [
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "11/16/2020",
+         "amount_lost": 163000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Blockchain Terminal Token": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "01/17/2021",
+         "amount_lost": 30000000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "YearnML Finance": [
+      {
+         "project_type": "",
+         "date_of_attack": "01/18/2021",
+         "amount_lost": 75000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "ShareDeFi Protocol": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "03/18/2021",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "MTI Finance": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "11/18/2020",
+         "amount_lost": 66000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "GasPay": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "02/19/2021",
+         "amount_lost": 203063,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Xfinance": [
+      {
+         "project_type": "Liquidity Pool",
+         "date_of_attack": "10/19/2020",
+         "amount_lost": 1050000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "K3psav Finance": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "11/19/2020",
+         "amount_lost": 16636,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Authmen Token": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "12/19/2020",
+         "amount_lost": 12000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Fairmoon": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "5/19/2021",
+         "amount_lost": 500000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "DarkDeFi": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "02/20/2021",
+         "amount_lost": 65000,
+         "attack_type": "Unable to Sell",
+         "contract_hash": ""
+      }
+   ],
+   "Shiba Poodle": [
+      {
+         "project_type": "Memecoin",
+         "date_of_attack": "03/20/2021",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "iProtocol": [
+      {
+         "project_type": "Network",
+         "date_of_attack": "12/20/2020",
+         "amount_lost": 42880,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Solid Protocol": [
+      {
+         "project_type": "Index",
+         "date_of_attack": "12/20/2020",
+         "amount_lost": 150000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "OpportyToken": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "01/21/2020",
+         "amount_lost": 600000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "Argyle Coin": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "05/21/2019",
+         "amount_lost": 30000000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "LV Finance": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "09/21/2020",
+         "amount_lost": 2500000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Marlin Pond": [
+      {
+         "project_type": "Network",
+         "date_of_attack": "12/21/2020",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Turtledex Token": [
+      {
+         "project_type": "Decentralized Storage",
+         "date_of_attack": "03/22/2021",
+         "amount_lost": 2500000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Titanium BAR": [
+      {
+         "project_type": "Other",
+         "date_of_attack": "05/22/2018",
+         "amount_lost": 21000000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "Pro Coin": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "05/22/2019",
+         "amount_lost": 26500000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "Futurebase": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "12/22/2020",
+         "amount_lost": 35560,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Gif.Market": [
+      {
+         "project_type": "",
+         "date_of_attack": "03/23/2021",
+         "amount_lost": 134000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Dropil": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "04/23/2020",
+         "amount_lost": 1800000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "Fantasy Market Token": [
+      {
+         "project_type": "Gaming",
+         "date_of_attack": "09/23/2019",
+         "amount_lost": 63000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "Mosaic": [
+      {
+         "project_type": "Other",
+         "date_of_attack": "10/24/2020",
+         "amount_lost": 102500,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Cakelock": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "02/25/2021",
+         "amount_lost": 4230,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Data Transaction Token": [
+      {
+         "project_type": "Other",
+         "date_of_attack": "09/25/2020",
+         "amount_lost": 2400000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "Hatch DAO": [
+      {
+         "project_type": "DAO",
+         "date_of_attack": "09/25/2020",
+         "amount_lost": 4319,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Magix": [
+      {
+         "project_type": "Index",
+         "date_of_attack": "12/25/2020",
+         "amount_lost": 6000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Veritaseum": [
+      {
+         "project_type": "Asset Management",
+         "date_of_attack": "07/26/2017",
+         "amount_lost": 8400000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "PopcornSwap": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "01/27/2021",
+         "amount_lost": 2000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Safestorm": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "03/27/2021",
+         "amount_lost": 24300,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Santa DAO": [
+      {
+         "project_type": "DAO",
+         "date_of_attack": "10/27/2020",
+         "amount_lost": 3456,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "ThunderSwap": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "02/28/2020",
+         "amount_lost": 46500,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "BitClave": [
+      {
+         "project_type": "Other",
+         "date_of_attack": "05/28/2020",
+         "amount_lost": 25500000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "Bitqyck": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "08/29/2019",
+         "amount_lost": 13000000,
+         "attack_type": "ICO Scam",
+         "contract_hash": ""
+      }
+   ],
+   "Dark Matter": [
+      {
+         "project_type": "Memecoin",
+         "date_of_attack": "12/29/2020",
+         "amount_lost": 3000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Oyster Protocol": [
+      {
+         "project_type": "Other",
+         "date_of_attack": "10/30/2018",
+         "amount_lost": 300000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "UniDark": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "11/30/2020",
+         "amount_lost": 35000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Exeedme": [
+      {
+         "project_type": "Gaming",
+         "date_of_attack": "12/30/2020",
+         "amount_lost": 560000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "YYFI": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "07/31/2020",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Amplyfi": [
+      {
+         "project_type": "Other",
+         "date_of_attack": "7/31/2020",
+         "amount_lost": 850000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "DecentralizedOracle": [
+      {
+         "project_type": "Oracle",
+         "date_of_attack": "4/6/2021",
+         "amount_lost": 600000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "iYieldFram": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "3/7/2021",
+         "amount_lost": 2000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "SharkTron": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "09/11/2020",
+         "amount_lost": 10000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Tether": [
+      {
+         "project_type": "Stablecoins",
+         "date_of_attack": "11/19/2017",
+         "amount_lost": 31000000,
+         "attack_type": "Unauthorized Withdrawal",
+         "contract_hash": ""
+      }
+   ],
+   "Polybutterfly": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "06/05/2021",
+         "amount_lost": 1600000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Polyorca": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "06/21/2021",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Beets Finance": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "06/17/2021",
+         "amount_lost": 100000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Aurafi": [
+      {
+         "project_type": "",
+         "date_of_attack": "06/05/2021",
+         "amount_lost": 1500000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "STRD Finance": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "cretaceous.space": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Missile Finance": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Pumaswap": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Boobs": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Ogre": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Croco": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Warden": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Pablo Escobar": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Pulldog Swap": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "MoltenSwap": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "WhaleSwap": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "DiceSwap": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "KoiSwap": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Chaddy": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "SheepSwap": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Demeterfinance.org": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Durian": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "https://sailorswap.io/sale": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "https://sf2.safufinance.xyz/": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "https://dragon-fly.finance/#/": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Rumstaking.com": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "https://original.finance/": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Finite": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Bacon": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Neonic": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Ela": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "BNBdivs": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Sexyapy.com": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "https://axedefi.com/": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "https://seashell.finance": [
+      {
+         "project_type": "",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "yCredit": [
+      {
+         "project_type": "",
+         "date_of_attack": "1/1/2021",
+         "amount_lost": 11000000,
+         "attack_type": "Mint Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Yield Finance": [
+      {
+         "project_type": "",
+         "date_of_attack": "2/27/21",
+         "amount_lost": 166000,
+         "attack_type": "Whitehat",
+         "contract_hash": ""
+      }
+   ],
+   "Zerion": [
+      {
+         "project_type": "",
+         "date_of_attack": "3/4/2021",
+         "amount_lost": 30000,
+         "attack_type": "Other",
+         "contract_hash": ""
+      }
+   ],
+   "Sil Finance": [
+      {
+         "project_type": "",
+         "date_of_attack": "3/18/21",
+         "amount_lost": 12200000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Polkatrain": [
+      {
+         "project_type": "",
+         "date_of_attack": "4/4/2021",
+         "amount_lost": 3000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Pancake Swap": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "3/15/21",
+         "amount_lost": 1800000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Venus": [
+      {
+         "project_type": "",
+         "date_of_attack": "5/18/21",
+         "amount_lost": 300000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Bogged": [
+      {
+         "project_type": "",
+         "date_of_attack": "5/22/21",
+         "amount_lost": 3600000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Merlin": [
+      {
+         "project_type": "",
+         "date_of_attack": "5/26/21",
+         "amount_lost": 680000,
+         "attack_type": "Mint Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Wild Credit": [
+      {
+         "project_type": "",
+         "date_of_attack": "5/27/21",
+         "amount_lost": 637000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Hotdogcart Finance": [
+      {
+         "project_type": "",
+         "date_of_attack": "6/29/21",
+         "amount_lost": 22000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Tomb Finance": [
+      {
+         "project_type": "",
+         "date_of_attack": "9/3/2021",
+         "amount_lost": null,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "AnubisDAO": [
+      {
+         "project_type": "",
+         "date_of_attack": "10/29/21",
+         "amount_lost": 60000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "SQUID": [
+      {
+         "project_type": "",
+         "date_of_attack": "11/01/2021",
+         "amount_lost": 3400000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Curve Finance": [
+      {
+         "project_type": "",
+         "date_of_attack": "11/11/2021",
+         "amount_lost": 30000000,
+         "attack_type": "Other",
+         "contract_hash": ""
+      }
+   ],
+   "Vesper Finance": [
+      {
+         "project_type": "",
+         "date_of_attack": "11/03/2021",
+         "amount_lost": 3000000,
+         "attack_type": "Oracle Manipulation",
+         "contract_hash": ""
+      }
+   ],
+   "BXH": [
+      {
+         "project_type": "Other",
+         "date_of_attack": "10/30/2021",
+         "amount_lost": 139195315,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Avaterra Finance": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "10/20/2021",
+         "amount_lost": null,
+         "attack_type": "Mint Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Glide Finance": [
+      {
+         "project_type": "DEX",
+         "date_of_attack": "10/18/2021",
+         "amount_lost": 300000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "Nowswap": [
+      {
+         "project_type": "DEX",
+         "date_of_attack": "09/15/2021",
+         "amount_lost": 1000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Wormhole": [
+      {
+         "project_type": "Crosschain Aggregator",
+         "date_of_attack": "02/02/2022",
+         "amount_lost": 325000000,
+         "attack_type": "Mint Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Grim Finance": [
+      {
+         "project_type": "Yield Aggregator",
+         "date_of_attack": "04/29/2022",
+         "amount_lost": 30000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Superfluid": [
+      {
+         "project_type": "Trading",
+         "date_of_attack": "12/09/2022",
+         "amount_lost": 8700000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": "https://polygonscan.com/tx/0xdee86cae2e1bab16496a49b2ec61aae0472a7ccf06f79744d42473e96edd6af6"
+      }
+   ],
+   "Dego Finance": [
+      {
+         "project_type": "NFT Project",
+         "date_of_attack": "02/10/2022",
+         "amount_lost": 10000000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Ronin Network": [
+      {
+         "project_type": "Bridge",
+         "date_of_attack": "03/29/2022",
+         "amount_lost": 625000000,
+         "attack_type": "Unauthorized Withdrawal",
+         "contract_hash": ""
+      }
+   ],
+   "Beanstalk": [
+      {
+         "project_type": "Stablecoins",
+         "date_of_attack": "04/18/2022",
+         "amount_lost": 181000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Dues DAO": [
+      {
+         "project_type": "DAO",
+         "date_of_attack": "03/15/2022",
+         "amount_lost": 3000000,
+         "attack_type": "Flash Loan Attack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "DAO",
+         "date_of_attack": "04/27/2022",
+         "amount_lost": 13400000,
+         "attack_type": "Oracle Manipulation",
+         "contract_hash": ""
+      }
+   ],
+   "Fei Protocol": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "05/02/2022",
+         "amount_lost": 80000000,
+         "attack_type": "Reentrancy",
+         "contract_hash": ""
+      }
+   ],
+   "Liquid Global": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "08/19/2021",
+         "amount_lost": 100000000,
+         "attack_type": "Unauthorized Withdrawal",
+         "contract_hash": ""
+      }
+   ],
+   "Mt. Gox": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "06/18/2011",
+         "amount_lost": 460000000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Bitfinex": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "08/02/2016",
+         "amount_lost": 623000000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "ACX": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Africrypt": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "04/13/2021",
+         "amount_lost": 3600000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "QuadigaCX": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/08/2018",
+         "amount_lost": 250000000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Genie": [
+      {
+         "project_type": "NFT Aggregator",
+         "date_of_attack": "05/01/2022",
+         "amount_lost": null,
+         "attack_type": "DDos Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Thodex": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "05/22/2021",
+         "amount_lost": 2000000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Livecoin": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/23/2020",
+         "amount_lost": 3300000,
+         "attack_type": "Price Manipulation",
+         "contract_hash": ""
+      }
+   ],
+   "Negocie Coins": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/01/2020",
+         "amount_lost": null,
+         "attack_type": "Unable to Sell",
+         "contract_hash": ""
+      }
+   ],
+   "CryTrEx": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "09/01/2020",
+         "amount_lost": null,
+         "attack_type": "Other",
+         "contract_hash": ""
+      }
+   ],
+   "NLexch": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "09/01/2020",
+         "amount_lost": null,
+         "attack_type": "Bankruptcy",
+         "contract_hash": ""
+      }
+   ],
+   "Tradesatoshi": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "02/01/2020",
+         "amount_lost": null,
+         "attack_type": "Bankruptcy",
+         "contract_hash": ""
+      }
+   ],
+   "FCoin": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "02/01/2020",
+         "amount_lost": 130000000,
+         "attack_type": "Bankruptcy",
+         "contract_hash": ""
+      }
+   ],
+   "Coinnest": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "04/01/2018",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "CEX",
+         "date_of_attack": "01/01/2019",
+         "amount_lost": 5000000,
+         "attack_type": "Failed Airdrop",
+         "contract_hash": ""
+      }
+   ],
+   "Crytopia": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "01/15/2019",
+         "amount_lost": 23000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "CEX",
+         "date_of_attack": "01/28/2019",
+         "amount_lost": 284000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Zaif": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "09/14/2018",
+         "amount_lost": 60000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Coinrail": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "06/10/2018",
+         "amount_lost": 40000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Coinsecure": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "04/13/2018",
+         "amount_lost": 3500000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Bitgrail": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "02/10/2018",
+         "amount_lost": 170000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Youbit": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "04/01/2017",
+         "amount_lost": 73000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/01/2017",
+         "amount_lost": null,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "CoinCheck": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "01/27/2018",
+         "amount_lost": 533000000,
+         "attack_type": "Phishing Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Gatecoin": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "04/09/2016",
+         "amount_lost": 2140000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "NiceHash": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/01/2017",
+         "amount_lost": 80000000,
+         "attack_type": "",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "CEX",
+         "date_of_attack": "07/28/2018",
+         "amount_lost": null,
+         "attack_type": "DDos Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Parity": [
+      {
+         "project_type": "Wallet",
+         "date_of_attack": "07/19/2017",
+         "amount_lost": 90000,
+         "attack_type": "Unauthorized Withdrawal",
+         "contract_hash": ""
+      }
+   ],
+   "Bithumb": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "06/19/2018",
+         "amount_lost": 31000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "CEX",
+         "date_of_attack": "06/29/2017",
+         "amount_lost": 8700,
+         "attack_type": "Admin Account Hack",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "CEX",
+         "date_of_attack": "03/29/2019",
+         "amount_lost": 29000000,
+         "attack_type": "",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "CEX",
+         "date_of_attack": "07/05/2017",
+         "amount_lost": 7000000,
+         "attack_type": "Other",
+         "contract_hash": ""
+      }
+   ],
+   "Harborly": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "08/14/2015",
+         "amount_lost": null,
+         "attack_type": "Bankruptcy",
+         "contract_hash": ""
+      }
+   ],
+   "Virtex": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "01/01/2015",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "AllCrypto.com": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "03/15/2015",
+         "amount_lost": 10500,
+         "attack_type": "Admin Account Hack",
+         "contract_hash": ""
+      }
+   ],
+   "MintPal": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "10/13/2014",
+         "amount_lost": 3500000,
+         "attack_type": "Unauthorized Withdrawal",
+         "contract_hash": ""
+      }
+   ],
+   "McxNOW": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "09/01/2013",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "CryptoRush": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "03/01/2014",
+         "amount_lost": 970000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "WeExchange": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "02/01/2017",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Kapiton": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "04/18/2012",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Bitomat": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "07/26/2011",
+         "amount_lost": 500000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Bitfloor": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "09/03/2012",
+         "amount_lost": 250000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "BitMarket.eu": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/21/2012",
+         "amount_lost": 500000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Cryto-Trade": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "01/01/2015",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Bitcoinica": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "03/01/2012",
+         "amount_lost": 87000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Tradehill": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "02/13/2012",
+         "amount_lost": 100000,
+         "attack_type": "Bankruptcy",
+         "contract_hash": ""
+      }
+   ],
+   "The Bitcoin Market": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "02/06/2010",
+         "amount_lost": null,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Hotbit": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "04/29/2021",
+         "amount_lost": null,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "EXMO": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/23/2020",
+         "amount_lost": 4000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "BTC Markets ": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/01/2020",
+         "amount_lost": null,
+         "attack_type": "Admin Account Hack",
+         "contract_hash": ""
+      }
+   ],
+   "Cashaa": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "07/11/2020",
+         "amount_lost": 3100000,
+         "attack_type": "Other",
+         "contract_hash": ""
+      }
+   ],
+   "Lendf.me": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "04/19/2020",
+         "amount_lost": 24500000,
+         "attack_type": "Reentrancy",
+         "contract_hash": ""
+      }
+   ],
+   "Altsbit": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "02/05/2020",
+         "amount_lost": 70000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Upbit": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "11/26/2019",
+         "amount_lost": 49000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "VinDAX": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "11/05/2019",
+         "amount_lost": 500000,
+         "attack_type": "Unauthorized Withdrawal",
+         "contract_hash": ""
+      }
+   ],
+   "Bitpoint": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "07/11/2019",
+         "amount_lost": 32000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Bitrue": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "06/27/2019",
+         "amount_lost": 4500000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Gatehub": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "06/06/2019",
+         "amount_lost": 9500000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Binance": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "05/07/2019",
+         "amount_lost": 40000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Coinbene": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "03/25/2019",
+         "amount_lost": 40000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "DragonEX": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "03/24/2019",
+         "amount_lost": 1000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Coinmama": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "02/15/2019",
+         "amount_lost": null,
+         "attack_type": "Other",
+         "contract_hash": ""
+      }
+   ],
+   "LocalBitcoins": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "01/26/2019",
+         "amount_lost": 27000,
+         "attack_type": "Phishing Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Maplechange": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "10/28/2018",
+         "amount_lost": 51000,
+         "attack_type": "Other",
+         "contract_hash": ""
+      }
+   ],
+   "EtherDelta": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/20/2017",
+         "amount_lost": null,
+         "attack_type": "Other",
+         "contract_hash": ""
+      }
+   ],
+   "Yapizon": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "04/22/2017",
+         "amount_lost": 5300000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Cryptopia": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "01/14/2017",
+         "amount_lost": 16000000,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Shapeshift": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "04/07/2016",
+         "amount_lost": 230000,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "BTER": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "02/16/2016",
+         "amount_lost": 1750000,
+         "attack_type": "",
+         "contract_hash": ""
+      },
+      {
+         "project_type": "CEX",
+         "date_of_attack": "08/15/2015",
+         "amount_lost": 1650000,
+         "attack_type": "",
+         "contract_hash": ""
+      }
+   ],
+   "Bitstamp": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "12/11/2015",
+         "amount_lost": 5000000,
+         "attack_type": "Malware",
+         "contract_hash": ""
+      }
+   ],
+   "Poloniex": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "03/04/2014",
+         "amount_lost": 50000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Bitcash": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "11/11/2013",
+         "amount_lost": 100000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Bitcoin7": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "10/5/2011",
+         "amount_lost": null,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Vicurex": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "01/01/2013",
+         "amount_lost": 50000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Inputs": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "10/23/2013",
+         "amount_lost": 1200000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "BIPS": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "11/17/2017",
+         "amount_lost": 1000000,
+         "attack_type": "DDos Attack",
+         "contract_hash": ""
+      }
+   ],
+   "Picostocks": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "11/29/2013",
+         "amount_lost": 6000000,
+         "attack_type": "Hot Wallet Compromise",
+         "contract_hash": ""
+      }
+   ],
+   "Sheep Marketplace": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "11/21/2013",
+         "amount_lost": 6000000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "GBL Exchange": [
+      {
+         "project_type": "CEX",
+         "date_of_attack": "10/26/2013",
+         "amount_lost": 4100000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Anyswap": [
+      {
+         "project_type": "Bridge",
+         "date_of_attack": "07/12/2021",
+         "amount_lost": 5500000,
+         "attack_type": "Private Key Compromise",
+         "contract_hash": "https://etherscan.io/address/0x0aE1554860E51844B61AE20823eF1268C3949f7C"
+      }
+   ],
+   "Chainswap": [
+      {
+         "project_type": "Bridge",
+         "date_of_attack": "07/13/2021",
+         "amount_lost": 4400000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": "https://etherscan.io/address/0xEda5066780dE29D00dfb54581A707ef6F52D8113"
+      }
+   ],
+   "Trunk": [
+      {
+         "project_type": "Stablecoins",
+         "date_of_attack": "04/13/2022",
+         "amount_lost": 22200000,
+         "attack_type": "Price Manipulation",
+         "contract_hash": "https://bscscan.com/tx/0xec317deb2f3efdc1dbf7ed5d3902cdf2c33ae512151646383a8cf8cbcd3d4577"
+      }
+   ],
+   "Inverse Finance": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "04/02/2022",
+         "amount_lost": 15000000,
+         "attack_type": "Price Manipulation",
+         "contract_hash": ""
+      }
+   ],
+   "Voltage Finance": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "03/31/2022",
+         "amount_lost": 4000000,
+         "attack_type": "Reentrancy",
+         "contract_hash": "https://explorer.fuse.io/address/0x371D7C9e4464576D45f11b27Cf88578983D63d75/transactions"
+      }
+   ],
+   "Revest Finance": [
+      {
+         "project_type": "NFT Aggregator",
+         "date_of_attack": "03/28/2022",
+         "amount_lost": 2000000,
+         "attack_type": "Reentrancy",
+         "contract_hash": "https://etherscan.io/address/0xef967ece5322c0d7d26dab41778acb55ce5bd58b"
+      }
+   ],
+   "Cashio": [
+      {
+         "project_type": "Stablecoins",
+         "date_of_attack": "03/23/2022",
+         "amount_lost": 48000000,
+         "attack_type": "Mint Exploit",
+         "contract_hash": ""
+      }
+   ],
+   "Qubit Finance": [
+      {
+         "project_type": "Lending and Borrowing",
+         "date_of_attack": "01/28/2022",
+         "amount_lost": 80000000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "Evolved Apes": [
+      {
+         "project_type": "NFT Project",
+         "date_of_attack": "10/06/2021",
+         "amount_lost": 2700000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "CryptoRom": [
+      {
+         "project_type": "Other",
+         "date_of_attack": "10/15/2021",
+         "amount_lost": 1400000,
+         "attack_type": "Rug Pull",
+         "contract_hash": ""
+      }
+   ],
+   "Pancake Hunny": [
+      {
+         "project_type": "Yield Farming",
+         "date_of_attack": "10/20/2021",
+         "amount_lost": 2000000,
+         "attack_type": "Smart Contract Bug",
+         "contract_hash": ""
+      }
+   ],
+   "Neko Network": [
+      {
+         "project_type": "Network",
+         "date_of_attack": "08/11/2021",
+         "amount_lost": 4000000,
+         "attack_type": "Smart Contract Exploit",
+         "contract_hash": ""
+      }
+   ]
+}
