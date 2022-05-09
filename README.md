@@ -40,7 +40,7 @@ Output: 11/05/2021
 
 <!-- image -->
 <p style="text-align:center;">
-  <img src="rektnews_inspect_element.png" alt="" width="700" class="center" style="margin-left: 10px;"/>
+  <img src="images/rektnews_inspect_element.png" alt="" width="700" class="center" style="margin-left: 10px;"/>
 </p>
 
 ## Applied Research: Discovering vulnerabilities before the attacks happen
