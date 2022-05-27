@@ -13,6 +13,6 @@ Attacks recorded from then and now are utilized to make inferences so that a pre
 ----
 
 ## Applied Research: Discovering vulnerabilities before the attacks happen
-Attacks only exist due to vulnerabilities and [attack vectors](https://github.com/sigp/solidity-security-blog). Throughout building the code base, within the attack analysis repo we will do extensive research into specific vulnerabilities with the code for DeFi protocols. 
+Attacks only exist due to vulnerabilities and [attack vectors](https://github.com/sigp/solidity-security-blog) that lead to possible intrusion. Throughout building the code base, within the attack analysis repo we will do extensive research into specific vulnerabilities with the code for DeFi protocols. 
 
 The inception of DeFi is a contentious subject, but in this repo we aggregate attack data from the later MakerDAO and Ethereum days. Around 2015, new chains began to emerge to partipate in the decentralized finance industry. 
