@@ -2,6 +2,11 @@
 
 The web scraper is used to extract data from webpages using Python's BeautifulSoup. We wish to use DeFi exploit specific APIs to autonmously funnel data into SEAL, but the DeFi industry is still relatively new. The main API we can utilize at this time is the Nansen.ai API. We hope to land them as a potential partner. 
 
+<!-- image -->
+<p style= "text-align:center;">
+  <img src="data-retrieval.jpg" alt="" width="800" class="center" style="margin: 10px;"/>
+</p>
+
 To expand the data-driven functionality of Sena we will have to build our own API with all the DeFi attack data we've curated to be the one-stop shop for the DeFi ecosystem. In the meanwhile, Python's BeautifulSoup allows us to extract qualitative and quantative attack data from HTML/XML text inside of webpages. 
 
 The following websites are used in Sena's web scraper:
@@ -22,10 +27,6 @@ The following websites are used in Sena's web scraper:
 >- [quadrigainitiative](https://www.quadrigainitiative.com/hackfraudscam/btfinancehack.php)
 >- [wowisme](https://www.wowisme.net/defi-security-vulnerabilities-and-exploits-2021/)
 
-<!-- image -->
-<p style="text-align:center;">
-  <img src="data-retrieval.jpg" alt="" width="800" class="center" style="margin: 10px;"/>
-</p>
 
 # Get requests through APIs
 >- TVL data: [DeFi Llama](https://docs.llama.fi/api)
