@@ -29,3 +29,5 @@ Output: 11/05/2021
 <p style="text-align:center;">
   <img src="images/rektnews_inspect_element.png" alt="" width="700" class="center" style="margin-left: 10px;"/>
 </p>
+
+## Insights into Web Scraping using Python AutoScraper
