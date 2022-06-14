@@ -23,13 +23,14 @@ Sena is the first DeFi protocol to using AI/ML to analyze attacks. By way of art
 
 
 Sources:
-1. [DoS Attacks Intelligent Detection using Neural Networks](https://reader.elsevier.com/reader/sd/pii/S1319157806800029?token=2EF11E26C870D27055A3E24E1E9E5FA0BBE72443A8FAB2CAC51BA87B480D569CF612869DB9F56B18D546E3FC4AAAE771&originRegion=us-east-1&originCreation=20220128064013)
-2. [A new scheme of vulnerability analysis in smart contract with machine learning](https://link.springer.com/article/10.1007/s11276-020-02379-z)
-3. [Smart Contract Vulnerability Detection: From Pure Neural Network to Interpretable Graph Feature and Expert Pattern Fusion](https://arxiv.org/abs/2106.09282)
-4. [Predicting phishing websites based on self-structuring neural network](https://link.springer.com/article/10.1007/s00521-013-1490-z)
-5. [Smart Contract Vulnerability Detection Using Graph Neural Networks](https://www.ijcai.org/Proceedings/2020/0454.pdf)
-6. [Detection of malicious and non-malicious website visitors using unsupervised neural network learning](https://www.sciencedirect.com/science/article/abs/pii/S1568494612003778)
-7. [DDoS flooding attack detection scheme based on F-divergence](https://www.sciencedirect.com/science/article/abs/pii/S0140366412001156)
-8. [Natural Language Processing](https://strathprints.strath.ac.uk/2611/1/strathprints002611.pdf)
-9. [Training Massive Deep Neural Networks in a Smart
+1. [The Risks of the Blockchain A Review on Current Vulnerabilities and Attacks](https://isyou.info/jisis/vol10/no3/jisis-2020-vol10-no3-06.pdf)
+2. [DoS Attacks Intelligent Detection using Neural Networks](https://reader.elsevier.com/reader/sd/pii/S1319157806800029?token=2EF11E26C870D27055A3E24E1E9E5FA0BBE72443A8FAB2CAC51BA87B480D569CF612869DB9F56B18D546E3FC4AAAE771&originRegion=us-east-1&originCreation=20220128064013)
+3. [A new scheme of vulnerability analysis in smart contract with machine learning](https://link.springer.com/article/10.1007/s11276-020-02379-z)
+4. [Smart Contract Vulnerability Detection: From Pure Neural Network to Interpretable Graph Feature and Expert Pattern Fusion](https://arxiv.org/abs/2106.09282)
+5. [Predicting phishing websites based on self-structuring neural network](https://link.springer.com/article/10.1007/s00521-013-1490-z)
+6. [Smart Contract Vulnerability Detection Using Graph Neural Networks](https://www.ijcai.org/Proceedings/2020/0454.pdf)
+7. [Detection of malicious and non-malicious website visitors using unsupervised neural network learning](https://www.sciencedirect.com/science/article/abs/pii/S1568494612003778)
+8. [DDoS flooding attack detection scheme based on F-divergence](https://www.sciencedirect.com/science/article/abs/pii/S0140366412001156)
+9. [Natural Language Processing](https://strathprints.strath.ac.uk/2611/1/strathprints002611.pdf)
+10. [Training Massive Deep Neural Networks in a Smart
 Contract: A New Hope](https://arxiv.org/pdf/2106.14763.pdf)
