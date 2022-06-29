@@ -26,6 +26,7 @@ The following websites are used in Sena's web scraper:
 >- [slowmist.io](https://hacked.slowmist.io/en/)
 >- [squanch](https://github.com/TheSquanch-147/Rugpulls-Hacks-Exploits-List)
 >- [quadrigainitiative](https://www.quadrigainitiative.com/hackfraudscam/btfinancehack.php)
+>- [watchpug](https://watchpug.medium.com)
 >- [wowisme](https://www.wowisme.net/defi-security-vulnerabilities-and-exploits-2021/)
 
 
