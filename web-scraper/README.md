@@ -71,5 +71,5 @@ Output: 11/05/2021
 
 <!-- image -->
 <p style="text-align:center;">
-  <img src="images/rektnews_inspect_element.png" alt="" width="700" class="center" style="margin-left: 10px;"/>
+  <img src="images/rektnews_inspect_element.png" alt="reck news" width="700" class="center" style="margin-left: 10px;"/>
 </p>
