@@ -32,7 +32,7 @@ The following websites are used in Sena's web scraper:
 
 # Get requests through APIs
 >- TVL data: [DeFi Llama](https://docs.llama.fi/api)
->- Protocol behavior: [Twitter](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)
+>- Protocol behavior (real time alerts): [Twitter](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api), Discord
 >- Overall DeFi market trends: [DeFi Pulse](https://docs.defipulse.com/api-docs-by-provider/defi-pulse-data) 
 >- NFT API: [QuickNode](https://www.quicknode.com/nft-api)
 >- Social behavior of DeFi users/protocols: [LunarCrush](https://legacy.lunarcrush.com/developers/docs), [PyPi page](https://pypi.org/project/lunarcrush/)
@@ -43,7 +43,7 @@ The preceding are a few APIs Sena will be using to curate protocol specific data
 ----
 
 
-## Insights into Web Scraping using Python BeautifulSoup
+## Insights into Web Scraping using Python BeautifulSoup & Autoscraper
 
 Each data vector needed to be cleaned: protocol names, dates, and amount lost in attack.
 The most intricate vector that needed prime attention were the dates. Dates and amounts with concatenated together with excessive spaces and a vertical bar(|). 
