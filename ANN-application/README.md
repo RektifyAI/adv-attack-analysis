@@ -1,6 +1,6 @@
 # ANN applications for analyzing attacks on vulnerable Web3 products
 
-The ANN repo highlights case-uses of supervised learning to gradient descent, linear regression, classifcation, and predictive models with the SEAL dataset, along with extracting relevant metadata from attack events. Through using advanced data science techniques, we explore the feasibility of utilizing artificial neural networks (ANNs) for risk assessment in detecting vulnerabilities before the entities graduates to successful attacks using SEAL API data. In a 2022 survey, we found that 96% of respondents would like to be notified of an attack before it happens, the other 4% were not opposed.
+The ANN repo highlights case-uses of supervised learning to gradient descent, linear regression, classifcation, and predictive models with the SEAL dataset, along with extracting relevant metadata from attack events. Through using advanced data science techniques, we explore the feasibility of utilizing artificial neural networks (ANNs) for risk assessment in detecting vulnerabilities before the entities graduates to successful attacks using SEAL API data. In a 2022 survey, we found that 96% of respondents would like to be notified of an attack before it happens, the other 4% were not opposed, so by enabling projects of their vulnerabilities we can directly impact their consumers.
 
 Sena is the first risk advisory platforms to using AI/ML to analyze attacks on any blockchain-based cryptocurrency. By way of ANNs we can analyze attack specific data in the decentralized finance domain. 
 
