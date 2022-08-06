@@ -17,6 +17,7 @@ The following websites are used in Rektify web scraper:
 >- [cryptobriefing hack archive](https://cryptobriefing.com/tag/hack/)
 >- [crypto.sec](https://cryptosec.info/defi-hacks/)
 >- [crypto slam](https://cryptoslam.io)
+>- [flipside crypto](https://app.flipsidecrypto.com/dashboard/solana-exploited-incident-analysis-xauPWQ)
 >- [defiprime.com](https://defiprime.com/hacks2020)
 >- [defiyieldapp-rektdatabase](https://defiyield.app/rekt-database)
 >- [etherscan](https://etherscan.io)
