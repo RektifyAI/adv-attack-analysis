@@ -13,6 +13,13 @@ Keywords or phases to look for from scammers:
 - victim
 - refund
 - returned
+- "any chance of refund"
+- 
+
+Keywords or phases to look for from actual victims:
+- $ amounts
+- 128-bit contract hash
+- 128-bit contract hash with image attachment
 
 ** Challenge **
 The challenges arise in the raw data scraped from tweets are scammers fake sentiments. 
