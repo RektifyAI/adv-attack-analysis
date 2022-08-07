@@ -4,6 +4,7 @@ Twitter is the most prevalently used social media application for crypto users. 
 
 ### NLP Program
 <b> Goal </b>
+Capture as many phrases from users in the event of a hack to rank the severity of the attack based on their diction.
 <b> Challenge </b>
 The challenges arise in the raw data scraped from tweets. 
 
