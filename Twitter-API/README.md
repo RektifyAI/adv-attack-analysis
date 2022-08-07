@@ -1,10 +1,10 @@
 ## Twitter API Repo
 
-Twitter is the most prevalently used social media application for crypto users. Twitter also hosts real-time alerts about on-chain and off-chain activity that is happening to blockchain-based assets. With Twitter we can track user sentiment and hack alerts.
+Twitter is the most prevalently used social media application for crypto users. Twitter also hosts real-time tweets about on-chain and off-chain activity that is happening to blockchain-based assets. These With Twitter we can track user sentiment and hack alerts.
 
 
 ### Tweet Validity Bot Program 
-** Goal **
+**Goal**
 Capture as many phrases from users in the event of a hack to rank the severity of the attack based on their diction. Fake users tend to state they were a "victim" or "wen refund". 
 
 Keywords or phases to look for from scammers:
@@ -22,8 +22,8 @@ Keywords or phases to look for from actual victims:
 - 128-bit contract hash with image attachment
 
 
-** Challenge **
+**Challenge**
 The challenges arise in the raw data scraped from tweets are scammers fake sentiments. 
 
-** Strategy **
+**Strategy**
 
