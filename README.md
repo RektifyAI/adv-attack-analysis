@@ -4,7 +4,7 @@ The Advanced Attack Analysis(A<sup>3</sup>) is a deep data analysis repo, uncove
 
 At Rektify AI, we utilize past attack data to perform prescriptive analytics using AI/ML as well as building models that will be used as data visualizations on the Rektify AI application. The system to curate live data will be done by analyzing on-chain and off-chain data from the blockchains of DeFi protocols we analyze.
 
-Attacks recorded from then and now are utilized to make inferences so that a predictions based on data stored in the SEAL dataset can support Sena protocol's analytical acrchitecture to detect high priority vulnerabilities before they lead to possible attacks. The use of ANNs support the vulnerability-attack prevention framework. The Rektify AI application will give alerts when attacks occur and warning messages when the deep learning system is triggered by vulnerabilities.
+Attacks recorded from then and now are utilized to make inferences so that a predictions based on data stored in the REAL API data warehouse can support analytical acrchitecture to detect high priority vulnerabilities before they lead to possible attacks. The use of ANNs support the vulnerability-attack prevention framework. The Rektify AI application will give alerts when attacks occur and warning messages when the deep learning system is triggered by vulnerabilities.
 
 > <b> Index terms: </b> </br>
 > EDA - Exploratory Data Analysis (typically conducted to display relationships between metadata) </br>
