@@ -9,7 +9,8 @@ Twitter is the most prevalently used social media application for crypto users. 
 
 ### Tweet Validity Bot Program 
 **Goal**
-Capture as many phrases from users in the event of a hack to rank the severity of the attack based on their diction. Fake users tend to state they were a "victim" or "wen refund". 
+</br>
+In this exercise we sift through official projects tweets about possible reimbursement from an attack. From there, we capture as many phrases from users in the event of a hack to 1. test validity of the request being from an acutal human being or a bot, and 2. rank the severity of the attack based on their diction. Fake users tend to state things such as "victim" or "wen refund". 
 
 Keywords or phases to look for from scammers:
 - $ amounts
