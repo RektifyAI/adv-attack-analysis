@@ -20,6 +20,7 @@ Keywords or phases to look for from scammers:
 Keywords or phases to look for from actual victims:
 - $ amounts
 - 128-bit contract hash with image attachment
+- "project name"
 
 
 **Challenge**
