@@ -26,6 +26,8 @@ Keywords or phases to look for from actual victims:
 - $ amounts
 - 128-bit contract hash with image attachment
 - "project name"
+- expletives [i.e., "project_name needs to get their shit together]
+- [negative words of expression]
 
 
 **Challenge**
