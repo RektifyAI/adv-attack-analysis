@@ -72,5 +72,5 @@ Output: 11/05/2021
 
 <!-- image -->
 <p style="text-align:center;">
- ![](https://github.com/RektifyAI/adv-attack-analysis/gif-2-look.gif)
+ ![](https://github.com/RektifyAI/adv-attack-analysis/web-scraper/gif-2-look.gif)
 </p>
