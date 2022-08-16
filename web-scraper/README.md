@@ -70,7 +70,9 @@ Output: 11/05/2021
 
 > Redirect link: [Follow the logic and results in the web scraper directory.](https://github.com/SenaLabs/adv-attack-analysis/blob/main/web-scraper/rekt-news-ws.ipynb)
 
+![](https://github.com/RektifyAI/adv-attack-analysis/web-scraper/gif-2-look.gif)
+
 <!-- image -->
 <p style="text-align:center;">
- ![](https://github.com/RektifyAI/adv-attack-analysis/web-scraper/gif-2-look.gif)
+ 
 </p>
