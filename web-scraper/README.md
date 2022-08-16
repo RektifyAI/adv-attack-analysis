@@ -72,5 +72,5 @@ Output: 11/05/2021
 
 <!-- image -->
 <p style="text-align:center;">
-  <img src="images/rektnews_inspect_element.png" alt="reck news" width="700" class="center" style="margin-left: 10px;"/>
+ ![](https://github.com/RektifyAI/adv-attack-analysis/gif-2-look.gif)
 </p>
