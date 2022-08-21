@@ -8,6 +8,7 @@ Twitter is the most prevalently used social media application for crypto users. 
 </p>
 
 ### Tweet Validity Bot Program 
+----
 **Goal**
 </br>
 In this exercise we sift through official projects tweets about possible reimbursement from an attack. From there, we capture as many phrases from users in the event of a hack to 1. test validity of the request being from an acutal human being or a bot, and 2. rank the severity of the attack based on their diction. Fake users tend to state things such as "victim" or "wen refund". 
@@ -17,6 +18,7 @@ Keywords or phases to look for from scammers:
 -  amoumt [token]
 - victim
 - refund
+- wen
 - returned
 - "any chance of refund"
 - 128-bit contract hash
@@ -28,6 +30,7 @@ Keywords or phases to look for from actual victims:
 - "project name"
 - expletives [i.e., "project_name needs to get their shit together]
 - [negative words of expression]
+
 
 
 **Challenge**
