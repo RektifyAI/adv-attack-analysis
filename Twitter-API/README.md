@@ -7,7 +7,7 @@ Twitter is the most prevalently used social media application for crypto users. 
   <img src="TF-IDF.png" alt="" width="400" class="center" style="margin-left: 100px;"/>
 </p>
 
-### Tweet Validity Bot Program 
+### Tweet Validity Bot Program: Spam or ham :pig:
 ----
 **Goal**
 </br>
