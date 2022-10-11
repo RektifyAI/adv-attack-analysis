@@ -1,6 +1,6 @@
-# Rektify Web Scraper
+# Rektify AI Web Scraper
 
-The web scraper is used to extract data from webpages using Python's BeautifulSoup and natural language processing. We wish to use DeFi exploit specific APIs to autonmously funnel data into SEAL, but the DeFi industry is still relatively new. The main API we can utilize at this time is the Nansen.ai API. We hope to land them as a potential partner. 
+The web scraper is used to extract data from webpages using Python's BeautifulSoup and natural language processing. We wish to use DeFi exploit specific APIs to autonmously funnel data into REAL, but the DeFi industry is still relatively new. The main API we can utilize at this time is the nansen.ai API. We hope to land them as a potential partner. 
 
 <!-- image -->
 <p style= "text-align:center;">
