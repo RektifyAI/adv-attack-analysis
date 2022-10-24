@@ -7,7 +7,7 @@ The web scraper is used to extract data from webpages using Python's BeautifulSo
   <img src="data-retrieval.jpg" alt="" width="800" class="center" style="margin: 10px;"/>
 </p>
 
-To expand the data-driven functionality of Sena we are building our own API with all the DeFi attack data we've curated to be the one-stop shop for the DeFi ecosystem. In the meanwhile, Python's BeautifulSoup allows us to extract qualitative and quantative attack data from HTML/XML text inside of webpages. 
+To expand the data-driven functionality of Rektify AI we are building our own API with all the DeFi attack data we've curated, aggregated, and wrangled to be the one-stop shop for the DeFi ecosystem. In the meanwhile, Python's BeautifulSoup allows us to extract qualitative and quantative attack data from HTML/XML text inside of webpages. 
 
 The following websites are used in Rektify web scraper:
 >- [rekt.news](https://rekt.news) - #1 resource for DeFi hacks across the ecosystem
