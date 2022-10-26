@@ -33,6 +33,7 @@ The following websites are used in Rektify web scraper:
 >- [Forta Data](https://github.com/forta-network/labelled-datasets)
 >- [Crypto Scam DB](https://cryptoscamdb.org/)
 >- [Web3 Rekt](https://www.web3rekt.com/)
+>- [Crypto Rank](https://cryptorank.io/news/)
 
 # Get requests through APIs
 >- TVL data: [DeFi Llama](https://docs.llama.fi/api)
