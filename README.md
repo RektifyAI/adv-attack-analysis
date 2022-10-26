@@ -2,9 +2,12 @@
 
 The Advanced Attack Analysis(A<sup>3</sup>) is a deep data analysis repo, uncovering the latest insights on attacks within the Web3 ecosystem. Methods such as EDA, web scrapping, Python requests, vulnerability detection and [Beneath API](https://beneath.dev/bubblyorca/seal-dataset) (halted acquired by RillzData) calls are used to retrieve attack specific data to explore what's happening on-chain with vulnerable Web3 products. The alogorithm detects vulnerabilities through applied ANNs. 
 
+<!-- gif -->
+<p align="center">
 ![](https://github.com/RektifyAI/adv-attack-analysis/blob/main/web-scraper/gif-2-look.GIF)
+</p>
 
-At Rektify AI, we utilize past attack data to perform prescriptive analytics using AI/ML as well as building models that will be used as data visualizations on the Rektify AI application. The system to curate live data will be done by analyzing on-chain and off-chain data from the blockchains of DeFi protocols we analyze.
+Rektify AI utilizes past attack data to perform prescriptive analytics using AI/ML as well as building models that will be used as data visualizations on the Rektify AI application. The system to curate live data will be done by analyzing on-chain and off-chain data from the blockchains of DeFi protocols we analyze.
 
 Attacks recorded from then and now are utilized to make inferences so that a predictions based on data stored in the REAL API data warehouse can support analytical acrchitecture to detect high priority vulnerabilities before they lead to possible attacks. The use of ANNs support the vulnerability-attack prevention framework. The Rektify AI application will give alerts when attacks occur and warning messages when the deep learning system is triggered by vulnerabilities.
 
