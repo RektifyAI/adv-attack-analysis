@@ -2,6 +2,8 @@
 
 Twitter is the most prevalently used social media application for crypto users. Twitter also hosts real-time tweets about on-chain and off-chain activity that is happening to blockchain-based assets. These tweets are consiered "alerts" in this repo. With Twitter we can track user sentiment and hack alerts, and then process the vectorized text using TD-IDF.
 
+Resoures: Bot Sentinel, AuditOne
+
 <!-- image -->
 <p align="center">
   <img src="TF-IDF.png" alt="" width="400" class="center" style="margin-left: 100px;"/>
