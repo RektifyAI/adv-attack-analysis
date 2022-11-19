@@ -4,7 +4,7 @@ The Rektify Exploratory Attack Library(REAL) dataset is the end point to data cu
 
 <!-- image -->
 <p align="center">
-  <img src="REAL-html.png" alt="" width="400" class="center" style="margin-left: 100px;"/>
+  <img src="REAL-html.png" alt="" width="600" class="center" style="margin-left: 100px;"/>
 </p>
 </br>
 
