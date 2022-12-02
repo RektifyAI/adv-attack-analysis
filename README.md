@@ -24,5 +24,5 @@ The inception of DeFi is a contentious subject, but in this repo we aggregate at
 
 ----
 ## Registry
-[SWC Registry](https://swcregistry.io)
+[SWC Registry](https://swcregistry.io) </br>
 [DeFi Hack Labs](https://github.com/SunWeb3Sec/DeFiHackLabs)
