@@ -14,6 +14,7 @@ The following websites are used in Rektify web scraper:
 >- [bitcoinexchangeguide](https://bitcoinexchangeguide.com/bitcoin/scams-hacks/#Picostocks_Cold_Wallet_Hack)
 >- [CertiK](https://www.certik.com)
 >- [coingeek](https://coingeek.com/the-defi-hacks-of-2020/)
+>- [coinintelligence](https://www.cointelligence.com/exchanges_list/) - Risk scores on CEXs
 >- [cryptobriefing hack archive](https://cryptobriefing.com/tag/hack/)
 >- [crypto.sec](https://cryptosec.info/defi-hacks/)
 >- [crypto slam](https://cryptoslam.io)
