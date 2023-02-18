@@ -8,6 +8,12 @@ Rektify AI utilizes past attack data to perform prescriptive analytics using AI/
 
 Attacks recorded from then and now are utilized to make inferences so that a predictions based on data stored in the REAL API data warehouse can support analytical acrchitecture to detect high priority vulnerabilities before they lead to possible attacks. The use of ANNs support the vulnerability-attack prevention framework. The Rektify AI application will give alerts when attacks occur and warning messages when the deep learning system is triggered by vulnerabilities.
 
+<!-- image -->
+<p align="center">
+  <img src="API-rektify.png" alt="" width="400" class="center" style="margin-left: 100px;"/>
+</p>
+
+
 > <b> Index terms: </b> </br>
 > AI/ML - Artificial Intelligence and Machine Learning
 > EDA - Exploratory Data Analysis (typically conducted to display relationships between metadata) </br>
