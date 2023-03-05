@@ -10,7 +10,7 @@ Sena is the first risk advisory platforms to using AI/ML to analyze attacks on a
 |-----------| -------- | -------- | ------------- | -------------- | ----------- |
 | Solana | 01/13/2021 | Open-source Blockchain Platform |  DDos Attack<sup>3</sup>   | Modified Adaptive Resonance Theory 2 ([mART](http://techlab.bu.edu/resources/cat/C54/index.html)) | #6 |
 | Arbitrum One | 01/14/2021 | Layer 2 |  DDos Attack<sup>2</sup> | Self-Organizing Map(SOM) | #1 |
-| Grim Finance | 12/19/2021 | Yield Farming | Re-entrancy | Graph Neural Network (GNN) |#3, #5 |
+| Grim Finance | 12/19/2021 | Yield Farming | Re-entrancy | Graph Neural Network (GNN), Graph Conv. Neural Network (GCN) |#3, #5 |
 | LooksRare | 01/11/2022 | NFT Marketplace |  DDos Attack<sup>1</sup>  | Feed-forward Neural Network   | #1 |
 | Multichain | 01/18/2022 | DEX | Smart Contract Bug  | Graph Neural Network (GNN)  | #2, #3, #5  |
 | CryptoBatz by Ozzy Osbourne | 01/21/2022 | NFT Project |  Phishing Attack | Self-structuring Neural Network | #4 |
