@@ -6,7 +6,7 @@ Using REAL API data is key. In a 2022 survey, we found that 96% of respondents w
 
 Sena is the first risk advisory platforms to using AI/ML to analyze attacks on any blockchain-based cryptocurrency. By way of ANNs we can analyze attack specific data in the decentralized finance domain. 
 
-|Attack Example | Attack Date | Protocol Type | Attack Type  | Artificial Neural Network Application | Sources |  
+| Attack Example | Attack Date | Protocol Type | Attack Type  | Artificial Neural Network Application | Sources |  
 |-----------| -------- | -------- | ------------- | -------------- | ----------- |
 | Solana | 01/13/2021 | Open-source Blockchain Platform |  DDos Attack<sup>3</sup>   | Modified Adaptive Resonance Theory 2 ([mART](http://techlab.bu.edu/resources/cat/C54/index.html)) | #6 |
 | Arbitrum One | 01/14/2021 | Layer 2 |  DDos Attack<sup>2</sup> | Self-Organizing Map(SOM) | #1 |
