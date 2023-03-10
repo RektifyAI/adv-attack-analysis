@@ -15,7 +15,7 @@ Sena is the first risk advisory platforms to using AI/ML to analyze attacks on a
 | Multichain | 01/18/2022 | DEX | Smart Contract Bug  | Graph Neural Network (GNN), Degree-free Graph Conv. Neural Network (DR-GCN) | #2, #3, #5  |
 | CryptoBatz by Ozzy Osbourne | 01/21/2022 | NFT Project |  Phishing Attack | Self-structuring Neural Network | #4 |
 | Compound Finance | 10/27/2022 | Lending and Borrowing |  Flash Loan Attack | Deep Neural Network(DNN) | #9 |
-
+</br>
 
 
 <!-- image -->
