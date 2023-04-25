@@ -36,3 +36,4 @@ Sources:
 9. [Natural Language Processing](https://strathprints.strath.ac.uk/2611/1/strathprints002611.pdf)
 10. [Training Massive Deep Neural Networks in a Smart
 Contract: A New Hope](https://arxiv.org/pdf/2106.14763.pdf)
+11. [Unnoticeable Backdoor Attacks on Graph Neural Networks](https://arxiv.org/abs/2303.01263)
