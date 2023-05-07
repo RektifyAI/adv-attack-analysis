@@ -1,4 +1,4 @@
-# ANN applications for detecting vulnerabilities on blockchain-based products prior to attack
+# ANN applications for detecting vulnerabilities on blockchain-based products
 
 The ANN repo highlights case-uses of supervised learning to gradient descent, linear regression, classifcation, and predictive models with the REAL API, along with extracting relevant metadata from hack events in Web3. Through using advanced data science techniques, we explore the feasibility of utilizing artificial neural networks (ANNs) for measuring risk assessment in vulnerabilities. 
 
