@@ -4,7 +4,7 @@ The ANN repo highlights case-uses of supervised learning to gradient descent, li
 
 Using REAL API data is key. In a 2022 survey, we found that 96% of respondents would like to be notified of an attack before it happens, the other 4% were not opposed, so by enabling projects to be cognizant of present vulnerabilities we can directly impact the health of their blockchains and the happiness of their consumers.
 
-Sena is the first risk advisory platforms to using AI/ML to analyze attacks on any blockchain-based cryptocurrency. By way of ANNs we can analyze attack specific data in the decentralized finance domain. 
+Rektify AI uses AI/ML to analyze attacks on any blockchain-based cryptocurrency. By way of ANNs we can analyze attack specific data in the decentralized finance domain. 
 
 | Attack Example | Attack Date | Protocol Type | Attack Type  | Artificial Neural Network Application | Sources |  
 |-----------| -------- | -------- | ------------- | -------------- | ----------- |
