@@ -9,7 +9,7 @@ Rektify AI uses AI/ML to analyze attacks on any blockchain-based cryptocurrency.
 | Attack Example | Attack Date | Protocol Type | Attack Type  | Artificial Neural Network Application | Sources |  
 |-----------| -------- | -------- | ------------- | -------------- | ----------- |
 | Solana | 01/13/2021 | Open-source Blockchain Platform |  DDos Attack<sup>3</sup>   | Modified Adaptive Resonance Theory 2 ([mART](http://techlab.bu.edu/resources/cat/C54/index.html)) | #6 |
-| Arbitrum One | 01/14/2021 | Layer 2 |  DDos Attack<sup>2</sup> | Self-Organizing Map(SOM) | #1 |
+| Arbitrum One | 01/14/2021 | Layer 2 |  DDos Attack<sup>2</sup> | Self-Organizing Map([SOM](https://pypi.org/project/sklearn-som/)) | #1 |
 | Grim Finance | 12/19/2021 | Yield Farming | Re-entrancy | Graph Neural Network (GNN), Graph Conv. Neural Network (GCN) |#3, #5 |
 | LooksRare | 01/11/2022 | NFT Marketplace |  DDos Attack<sup>1</sup>  | Feed-forward Neural Network   | #1 |
 | Multichain | 01/18/2022 | DEX | Smart Contract Bug  | Graph Neural Network (GNN), Degree-free Graph Conv. Neural Network (DR-GCN) | #2, #3, #5  |
