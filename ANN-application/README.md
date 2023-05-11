@@ -37,3 +37,5 @@ Sources:
 10. [Training Massive Deep Neural Networks in a Smart
 Contract: A New Hope](https://arxiv.org/pdf/2106.14763.pdf)
 11. [Unnoticeable Backdoor Attacks on Graph Neural Networks](https://arxiv.org/abs/2303.01263)
+12. [Fake news detection: A hybrid CNN-RNN based deep learning approach](https://www.sciencedirect.com/science/article/pii/S2667096820300070)
+13. [Improved Price Oracles: Constant Function Market Makers](https://arxiv.org/pdf/2003.10001.pdf)
