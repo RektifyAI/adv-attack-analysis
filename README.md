@@ -17,7 +17,7 @@ Attacks recorded from then and now are utilized to make inferences so that a pre
 > <b> Index terms: </b> </br>
 > AI/ML - Artificial Intelligence and Machine Learning
 > EDA - Exploratory Data Analysis (typically conducted to display relationships between metadata) </br>
-> Supervised Learning - a machine learning technique that uses labeled data to train models to  predict and classify outcomes </br>
+> Supervised Learning - A machine learning technique that uses labeled data to train models to  predict and classify outcomes </br>
 > REAL - Rektify Exploratory Attack Library dataset </br>
 > ANN - Artificial Neural Network </br>
 > DApp - Decentralized Application
