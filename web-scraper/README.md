@@ -40,7 +40,7 @@ The following websites are used in Rektify web scraper:
 >- TVL data: [DeFi Llama](https://docs.llama.fi/api)
 >- Protocol behavior (real time alerts): [Twitter](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api), Discord
 >- Overall DeFi market trends: [DeFi Pulse](https://docs.defipulse.com/api-docs-by-provider/defi-pulse-data) 
->- NFT API: [QuickNode](https://www.quicknode.com/nft-api)
+>- NFT API: [QuickNode](https://www.quicknode.com/nft-api), CryptoSlam
 >- Social behavior of DeFi users/protocols: [LunarCrush](https://legacy.lunarcrush.com/developers/docs), [PyPi page](https://pypi.org/project/lunarcrush/)
 
 
