@@ -1,6 +1,6 @@
 # A<sup>3</sup>: Advanced Attack Analysis
 
-The Advanced Attack Analysis(A<sup>3</sup>) is a deep data analysis repo, uncovering the latest insights on attacks within the Web3 ecosystem. Methods such as EDA, web scrapping, Python requests, vulnerability detection and [Beneath API](https://beneath.dev/bubblyorca/seal-dataset) (halted acquired by RillzData) calls are used to retrieve attack specific data to explore what's happening on-chain with vulnerable Web3 products. The algorithm detects vulnerabilities through applied ANNs. 
+The Advanced Attack Analysis(A<sup>3</sup>) is a deep data analysis repo, uncovering the latest insights on attacks within the Web3 ecosystem. Methods such as EDA(exploratory data analysis), web scrapping, Python requests, vulnerability detection and [Beneath API](https://beneath.dev/bubblyorca/seal-dataset) (halted acquired by RillzData) calls are used to retrieve attack specific data to explore what's happening on-chain with vulnerable Web3 products. The algorithm detects vulnerabilities through applied ANNs. 
 
 ![](https://github.com/RektifyAI/adv-attack-analysis/blob/main/web-scraper/gif-2-look.GIF)
 
