@@ -1,6 +1,6 @@
 # Rektify Exploratory Attack Library(REAL) dataset
 
-The Rektify Exploratory Attack Library(REAL) dataset is the end point to data curation tasks. The vision for the dataset is to become an NFT so that others that use REAL. will have co-ownership Sena data. By way of smart contracts we can prove the provenance of REAL data. 
+The Rektify Exploratory Attack Library(REAL) dataset is the end point to data curation tasks. The vision for the dataset is to become an NFT so that others that use REAL, will have co-ownership REAL data. By way of smart contracts we can prove the provenance of REAL data and allow for collaboration by maintainers from the Rektify AI community.
 
 <!-- image -->
 <p align="center">
