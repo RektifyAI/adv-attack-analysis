@@ -30,11 +30,17 @@ Sources:
 3. [Combining Graph Neural Networks With Expert Knowledge for Smart Contract Vulnerability Detection](https://ieeexplore.ieee.org/abstract/document/9477066)
 4. [Vulnerable smart contract function locating based on Multi-Relational Nested Graph Convolutional Network](https://www.sciencedirect.com/science/article/abs/pii/S016412122300170X?via%3Dihub)
 5. [A new scheme of vulnerability analysis in smart contract with machine learning](https://link.springer.com/article/10.1007/s11276-020-02379-z)
+
+----
+
 6. [Smart Contract Vulnerability Detection: From Pure Neural Network to Interpretable Graph Feature and Expert Pattern Fusion](https://arxiv.org/abs/2106.09282)
 7. [Predicting phishing websites based on self-structuring neural network](https://link.springer.com/article/10.1007/s00521-013-1490-z)
 8. [Smart Contract Vulnerability Detection Using Graph Neural Networks](https://www.ijcai.org/Proceedings/2020/0454.pdf)
 9. [Detection of malicious and non-malicious website visitors using unsupervised neural network learning](https://www.sciencedirect.com/science/article/abs/pii/S1568494612003778)
 10. [DDoS flooding attack detection scheme based on F-divergence](https://www.sciencedirect.com/science/article/abs/pii/S0140366412001156)
+
+----
+
 11. [Natural Language Processing](https://strathprints.strath.ac.uk/2611/1/strathprints002611.pdf)
 12. [Training Massive Deep Neural Networks in a Smart
 Contract: A New Hope](https://arxiv.org/pdf/2106.14763.pdf)
