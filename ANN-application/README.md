@@ -47,3 +47,11 @@ Contract: A New Hope](https://arxiv.org/pdf/2106.14763.pdf)
 13. [Unnoticeable Backdoor Attacks on Graph Neural Networks](https://arxiv.org/abs/2303.01263)
 14. [Fake news detection: A hybrid CNN-RNN based deep learning approach](https://www.sciencedirect.com/science/article/pii/S2667096820300070)
 15. [Improved Price Oracles: Constant Function Market Makers](https://arxiv.org/pdf/2003.10001.pdf)
+
+----
+
+16. [Dynamic Vulnerability Detection on Smart Contracts Using Machine Learning](https://arxiv.org/pdf/2102.07420.pdf)
+17. [Eth2Vec: Learning Contract-Wide Code Representations for Vulnerability Detection on Ethereum Smart Contracts](https://dl.acm.org/doi/pdf/10.1145/3457337.3457841)
+        - [Supplemental Material (Demo video)](https://dl.acm.org/doi/abs/10.1145/3457337.3457841)
+18. [Attention-based Machine Learning Model for Smart Contract Vulnerability Detection](https://iopscience.iop.org/article/10.1088/1742-6596/1820/1/012004/pdf)
+19. [CBGRU: A Detection Method of Smart Contract Vulnerability Based on a Hybrid Model](https://www.mdpi.com/1424-8220/22/9/3577)
