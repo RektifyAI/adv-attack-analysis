@@ -62,3 +62,7 @@ Contract: A New Hope](https://arxiv.org/pdf/2106.14763.pdf)
 21. [eTainter: Detecting Gas-Related Vulnerabilities in Smart Contracts](https://people.ece.ubc.ca/mjulia/publications/eTainter_2022.pdf)
 22. [Gas Gauge: A Security Analysis Tool for Smart Contract Out-of-Gas Vulnerabilities](https://arxiv.org/abs/2112.14771)
 23. [Gas Griefing Attack](https://www.linkedin.com/pulse/gas-griefing-attack-olympix/)
+
+
+----
+24. [Formal Analysis of Reentrancy Vulnerabilities in Smart Contract Based on CPN](https://www.mdpi.com/2079-9292/12/10/2152)
