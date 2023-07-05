@@ -58,5 +58,6 @@ Contract: A New Hope](https://arxiv.org/pdf/2106.14763.pdf)
 20. [Novel Smart Contract Vulnerability Detection Method Based on Information Graph and Ensemble Learning](https://www.mdpi.com/1424-8220/22/9/3581)
 
 ----
-
+## Gas Vuln.
 21. [eTainter: Detecting Gas-Related Vulnerabilities in Smart Contracts](https://people.ece.ubc.ca/mjulia/publications/eTainter_2022.pdf)
+22. [Gas Gauge: A Security Analysis Tool for Smart Contract Out-of-Gas Vulnerabilities](https://arxiv.org/abs/2112.14771)
