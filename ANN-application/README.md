@@ -56,3 +56,7 @@ Contract: A New Hope](https://arxiv.org/pdf/2106.14763.pdf)
 18. [Attention-based Machine Learning Model for Smart Contract Vulnerability Detection](https://iopscience.iop.org/article/10.1088/1742-6596/1820/1/012004/pdf)
 19. [CBGRU: A Detection Method of Smart Contract Vulnerability Based on a Hybrid Model](https://www.mdpi.com/1424-8220/22/9/3577)
 20. [Novel Smart Contract Vulnerability Detection Method Based on Information Graph and Ensemble Learning](https://www.mdpi.com/1424-8220/22/9/3581)
+
+----
+
+21. [eTainter: Detecting Gas-Related Vulnerabilities in Smart Contracts](https://people.ece.ubc.ca/mjulia/publications/eTainter_2022.pdf)
