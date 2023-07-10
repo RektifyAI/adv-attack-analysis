@@ -17,6 +17,7 @@ Rektify AI uses AI/ML to analyze attacks on any blockchain-based cryptocurrency.
 | Compound Finance | 10/27/2022 | Lending and Borrowing |  Flash Loan Attack | Deep Neural Network(DNN) | #9 |
 </br>
 
+## Source: [Smart Contract Vulnerability Detection Using GNNs](https://www.ijcai.org/Proceedings/2020/0454.pdf)
 
 <!-- image -->
 <p style="text-align:center;">
