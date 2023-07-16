@@ -60,7 +60,6 @@ Contract: A New Hope](https://arxiv.org/pdf/2106.14763.pdf)
 
 ----
 
-
 ## Gas Vuln.
 21. [eTainter: Detecting Gas-Related Vulnerabilities in Smart Contracts](https://people.ece.ubc.ca/mjulia/publications/eTainter_2022.pdf)
 22. [Gas Gauge: A Security Analysis Tool for Smart Contract Out-of-Gas Vulnerabilities](https://arxiv.org/abs/2112.14771)
