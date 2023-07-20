@@ -68,3 +68,4 @@ Contract: A New Hope](https://arxiv.org/pdf/2106.14763.pdf)
 ----
 24. [Formal Analysis of Reentrancy Vulnerabilities in Smart Contract Based on CPN](https://www.mdpi.com/2079-9292/12/10/2152)
 25. [ReGuard: finding reentrancy bugs in smart contracts](https://dl.acm.org/doi/10.1145/3183440.3183495)
+26. [Do you still need a manual smart contract audit?](https://arxiv.org/pdf/2306.12338.pdf)
